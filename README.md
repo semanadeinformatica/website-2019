@@ -27,7 +27,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```sh
     cd website-2019/
-    yarn install
+    npm install # use node version 10.16.0
     gatsby develop
     ```
 
