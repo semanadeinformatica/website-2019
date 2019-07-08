@@ -10,7 +10,7 @@ const Event = ({ name, type, talker, startTime, endTime, location }) => (
     {talker != null && <p>{talker}</p>}
     <p>{type}</p>
     <p>
-      {startTime} - {endTime} {location != null && <span>| location</span>}
+      {startTime} - {endTime} {location != null && <span>| {location}</span>}
     </p>
   </div>
 )

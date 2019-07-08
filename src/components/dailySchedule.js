@@ -3,28 +3,21 @@ import PropTypes from "prop-types"
 
 const DailySchedule = ({ events }) => {
   let rows = []
-  let row = []
+  let row = [<th scope="row">{events[0].props.startTime}</th>]
 
   for (let i = 0; i < events.length; i++) {
     if (i > 0 && events[i].props.startTime !== events[i - 1].props.startTime) {
-        
-      rows.push(row)
-
+      rows.push(<tr>{row}</tr>)
       row = []
-      row.push(<td>{events[i]}</td>)
-
-    } else {
-      row.push(<td>{events[i]}</td>)
+      row.push(<th scope="row">{events[i].props.startTime}</th>)
     }
-  }
 
-  console.log(rows);
+    row.push(<td>{events[i]}</td>)
+  }
 
   return (
     <table>
-      {rows.map(row => (
-        <tr>{row}</tr>
-      ))}
+      {rows}
     </table>
   )
 }
