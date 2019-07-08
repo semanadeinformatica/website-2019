@@ -14,8 +14,15 @@ const IndexPage = ({ data }) => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-
+    <h2>Pages</h2>
+    <ul>
+      <li>
+        <Link to="/page-2/">Go to page 2</Link>
+      </li>
+      <li>
+        <Link to="/program">Program</Link>
+      </li>
+    </ul>
     <h2>Talks</h2>
     <ul>
       {data.allMarkdownRemark.edges.map(talk => (
