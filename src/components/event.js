@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 
 const Event = ({ name, type, talker, startTime, endTime, location }) => (
   <div>
@@ -10,7 +10,8 @@ const Event = ({ name, type, talker, startTime, endTime, location }) => (
     {talker != null && <p>{talker}</p>}
     <p>{type}</p>
     <p>
-      {startTime} - {endTime} {location != null && <span>| {location}</span>}
+      {startTime} {endTime != null && <span> - {endTime}</span>}
+      {location != null && <span> | {location}</span>}
     </p>
   </div>
 )
@@ -20,7 +21,7 @@ Event.propTypes = {
   type: PropTypes.string.isRequired,
   talker: PropTypes.string,
   startTime: PropTypes.string.isRequired,
-  endTime: PropTypes.string.isRequired,
+  endTime: PropTypes.string,
   location: PropTypes.string,
 }
 

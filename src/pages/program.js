@@ -12,12 +12,15 @@ const eventsQuery = graphql`
     allEventsJson {
       edges {
         node {
-          name
-          type
-          talker
-          startTime
-          endTime
-          location
+          date
+          events {
+            name
+            type
+            talker
+            startTime
+            endTime
+            location
+          }
         }
       }
     }
@@ -32,18 +35,20 @@ const ProgramPage = data => (
       <StaticQuery
         query={eventsQuery}
         render={data => (
-          <DailySchedule
-            events={data.allEventsJson.edges.map(event => (
-              <Event 
-              name={event.node.name} 
-              type={event.node.type} 
-              talker={event.node.talker} 
-              startTime={event.node.startTime} 
-              endTime={event.node.endTime} 
-              location={event.node.location} 
-              />
-            ))}
-          />
+          data.allEventsJson.edges.map(day =>(
+            <DailySchedule
+            key={day.node.date}
+            date={day.node.date}
+            events={day.node.events.map(event =>(
+              <Event
+              name={event.name} 
+              type={event.type} 
+              talker={event.talker} 
+              startTime={event.startTime} 
+              endTime={event.endTime} 
+              location={event.location} />
+            ))}/>
+          ))
         )}
       />
     </div>
