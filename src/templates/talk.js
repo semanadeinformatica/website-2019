@@ -1,10 +1,10 @@
 import React from "react"
 // import Helmet from "react-helmet"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Speaker from "../components/speaker"
 
 export default function Template({ data }) {
   const { markdownRemark: talk } = data
@@ -23,18 +23,7 @@ export default function Template({ data }) {
           <h2>Speakers</h2>
           <div>
             {talk.frontmatter.speakers.map(speaker => {
-              return (
-                <div>
-                  <h3>{speaker.name}</h3>
-                  <Img fluid={speaker.img.childImageSharp.fluid} />
-                  <p>{speaker.occupation}</p>
-                  <p>{speaker.workplace}</p>
-                  <p>{speaker.bio}</p>
-                  <a href={speaker.twitter}>Twitter</a>
-                  <a href={speaker.linkedin}>LinkedIn</a>
-                  <a href={speaker.website}>Website</a>
-                </div>
-              )
+              return <Speaker data={speaker} />
             })}
           </div>
         </div>
