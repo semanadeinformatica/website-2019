@@ -1,0 +1,70 @@
+import React from "react"
+import { Link } from "gatsby"
+import Img from "gatsby-image"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+const styles = {
+  image: {
+    width: "100px",
+    height: "100px",
+  },
+}
+
+const SpeakersPage = ({ data }) => (
+  <Layout>
+    <SEO title="Speakers" />
+    <h1>Speakers</h1>
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <div>
+        {node.frontmatter.speakers.map(speaker => (
+          <div>
+            <Img
+              fluid={speaker.img.childImageSharp.fluid}
+              style={styles.image}
+            />
+            <div>
+              <Link to={node.frontmatter.path}>{speaker.name}</Link>
+            </div>
+            <div>
+              {speaker.occupation}
+              {" @ "}
+              {speaker.workplace}
+            </div>
+          </div>
+        ))}
+      </div>
+    ))}
+    <Link to="/">Go back to the homepage</Link>
+  </Layout>
+)
+
+export const pageQuery = graphql`
+  query SpeakersQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            speakers {
+              name
+              occupation
+              workplace
+              img {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            path
+          }
+        }
+      }
+    }
+  }
+`
+
+export default SpeakersPage
