@@ -46,8 +46,10 @@ export const talkQuery = graphql`
         speakers {
           name
           bio
-          occupation
-          workplace
+          occupations {
+            what
+            where
+          }
           img {
             childImageSharp {
               fluid {

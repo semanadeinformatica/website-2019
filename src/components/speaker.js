@@ -1,17 +1,28 @@
 import React from "react"
 import Img from "gatsby-image"
+import Occupations from "./occupations"
+
+const styles = {
+  image: {
+    width: "100px",
+    height: "100px",
+  },
+}
 
 const Speaker = ({ data }) => {
   return (
     <div>
-      <h3>{data.name}</h3>
-      <Img fluid={data.img.childImageSharp.fluid} />
-      <p>{data.occupation}</p>
-      <p>{data.workplace}</p>
+      <div>
+        <Img fluid={data.img.childImageSharp.fluid} style={styles.image} />
+        <div>{data.name}</div>
+        <div>
+          <Occupations occupations={data.occupations} />
+        </div>
+      </div>
       <p>{data.bio}</p>
-      <a href={data.twitter}>Twitter</a>
-      <a href={data.linkedin}>LinkedIn</a>
-      <a href={data.website}>Website</a>
+      {data.twitter ? <a href={data.twitter}>Twitter</a> : ""}
+      {data.linkedin ? <a href={data.linkedin}>LinkedIn</a> : ""}
+      {data.website ? <a href={data.website}>Website</a> : ""}
     </div>
   )
 }

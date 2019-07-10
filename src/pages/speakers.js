@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Occupations from "../components/occupations"
 
 const styles = {
   image: {
@@ -27,11 +28,7 @@ const SpeakersPage = ({ data }) => (
             <div>
               <Link to={node.frontmatter.path}>{speaker.name}</Link>
             </div>
-            <div>
-              {speaker.occupation}
-              {" @ "}
-              {speaker.workplace}
-            </div>
+            <Occupations occupations={speaker.occupations} />
           </div>
         ))}
       </div>
@@ -49,8 +46,10 @@ export const pageQuery = graphql`
           frontmatter {
             speakers {
               name
-              occupation
-              workplace
+              occupations {
+                what
+                where
+              }
               img {
                 childImageSharp {
                   fluid {
