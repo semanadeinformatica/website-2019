@@ -20,6 +20,9 @@ const IndexPage = ({ data }) => (
       <Link to="/page-2/">Go to page 2</Link>
     </div>
     <div>
+      <Link to="/sobre-nos/">Sobre nós</Link>
+    </div>
+    <div>
       <Link to="/competicao-programacao/">Competição</Link>
     </div>
 
