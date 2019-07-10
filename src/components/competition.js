@@ -27,9 +27,24 @@ const Competition = () => (
 
     <h4>Os prémios para os vencedores são:</h4>
     <ul>
-      <li>1ª posição: Headphones Bluetooth Sony WH-1000XM2</li>
-      <li>2ª posição: Monitor LG 24GM79G-B 144Hz</li>
-      <li>3ª posição: Raspberry Pi</li>
+      <li>
+        1ª posição:{" "}
+        <a href="https://www.sony.pt/electronics/auscultadores-banda-cabeca/wh-1000xm2">
+          Headphones Bluetooth Sony WH-1000XM2
+        </a>
+      </li>
+      <li>
+        2ª posição:{" "}
+        <a href="https://www.lg.com/pt/monitores/lg-24GM79G-B">
+          Monitor LG 24GM79G-B 144Hz
+        </a>
+      </li>
+      <li>
+        3ª posição:{" "}
+        <a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">
+          Raspberry Pi 4 model B
+        </a>
+      </li>
     </ul>
   </div>
 )
