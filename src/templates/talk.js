@@ -15,7 +15,7 @@ export default function Template({ data }) {
       <div>
         <h1>{talk.frontmatter.title}</h1>
         <p>{talk.frontmatter.day}</p>
-        <p>{talk.frontmatter.time}</p>
+        <p>{talk.frontmatter.start_time}</p>
         <p>{talk.frontmatter.place}</p>
         <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
 
@@ -42,7 +42,7 @@ export const talkQuery = graphql`
         title
         day
         place
-        time
+        start_time
         speakers {
           name
           bio

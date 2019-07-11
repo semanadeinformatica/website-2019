@@ -14,7 +14,8 @@ speakers:
     linkedin: https://www.linkedin.com/in/jvsantos/
 
 day: 30 de Outubro
-time: 17h10
+start_time: 17h10
+end_time: 17h50
 place: B032
 path: /blockchain-101
 ---

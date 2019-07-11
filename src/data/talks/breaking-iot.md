@@ -14,7 +14,8 @@ speakers:
     twitter: https://twitter.com/dsopas
 
 day: 31 Outubro
-time: 14h40
+start_time: 14h40
+end_time: 15h40
 place: B032
 
 path: /breaking-iot
