@@ -18,9 +18,9 @@ const SpeakersPage = ({ data }) => (
     <SEO title="Speakers" />
     <h1>Speakers</h1>
     {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div>
+      <div key={node.id}>
         {node.frontmatter.speakers.map(speaker => (
-          <div>
+          <div key={speaker.name}>
             <Img
               fluid={speaker.img.childImageSharp.fluid}
               style={styles.image}

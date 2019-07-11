@@ -23,7 +23,7 @@ export default function Template({ data }) {
           <h2>Speakers</h2>
           <div>
             {talk.frontmatter.speakers.map(speaker => {
-              return <Speaker data={speaker} />
+              return <Speaker key={speaker.name} data={speaker} />
             })}
           </div>
         </div>

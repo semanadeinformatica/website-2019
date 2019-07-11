@@ -5,7 +5,7 @@ const Occupations = ({ occupations }) => {
     <div>
       {occupations.map((occupation, index) => {
         return (
-          <span>
+          <span key={occupation.what}>
             {occupation.what}
             {" @ "}
             {occupation.where}
