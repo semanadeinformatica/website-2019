@@ -4,22 +4,21 @@
         "events": [
             {
                 "name": "check-in",
-                "type": "break",
+                "type": "formal",
                 "startTime": "11h00",
                 "endTime": "17h00",
                 "location": "corredor do anfiteatro nobre"
             },
             {
                 "name": "cerimónia de abertura",
-                "type": "break",
+                "type": "formal",
                 "startTime": "14h00",
                 "endTime": "15h00",
                 "location": "b032"
             },
             {
                 "name": "inicio da competição de programação",
-                "type": "break",
-                "talker": "pedro costa",
+                "type": "competition",
                 "startTime": "14h00"
             },
             {
@@ -62,7 +61,7 @@
             },
             {
                 "name": "pitch de oportunidades",
-                "type": "break",
+                "type": "session",
                 "startTime": "17h10",
                 "endTime": "19h10",
                 "location": "i-105"
@@ -171,14 +170,6 @@
                 "location": "b336"
             },
             {
-                "name": "building a serverless text-to-voice note & podcasting app",
-                "type": "workshop",
-                "talker": "pedro costa",
-                "startTime": "14h40",
-                "endTime": "16h40",
-                "location": "b336"
-            },
-            {
                 "name": "breaking iot",
                 "type": "talk",
                 "talker": "david sopas",
@@ -277,14 +268,14 @@
             },
             {
                 "name": "cerimónia de encerramento",
-                "type": "break",
+                "type": "formal",
                 "startTime": "17h50",
                 "endTime": "18h20",
                 "location": "b032"
             },
             {
                 "name": "porto de honra",
-                "type": "break",
+                "type": "formal",
                 "startTime": "18h20",
                 "endTime": "18h50",
                 "location": "local a anunciar"
