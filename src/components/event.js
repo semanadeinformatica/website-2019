@@ -14,13 +14,25 @@ function printSpeakers(speakers) {
   return speakersText
 }
 
-const Event = ({ title, type, path, speakers, start_time, end_time, place }) => (
+const Event = ({
+  title,
+  type,
+  path,
+  speakers,
+  start_time,
+  end_time,
+  place,
+}) => (
   <div>
-    <Link to={path}>
+    {path != null ? (
+      <Link to={path}>
+        <h3>{title}</h3>
+      </Link>
+    ) : (
       <h3>{title}</h3>
-    </Link>
-    {speakers.length !== 0 && <p>{printSpeakers(speakers)}</p>}
-    {type === "workshop" && <p>{type}</p>}
+    )}
+    {speakers != null && <p>{printSpeakers(speakers)}</p>}
+    {type != null && type.substring(2, type.length) === "workshop" && <p>Workshop</p>}
     <p>
       {start_time} {end_time != null && <span> - {end_time}</span>}
       {place != null && <span> | {place}</span>}
@@ -31,6 +43,7 @@ const Event = ({ title, type, path, speakers, start_time, end_time, place }) => 
 Event.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string,
+  path: PropTypes.string,
   speakers: PropTypes.arrayOf(PropTypes.string),
   start_time: PropTypes.string.isRequired,
   end_time: PropTypes.string,

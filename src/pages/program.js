@@ -10,8 +10,7 @@ import Event from "../components/event"
 const eventsQuery = graphql`
   query Events {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___day, frontmatter___start_time] }
-      filter: { fileAbsolutePath: {} }
+      sort: { fields: [frontmatter___day, frontmatter___start_time, frontmatter___type] }
     ) {
       edges {
         node {
@@ -22,6 +21,7 @@ const eventsQuery = graphql`
             start_time
             title
             path
+            type
             speakers {
               name
             }
@@ -31,6 +31,30 @@ const eventsQuery = graphql`
     }
   }
 `
+
+function getEvents(day){
+  let events = [];
+  day.forEach(event => {
+    events.push(<Event
+      title={event.node.frontmatter.title}
+      type={event.node.frontmatter.type}
+      speakers={event.node.frontmatter.speakers}
+      start_time={event.node.frontmatter.start_time}
+      end_time={event.node.frontmatter.end_time}
+      place={event.node.frontmatter.place}
+      path={event.node.frontmatter.path}
+    />);
+
+    if(event.node.frontmatter.end_time === "16h50")
+      events.push(<Event
+        title="Coffee break"
+        start_time="16h50"
+        end_time="17h20"
+        />)
+  });
+
+  return events;
+}
 
 const ProgramPage = () => (
   <Layout>
@@ -60,16 +84,7 @@ const ProgramPage = () => (
             <DailySchedule
               key={day[0].node.frontmatter.day}
               date={day[0].node.frontmatter.day}
-              events={day.map(event => (
-                <Event
-                  title={event.node.frontmatter.title}
-                  speakers={event.node.frontmatter.speakers}
-                  start_time={event.node.frontmatter.start_time}
-                  end_time={event.node.frontmatter.end_time}
-                  place={event.node.frontmatter.place}
-                  path={event.node.frontmatter.path}
-                />
-              ))}
+              events={getEvents(day)}
             />
           ))
         }}

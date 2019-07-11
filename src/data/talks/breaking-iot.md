@@ -15,8 +15,9 @@ speakers:
 
 day: 2019-10-31
 start_time: 14h40
-end_time: 15h40
+end_time: 16h50
 place: B032
+type: 0-talk
 
 path: /breaking-iot
 ---

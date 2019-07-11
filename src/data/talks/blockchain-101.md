@@ -18,6 +18,7 @@ start_time: 17h10
 end_time: 17h50
 place: B032
 path: /blockchain-101
+type: 0-talk
 ---
 
 Blockchain technology, coupled with cryptoeconomics, allows us to confidently approach a whole new class of problems. It's a force for good, bringing censorship resistance to a global economy. In this short talk, I'll give you a short overview of the ecosystem, covering decentralization, Bitcoin, Ethereum, and ICOs
