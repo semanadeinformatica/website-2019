@@ -44,7 +44,7 @@ Event.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string,
   path: PropTypes.string,
-  speakers: PropTypes.arrayOf(PropTypes.string),
+  speakers: PropTypes.arrayOf(PropTypes.object),
   start_time: PropTypes.string.isRequired,
   end_time: PropTypes.string,
   place: PropTypes.string,
