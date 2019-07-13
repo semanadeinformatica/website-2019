@@ -38,38 +38,70 @@ const eventsQuery = graphql`
   }
 `
 
-const dayOneDefaultEvents = [
-  <Event title="Check-in" start_time="11h00" end_time="17h00" />,
-  <Event title="Cerimónia de abertura" start_time="14h00" end_time="15h00" place="B032"/>,
-  <Event title="Inicio da competição de programação" start_time="14h00" />
-]
+const coffeBreak = (
+  <Event title="Coffee break" start_time="16h40" end_time="17h10" />
+)
 
-const dayFourDefaultEvents = [
-  <Event title="Cerimónia de encerramento" start_time="17h50" end_time="18h20" place="B032"/>,
-  <Event title="Porto de honra" start_time="18h20" end_time="18h50" place="local a anunciar"/>
-
-]
+const defaultEvents = {
+  "29 Outubro": [
+    <Event title="Check-in" start_time="11h00" end_time="17h00" place="Corredor do anfiteatro nobre"/>,
+    <Event
+      title="Cerimónia de abertura"
+      start_time="14h00"
+      end_time="15h00"
+      place="B032"
+    />,
+    <Event title="Inicio da competição de programação" start_time="14h00" />,
+    coffeBreak,
+  ],
+  "1 Novembro": [
+    coffeBreak,
+    <Event
+      title="Cerimónia de encerramento"
+      start_time="17h50"
+      end_time="18h20"
+      place="B032"
+    />,
+    <Event
+      title="Porto de honra"
+      start_time="18h20"
+      end_time="18h50"
+      place="local a anunciar"
+    />,
+  ],
+}
 
 function getEvents(day) {
   let events = []
-  day.forEach(event => {
-    if (event.node.frontmatter.start_time === "17h20")
-      events.push(
-        <Event title="Coffee break" start_time="16h50" end_time="17h20" />
-      )
+  let dayDefaultEvents = defaultEvents[day[0].node.frontmatter.day]
+
+  if (dayDefaultEvents == null) dayDefaultEvents = []
+
+  for (let i = 0, j = 0; i < day.length; i++) {
+    let event = day[i]
+
+    while (
+      j < dayDefaultEvents.length &&
+      dayDefaultEvents[j].props.start_time < event.node.frontmatter.start_time
+    ) {
+      events.push(dayDefaultEvents[j])
+      j++
+    }
+
+    const {title, type, speakers, start_time, end_time, place, path} = event.node.frontmatter
 
     events.push(
       <Event
-        title={event.node.frontmatter.title}
-        type={event.node.frontmatter.type}
-        speakers={event.node.frontmatter.speakers}
-        start_time={event.node.frontmatter.start_time}
-        end_time={event.node.frontmatter.end_time}
-        place={event.node.frontmatter.place}
-        path={event.node.frontmatter.path}
+        title={title}
+        type={type}
+        speakers={speakers}
+        start_time={start_time}
+        end_time={end_time}
+        place={place}
+        path={path}
       />
     )
-  })
+  }
 
   return events
 }
