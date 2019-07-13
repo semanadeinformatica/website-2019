@@ -5,7 +5,6 @@ speakers:
     occupations:
       - what: CTO
         where: Fractal
-
       - what: Co-Founder
         where: Life on Mars
     bio: Júlio is a software engineer who started 4 companies. He's one of the founders of Life on Mars, a Porto-based software team with sky-high standards and aspirations. He's also the CTO of Fractal, a Berlin-based blockchain tech company. To this day, he has no idea what he's doing, but somehow keeps merrily chugging along in blissful oblivion.

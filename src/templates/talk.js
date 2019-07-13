@@ -14,9 +14,11 @@ export default function Template({ data }) {
       <SEO title={talk.frontmatter.title} />
       <div>
         <h1>{talk.frontmatter.title}</h1>
-        <p>{talk.frontmatter.day}</p>
-        <p>{talk.frontmatter.start_time}</p>
-        <p>{talk.frontmatter.place}</p>
+        <div>{talk.frontmatter.day}</div>
+        <div>
+          {talk.frontmatter.start_time} {" - "} {talk.frontmatter.end_time}
+        </div>
+        <div>{talk.frontmatter.place}</div>
         <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
 
         <div>
@@ -43,6 +45,7 @@ export const talkQuery = graphql`
         day
         place
         start_time
+        end_time
         speakers {
           name
           bio
