@@ -38,7 +38,7 @@ const TeamPage = ({ data }) => (
 
 export const teamQuery = graphql`
   query TeamQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/team/"}}) {
       edges {
         node {
           id

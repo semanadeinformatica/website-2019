@@ -39,7 +39,7 @@ const SpeakersPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query SpeakersQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/talks/"}}) {
       edges {
         node {
           id
