@@ -36,7 +36,7 @@ const TeamPage = ({ data }) => (
   </Layout>
 )
 
-export const teamQuery = graphql`
+export const pageQuery = graphql`
   query TeamQuery {
     allMarkdownRemark {
       edges {
