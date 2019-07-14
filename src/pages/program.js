@@ -136,6 +136,7 @@ const ProgramPage = () => (
               key={day[0].node.frontmatter.day}
               date={day[0].node.frontmatter.day}
               events={getEvents(day)}
+              increment={10} 
             />
           ))
         }}

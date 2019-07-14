@@ -11,9 +11,9 @@ const getMaxEndTime = events => {
   return max
 }
 
-const DailySchedule = ({ date, events }) => {
+const DailySchedule = ({ date, events, increment }) => {
   const maxEndTime = getMaxEndTime(events)
-  let numRows = length(events[0].props.start_time, maxEndTime) / 10
+  let numRows = length(events[0].props.start_time, maxEndTime) / increment
 
   let rows = []
   let row = []
@@ -24,11 +24,11 @@ const DailySchedule = ({ date, events }) => {
   let blankCellSpan = 0
 
   for (let i = 0, j = 0; i < numRows; i++) {
-    let time = sumTime(initial_time, 10 * i)
+    let time = sumTime(initial_time, increment * i)
 
     for (; j < events.length && time === events[j].props.start_time; j++) {
       let span =
-        length(events[j].props.start_time, events[j].props.end_time) / 10
+        length(events[j].props.start_time, events[j].props.end_time) / increment
 
       if (span === 0) span = row[row.length - 1].props.rowSpan
 
@@ -36,14 +36,14 @@ const DailySchedule = ({ date, events }) => {
         colSpan = 2
         span =
           length(events[j].props.start_time, events[j + 1].props.start_time) /
-          10
+          increment
       }
 
       if (row.length === 0) {
         let header_span = span
 
         if (time === last_start_time) {
-          header_span = length(events[j].props.start_time, maxEndTime) / 10
+          header_span = length(events[j].props.start_time, maxEndTime) / increment
 
           blankCellIndex = i + span
           blankCellSpan = header_span - span
@@ -119,6 +119,7 @@ const sumTime = (time, increment) => {
 DailySchedule.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
   date: PropTypes.string.isRequired,
+  increment: PropTypes.integer.isRequired
 }
 
 export default DailySchedule
