@@ -119,7 +119,7 @@ const sumTime = (time, increment) => {
 DailySchedule.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
   date: PropTypes.string.isRequired,
-  increment: PropTypes.integer.isRequired
+  increment: PropTypes.number.isRequired
 }
 
 export default DailySchedule
