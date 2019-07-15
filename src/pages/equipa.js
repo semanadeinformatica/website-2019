@@ -18,18 +18,30 @@ const TeamPage = ({ data }) => (
     <h1>Equipa</h1>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
-        {node.frontmatter.members.map(member => (
-          <div key={member.name}>
-            <Img
-              fluid={member.img.childImageSharp.fluid}
-              style={styles.image}
-            />
+        <div key={node.frontmatter.name}>
+          <Img
+            fluid={node.frontmatter.img.childImageSharp.fluid}
+            style={styles.image}
+          />
+          <div>
+            <div>{node.frontmatter.name}</div>
+            <div>{node.frontmatter.role}</div>
             <div>
-              <div>{member.name}</div>
-              <div>{member.role}</div>
+              {node.frontmatter.linkedin ? (
+                <a href={node.frontmatter.linkedin}>LinkedIn</a>
+              ) : (
+                ""
+              )}
+            </div>
+            <div>
+              {node.frontmatter.github ? (
+                <a href={node.frontmatter.github}>GitHub</a>
+              ) : (
+                ""
+              )}
             </div>
           </div>
-        ))}
+        </div>
       </div>
     ))}
     <Link to="/">Go back to the homepage</Link>
@@ -38,22 +50,25 @@ const TeamPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query TeamQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/team/" } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/team/" } }
+      sort: { fields: [frontmatter___role], order: ASC }
+    ) {
       edges {
         node {
           id
           frontmatter {
-            members {
-              name
-              role
-              img {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
+            name
+            role
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
+            linkedin
+            github
           }
         }
       }
