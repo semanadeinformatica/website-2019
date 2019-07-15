@@ -67,7 +67,7 @@ const DailySchedule = ({ date, events, increment }) => {
 
     if (i === blankCellIndex)
       row.push(
-        <React.Fragment>
+        <React.Fragment key="blankCell">
           <th rowSpan={blankCellSpan}></th>
           <td rowSpan={blankCellSpan}></td>
         </React.Fragment>
