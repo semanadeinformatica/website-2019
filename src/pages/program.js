@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,9 +7,14 @@ import DailySchedule from "../components/dailySchedule"
 
 import Event from "../components/event"
 
-const eventsQuery = graphql`
+export const eventsQuery = graphql`
   query Events {
     allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: {
+          regex: "/talks/"
+        }
+      },
       sort: {
         fields: [
           frontmatter___day
@@ -106,32 +111,32 @@ function getEvents(day) {
   return events
 }
 
-const ProgramPage = () => (
+const splitDays = data => {
+  let days = []
+  let day = []
+  for (let i = 0; i < data.allMarkdownRemark.edges.length; i++) {
+    let event = data.allMarkdownRemark.edges[i]
+    if (
+      i > 0 &&
+      event.node.frontmatter.day !==
+        data.allMarkdownRemark.edges[i - 1].node.frontmatter.day
+    ) {
+      days.push(day)
+      day = []
+    }
+    day.push(event)
+  }
+  days.push(day)
+
+  return days;
+}
+
+const ProgramPage = ({data}) => (
   <Layout>
     <SEO title="Program" />
     <div>
       <h1>Program</h1>
-      <StaticQuery
-        query={eventsQuery}
-        render={data => {
-          let days = []
-          let day = []
-          for (let i = 0; i < data.allMarkdownRemark.edges.length; i++) {
-            let event = data.allMarkdownRemark.edges[i]
-            if (
-              i > 0 &&
-              event.node.frontmatter.day !==
-                data.allMarkdownRemark.edges[i - 1].node.frontmatter.day
-            ) {
-              days.push(day)
-              day = []
-            }
-            day.push(event)
-          }
-          days.push(day)
-
-          console.log(days)
-          return days.map(day => (
+          {splitDays(data).map(day => (
             <DailySchedule
               key={day[0].node.frontmatter.day}
               date={day[0].node.frontmatter.day}
@@ -139,8 +144,7 @@ const ProgramPage = () => (
               increment={10} 
             />
           ))
-        }}
-      />
+        }
     </div>
   </Layout>
 )
