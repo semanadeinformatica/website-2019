@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-function printSpeakers(speakers) {
+const printSpeakers = speakers => {
   let speakersText = ""
 
   for (let i = 0; i < speakers.length; i++) {

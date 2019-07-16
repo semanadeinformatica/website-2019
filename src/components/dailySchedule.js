@@ -40,17 +40,16 @@ const DailySchedule = ({ date, events, increment }) => {
       }
 
       if (row.length === 0) {
-        let header_span = span
 
         if (time === last_start_time) {
-          header_span = length(events[j].props.start_time, maxEndTime) / increment
+          let header_span = length(events[j].props.start_time, maxEndTime) / increment
 
           blankCellIndex = i + span
           blankCellSpan = header_span - span
         }
 
         row.push(
-          <th key="time" scope="row" rowSpan={span}>
+          <th key="time" scope="row">
             {events[j].props.start_time}
           </th>
         )

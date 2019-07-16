@@ -76,7 +76,7 @@ const defaultEvents = {
   ],
 }
 
-function getEvents(day) {
+const getEvents = day => {
   let events = []
   let dayDefaultEvents = defaultEvents[day[0].node.frontmatter.day]
 
