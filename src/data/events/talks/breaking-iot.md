@@ -15,7 +15,7 @@ speakers:
 
 day: 2019-10-31
 start_time: 14h40
-end_time: 16h50
+end_time: 16h40
 place: B032
 type: 0-talk
 
