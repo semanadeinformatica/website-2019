@@ -12,7 +12,7 @@ export const eventsQuery = graphql`
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
-          regex: "/talks/"
+          regex: "/events/"
         }
       },
       sort: {
