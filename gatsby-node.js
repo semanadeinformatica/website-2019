@@ -10,6 +10,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const talkTemplate = path.resolve("src/templates/talk.js")
+  const sessionTemplate = path.resolve("src/templates/session.js")
 
   return graphql(`
     {
@@ -18,6 +19,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             html
             id
+            fileAbsolutePath
             frontmatter {
               path
               title
@@ -31,11 +33,22 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(res.errors)
     }
 
+
+
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+
       if (node.frontmatter.path) {
+        let component = null;
+
+        if(node.fileAbsolutePath.search("/talks/") !== -1)
+          component = talkTemplate
+        else if(node.fileAbsolutePath.search("/sessions/") !== -1)
+          component = sessionTemplate
+
+
         createPage({
           path: node.frontmatter.path,
-          component: talkTemplate,
+          component,
         })
       }
     })
