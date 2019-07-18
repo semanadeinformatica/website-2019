@@ -42,7 +42,7 @@ export const talkQuery = graphql`
       frontmatter {
         path
         title
-        day
+        day(formatString: "D MMMM", locale: "pt-PT")
         place
         start_time
         end_time
