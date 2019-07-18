@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -39,7 +39,13 @@ const SpeakersPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query SpeakersQuery {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/talks/"}}) {
+    allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: {
+          regex: "/talks/"
+        }
+      }
+      ) {
       edges {
         node {
           id
