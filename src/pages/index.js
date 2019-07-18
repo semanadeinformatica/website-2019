@@ -28,6 +28,9 @@ const IndexPage = ({ data }) => (
     <div>
       <Link to="/competicao-programacao/">Competição</Link>
     </div>
+    <div>
+      <Link to="/equipa/">Equipa</Link>
+    </div>
 
     <h2>Talks</h2>
     <ul>
