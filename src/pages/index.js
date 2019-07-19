@@ -34,6 +34,9 @@ const IndexPage = ({ data }) => (
     <div>
       <Link to="/equipa/">Equipa</Link>
     </div>
+    <div>
+      <Link to="/contactos/">Contactos</Link>
+    </div>
 
     <h2>Talks</h2>
     <ul>
