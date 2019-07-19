@@ -12,7 +12,6 @@ speakers:
     linkedin: https://www.linkedin.com/in/ricardonevesaraujo/
     website: https://davidsopas.com
     twitter: https://twitter.com/dsopas
-    
 
   - name: Hélder Gonçalves
     occupations:
@@ -28,7 +27,7 @@ end_time: 16h00
 place: B032
 type: 0-talk
 
-path: /software-engineering-at-outsystems.md
+path: /talks/software-engineering-at-outsystems.md
 ---
 
 Todos os procuramos do que se faz bem lá fora esquecendo que em Portugal há equipas de classe mundial a inovar nos processos de engenharia de software. É isso que pretendemos dar a conhecer durante a nossa apresentação, quais os ingredientes essenciais para uma empresa de software nascida e baseada em Portugal
