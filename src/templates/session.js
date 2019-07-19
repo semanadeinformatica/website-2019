@@ -21,23 +21,25 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={title} />
       <div>
-        <h1>{title}</h1>
-        <div>{day}</div>
+        <h2>session</h2>
         <div>
-          {start_time} {" - "}{" "}
-          {end_time}
-        </div>
-        <div>{place}</div>
-        <div dangerouslySetInnerHTML={{ __html: session.html }}></div>
+          <h1>{title}</h1>
+          <div>{day}</div>
+          <div>
+            {start_time} {" - "} {end_time}
+          </div>
+          <div>{place}</div>
+          <div dangerouslySetInnerHTML={{ __html: session.html }}></div>
 
-        <a
-          type="button"
-          href={registration}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Inscrições
-        </a>
+          <a
+            type="button"
+            href={registration}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Inscrições
+          </a>
+        </div>
       </div>
     </Layout>
   )
