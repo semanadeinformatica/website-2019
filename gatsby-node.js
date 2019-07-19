@@ -9,8 +9,11 @@ const path = require("path")
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const talkTemplate = path.resolve("src/templates/talk.js")
-  const workshopTemplate = path.resolve("src/templates/workshop.js")
+  const templates = {
+    talks: path.resolve("src/templates/talk.js"),
+    sessions: path.resolve("src/templates/session.js"),
+    workshops: path.resolve("src/templates/workshop.js"),
+  }
 
   return graphql(`
     {
@@ -19,7 +22,6 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             html
             id
-            fileAbsolutePath
             frontmatter {
               path
               title
@@ -35,16 +37,11 @@ exports.createPages = ({ actions, graphql }) => {
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       if (node.frontmatter.path) {
-        let component = null
-
-        if (node.fileAbsolutePath.search("/talks/") !== -1)
-          component = talkTemplate
-        else if (node.fileAbsolutePath.search("/workshops/") !== -1)
-          component = workshopTemplate
+        let type = node.frontmatter.path.match(/(?<=\/)\w*(?=\/)/)[0]
 
         createPage({
           path: node.frontmatter.path,
-          component,
+          component: templates[type],
         })
       }
     })
