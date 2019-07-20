@@ -9,7 +9,10 @@ const path = require("path")
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const talkTemplate = path.resolve("src/templates/talk.js")
+  const templates = {
+    talks: path.resolve("src/templates/talk.js"),
+    sessions: path.resolve("src/templates/session.js"),
+  }
 
   return graphql(`
     {
@@ -33,9 +36,11 @@ exports.createPages = ({ actions, graphql }) => {
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       if (node.frontmatter.path) {
+        let type = node.frontmatter.path.match(/(?<=\/)\w*(?=\/)/)[0]
+
         createPage({
           path: node.frontmatter.path,
-          component: talkTemplate,
+          component: templates[type],
         })
       }
     })

@@ -19,7 +19,7 @@ end_time: 16h40
 place: B032
 type: 0-talk
 
-path: /breaking-iot
+path: /talks/breaking-iot
 ---
 
 A Internet da Coisas está a mudar os nossos hábitos de vida. Desde a utilização de wearables que nos informam que perdemos menos calorias que no dia anterior até aos dispositivos médicos que administram automaticamente a dose necessária para o doente. Esta "sede" de desenvolver dispositivos "inteligentes" está a gerar oportunidades aos
