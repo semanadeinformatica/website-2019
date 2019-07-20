@@ -35,6 +35,9 @@ const IndexPage = ({ data }) => (
       <Link to="/equipa/">Equipa</Link>
     </div>
     <div>
+      <Link to="/patrocinios/">Patrocínios</Link>
+    </div>
+    <div>
       <Link to="/contactos/">Contactos</Link>
     </div>
 
@@ -53,9 +56,7 @@ const IndexPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/talks/" } }
-    ) {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/talks/" } }) {
       edges {
         node {
           id
