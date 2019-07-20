@@ -13,20 +13,23 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={talk.frontmatter.title} />
       <div>
-        <h1>{talk.frontmatter.title}</h1>
-        <div>{talk.frontmatter.day}</div>
+        <h2>talk</h2>
         <div>
-          {talk.frontmatter.start_time} {" - "} {talk.frontmatter.end_time}
-        </div>
-        <div>{talk.frontmatter.place}</div>
-        <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
-
-        <div>
-          <h2>Speakers</h2>
+          <h1>{talk.frontmatter.title}</h1>
+          <div>{talk.frontmatter.day}</div>
           <div>
-            {talk.frontmatter.speakers.map(speaker => {
-              return <Speaker key={speaker.name} data={speaker} />
-            })}
+            {talk.frontmatter.start_time} {" - "} {talk.frontmatter.end_time}
+          </div>
+          <div>{talk.frontmatter.place}</div>
+          <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
+
+          <div>
+            <h2>Speakers</h2>
+            <div>
+              {talk.frontmatter.speakers.map(speaker => {
+                return <Speaker key={speaker.name} data={speaker} />
+              })}
+            </div>
           </div>
         </div>
       </div>
