@@ -1,6 +1,7 @@
 import React from "react"
 import SoonStyles from "../styles/soon.module.css"
 import Icon from "../images/svg/gradient-outline.inline.svg"
+
 const Brevemente = () => {
   return (
     <div className={SoonStyles.banner}>
