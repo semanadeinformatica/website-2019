@@ -24,7 +24,6 @@
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 15em;
-  min-width: 10em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,6 +66,7 @@
   -ms-animation: rotating 10s linear infinite;
   -o-animation: rotating 10s linear infinite;
   animation: rotating 10s linear infinite;
+  width: 85%;
 }
 
 .title {
@@ -92,19 +92,17 @@ div.content_container {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 0 2em;
+  padding: 5em 3em 3em 3em;
 }
 
-.bottom_row {
-  margin-bottom: 2em;
+.logo {
+  max-height: 5em;
 }
 
 .info {
   align-items: center;
   justify-content: space-between;
   font-size: 0.9em;
-
-  margin: 0 1em 1em 1em;
 }
 
 .facebook_link {
@@ -125,6 +123,10 @@ div.content_container {
 @media (min-width: 768px) {
   .text_info {
     text-align: left;
+  }
+
+  .logo {
+    max-height: 8em;
   }
 }
 
