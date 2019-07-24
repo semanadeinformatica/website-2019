@@ -92,11 +92,22 @@ div.content_container {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 5em 3em 3em 3em;
+  padding: 3.5em 3em 3em 3em;
+}
+
+.top_row div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom_row > div {
+  padding: 0;
 }
 
 .logo {
-  max-height: 5em;
+  height: 10em;
+  width: 10em;
 }
 
 .info {
@@ -128,10 +139,29 @@ div.content_container {
   .logo {
     max-height: 8em;
   }
+
+  .top_row div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: 1200px) {
   .left_text {
     margin-left: 25%;
+  }
+}
+
+/* Making the banner disapear on phones flipped horizontaly*/
+@media (max-height: 530px) {
+  .banner {
+    display: none;
+  }
+}
+
+@media (max-height: 630px) {
+  div.content_container {
+    padding-top: 1em;
   }
 }
