@@ -116,13 +116,20 @@ div.content_container {
   font-size: 0.9em;
 }
 
-.facebook_link {
+.icon_links {
+  display: flex;
+  justify-content: center;
+}
+
+.icon_links a {
+  margin-left: 0.5em;
+  font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
   color: var(--white);
 }
 
-.facebook_link:hover {
+.icon_links a:hover {
   color: var(--white);
   text-decoration: none;
 }
@@ -131,9 +138,17 @@ div.content_container {
   text-align: center;
 }
 
+.text_info p {
+  margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
+  .left_text p {
+    text-align: end;
+  }
+
   .text_info {
-    text-align: left;
+    text-align: start;
   }
 
   .logo {
@@ -145,11 +160,9 @@ div.content_container {
     align-items: center;
     justify-content: flex-start;
   }
-}
 
-@media (min-width: 1200px) {
-  .left_text {
-    margin-left: 25%;
+  .icon_links {
+    justify-content: flex-end;
   }
 }
 
