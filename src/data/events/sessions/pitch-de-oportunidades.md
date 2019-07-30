@@ -1,7 +1,7 @@
 ---
 title: Pitch de oportunidades
 day: 2019-10-29
-start_time: 17h10 
+start_time: 17h10
 end_time: 19h10
 place: i-105
 path: /sessions/pitch-de-oportunidades

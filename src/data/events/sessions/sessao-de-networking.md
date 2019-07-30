@@ -1,7 +1,7 @@
 ---
 title: sessão de networking
 day: 2019-10-30
-start_time: 17h10 
+start_time: 17h10
 end_time: 19h10
 place: b227
 path: /sessions/sessao-de-networking
