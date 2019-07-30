@@ -9,6 +9,7 @@ import Info from "../components/info"
 import { Container, Row, Col } from "reactstrap"
 
 import Icon from "../images/svg/logo_sinf_comp.inline.svg"
+import "../components/layout.css"
 
 const IndexPage = () => (
   <div className={SoonStyles.background}>
