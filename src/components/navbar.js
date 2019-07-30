@@ -1,9 +1,9 @@
 import React from "react"
+import { Link } from "gatsby"
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -31,7 +31,6 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar dark fixed="top" expand="md" className={NavbarStyles.navbar}>
-          <NavbarToggler onClick={this.toggle} />
           <Collapse
             isOpen={this.state.isOpen}
             navbar
@@ -39,34 +38,44 @@ export default class Example extends React.Component {
           >
             <Nav navbar className="mr-auto ml-0">
               <NavItem className="px-2">
-                <NavLink className={NavbarStyles.navLink} href="#sobre-nos">
+                <Link
+                  className={`nav-link ${NavbarStyles.navLink}`}
+                  to="/#sobre-nos"
+                >
                   Sobre nós
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem className="px-2">
-                <NavLink className={NavbarStyles.navLink} href="#speakers">
+                <Link
+                  className={`nav-link ${NavbarStyles.navLink}`}
+                  to="/#speakers"
+                >
                   Speakers
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem className="px-2">
                 <NavLink
                   className={NavbarStyles.navLink}
                   href="https://www.eventbrite.com/e/semana-de-informatica-tickets-50695985056"
+                  target="_blank"
                 >
                   Bilhetes
                 </NavLink>
               </NavItem>
               <NavItem className="px-2">
-                <NavLink className={NavbarStyles.navLink} href="#contactos">
+                <Link
+                  className={`nav-link ${NavbarStyles.navLink}`}
+                  to="/#contactos"
+                >
                   Contactos
-                </NavLink>
+                </Link>
               </NavItem>
             </Nav>
           </Collapse>
           <div className="mx-auto order-0">
-            <NavbarBrand className="mx-auto" href="/">
-              <Logo className={NavbarStyles.logo} />
-            </NavbarBrand>
+            <Link className="navbar-brand mx-auto" to="/">
+              <Logo fill="#000" className={NavbarStyles.logo} />
+            </Link>
           </div>
           <Collapse
             isOpen={this.state.isOpen}
@@ -75,33 +84,41 @@ export default class Example extends React.Component {
           >
             <Nav navbar className="ml-auto">
               <NavItem className="px-2">
-                <NavLink className={NavbarStyles.navLink} href="#programa">
+                <Link
+                  className={`nav-link ${NavbarStyles.navLink}`}
+                  to="/#programa"
+                >
                   Programa
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem className="px-2">
-                <NavLink className={NavbarStyles.navLink} href="/equipa">
+                <Link
+                  className={`nav-link ${NavbarStyles.navLink}`}
+                  to="/equipa"
+                >
                   Equipa
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem className="px-2">
-                <NavLink
-                  className={NavbarStyles.navLink}
-                  href="/competicao-programacao"
+                <Link
+                  className={`nav-link ${NavbarStyles.navLink}`}
+                  to="/competicao-programacao"
                 >
                   Competição
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem className="px-2">
                 <NavLink
                   className={NavbarStyles.navLink}
                   href="http://2018.sinf.pt"
+                  target="_blank"
                 >
                   2018
                 </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
+          <NavbarToggler onClick={this.toggle} />
         </Navbar>
       </div>
     )
