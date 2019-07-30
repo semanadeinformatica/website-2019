@@ -1,0 +1,28 @@
+@import "./palette.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+.logo {
+  width: 10rem;
+  height: 2rem;
+}
+
+.navbar {
+  background-color: var(--color1);
+  font-family: "Roboto", sans-serif;
+}
+
+.navLink {
+  color: var(--white) !important;
+}
+
+.navLinkActive {
+  color: var(--color2) !important;
+}
+
+.navLink:hover {
+  color: var(--color4) !important;
+}
+
+.navLink:hover {
+  color: var(--color4);
+}
