@@ -26,14 +26,14 @@ const Info = () => {
   return (
     <Container fluid>
       <Row className={SoonStyles.info}>
-        <Col xs="12" md="3" lg="2">
+        <Col xs="12" md="5">
           <div className={SoonStyles.text_info}>
             O site está em remodelação.
             <br />
             Pedimos desculpa pelo incómodo!
           </div>
         </Col>
-        <Col xs="12" md="3">
+        <Col xs="12" md="5">
           <div className={SoonStyles.text_info + " " + SoonStyles.left_text}>
             <div className={SoonStyles.icon_links}>
               {links.map(({ icon, href }, index) => (

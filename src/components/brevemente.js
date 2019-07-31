@@ -7,7 +7,7 @@ const Brevemente = () => {
     <div className={SoonStyles.banner}>
       <Icon className={SoonStyles.banner_icon} />
       <h1 className={SoonStyles.title}>Brevemente</h1>
-      <a className={SoonStyles.link} href="https://sinf.pt/">
+      <a className={SoonStyles.link} href="https://2018.sinf.pt/">
         Edição Anterior
       </a>
     </div>
