@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sinf",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "SINF 2019 website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "NIAEFEUP <ni@aefeup.pt>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
@@ -43,19 +43,11 @@
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx} gatsby-*.js",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "serve": "gatsby serve"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
