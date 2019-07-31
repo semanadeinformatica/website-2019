@@ -22,6 +22,7 @@ const links = [
     href: "mailto:geral@sinf.pt",
   },
 ]
+
 const Info = () => {
   return (
     <Container fluid>
