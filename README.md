@@ -28,7 +28,7 @@ gatsby develop
 
 This will create a development server with hot reloading which will listen on `http://localhost:8000`.
 
-It also makes available GraphiQL, an in-browser IDE, to explore the site's data and schema on `http://localhost:8000/___graphql`
+It also makes available GraphiQL, an in-browser IDE, to explore the site's data and schema on `http://localhost:8000/___graphql`.
 
 ## Project Details
 
