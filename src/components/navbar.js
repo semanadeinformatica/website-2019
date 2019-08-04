@@ -10,8 +10,18 @@ import {
 } from "reactstrap"
 
 import Logo from "../images/svg/logo_sinf_simp.inline.svg"
-
 import NavbarStyles from "../styles/navbar.module.css"
+
+// Markup for navbar links redirecting to an internal page
+const InternalNavLink = ({ to, text }) => (
+  <Link
+    className={`nav-link ${NavbarStyles.navLink}`}
+    activeClassName={NavbarStyles.navLinkActive}
+    to={to}
+  >
+    {text}
+  </Link>
+)
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -38,37 +48,24 @@ export default class Example extends React.Component {
           >
             <Nav navbar className="mr-auto ml-0">
               <NavItem className="px-2">
-                <Link
-                  className={`nav-link ${NavbarStyles.navLink}`}
-                  to="/#sobre-nos"
-                >
-                  Sobre nós
-                </Link>
+                <InternalNavLink to="/#sobre-nos" text="Sobre nós" />
               </NavItem>
               <NavItem className="px-2">
-                <Link
-                  className={`nav-link ${NavbarStyles.navLink}`}
-                  to="/#speakers"
-                >
-                  Speakers
-                </Link>
+                <InternalNavLink to="/#speakers" text="Speakers" />
+              </NavItem>
+              <NavItem className="px-2">
+                <InternalNavLink to="/#sponsors" text="Sponsors" />
               </NavItem>
               <NavItem className="px-2">
                 <NavLink
                   className={NavbarStyles.navLink}
                   href="https://www.eventbrite.com/e/semana-de-informatica-tickets-50695985056"
-                  target="_blank"
                 >
                   Bilhetes
                 </NavLink>
               </NavItem>
               <NavItem className="px-2">
-                <Link
-                  className={`nav-link ${NavbarStyles.navLink}`}
-                  to="/#contactos"
-                >
-                  Contactos
-                </Link>
+                <InternalNavLink to="/#contactos" text="Contactos" />
               </NavItem>
             </Nav>
           </Collapse>
@@ -84,34 +81,21 @@ export default class Example extends React.Component {
           >
             <Nav navbar className="ml-auto">
               <NavItem className="px-2">
-                <Link
-                  className={`nav-link ${NavbarStyles.navLink}`}
-                  to="/#programa"
-                >
-                  Programa
-                </Link>
+                <InternalNavLink to="/programa" text="Programa" />
               </NavItem>
               <NavItem className="px-2">
-                <Link
-                  className={`nav-link ${NavbarStyles.navLink}`}
-                  to="/equipa"
-                >
-                  Equipa
-                </Link>
+                <InternalNavLink to="/equipa" text="Equipa" />
               </NavItem>
               <NavItem className="px-2">
-                <Link
-                  className={`nav-link ${NavbarStyles.navLink}`}
+                <InternalNavLink
                   to="/competicao-programacao"
-                >
-                  Competição
-                </Link>
+                  text="Competição"
+                />
               </NavItem>
               <NavItem className="px-2">
                 <NavLink
                   className={NavbarStyles.navLink}
                   href="http://2018.sinf.pt"
-                  target="_blank"
                 >
                   2018
                 </NavLink>

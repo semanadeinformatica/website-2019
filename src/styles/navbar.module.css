@@ -6,10 +6,6 @@
   height: 2rem;
 }
 
-.logo:hover path {
-  fill: var(--color3);
-}
-
 .navbar {
   background-color: var(--color1);
   font-family: "Roboto", sans-serif;
@@ -17,8 +13,17 @@
 
 .navLink {
   color: var(--white) !important;
+  font-size: 0.9rem;
 }
 
-.navLink:hover {
-  color: var(--color3) !important;
+.navLink:hover,
+.navLinkActive {
+  border-bottom: 1px var(--white) solid;
+}
+
+@media (max-width: 768px) {
+  .navLink:hover,
+  .navLinkActive {
+    border-bottom: none;
+  }
 }
