@@ -12,18 +12,29 @@ import {
 import Logo from "../images/svg/logo_sinf_simp.inline.svg"
 import NavbarStyles from "../styles/navbar.module.css"
 
-// Markup for navbar links redirecting to an internal page
-const InternalNavLink = ({ to, text }) => (
-  <Link
-    className={`nav-link ${NavbarStyles.navLink}`}
-    activeClassName={NavbarStyles.navLinkActive}
-    to={to}
-  >
-    {text}
-  </Link>
+const NavWrapper = ({ links, className }) => (
+  <Nav navbar className={className}>
+    {links.map(({ internal, url, text }) => (
+      <NavItem className="px-2" key={url}>
+        {internal ? (
+          <Link
+            className={`nav-link ${NavbarStyles.navLink}`}
+            activeClassName={NavbarStyles.navLinkActive}
+            to={url}
+          >
+            {text}
+          </Link>
+        ) : (
+          <NavLink className={NavbarStyles.navLink} href={url}>
+            {text}
+          </NavLink>
+        )}
+      </NavItem>
+    ))}
+  </Nav>
 )
 
-export default class Example extends React.Component {
+export default class NavBar extends React.Component {
   constructor(props) {
     super(props)
 
@@ -31,12 +42,66 @@ export default class Example extends React.Component {
     this.state = {
       isOpen: false,
     }
+
+    this.leftLinks = [
+      {
+        url: "/#sobre-nos",
+        text: "Sobre nós",
+        internal: true,
+      },
+      {
+        url: "/#speakers",
+        text: "Speakers",
+        internal: true,
+      },
+      {
+        url: "/#sponsors",
+        text: "Sponsors",
+        internal: true,
+      },
+      {
+        url:
+          "https://www.eventbrite.com/e/semana-de-informatica-tickets-50695985056",
+        text: "Bilhetes",
+        internal: false,
+      },
+      {
+        url: "/#contactos",
+        text: "Contactos",
+        internal: true,
+      },
+    ]
+
+    this.rightLinks = [
+      {
+        url: "/programa",
+        text: "Programa",
+        internal: true,
+      },
+      {
+        url: "/equipa",
+        text: "Equipa",
+        internal: true,
+      },
+      {
+        url: "/competicao-programacao",
+        text: "Competição",
+        internal: true,
+      },
+      {
+        url: "https://2018.sinf.pt",
+        text: "2018",
+        internal: false,
+      },
+    ]
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
     })
   }
+
   render() {
     return (
       <div>
@@ -46,28 +111,7 @@ export default class Example extends React.Component {
             navbar
             className=" w-100 order-1 order-md-0 dual-collapse2"
           >
-            <Nav navbar className="mr-auto ml-0">
-              <NavItem className="px-2">
-                <InternalNavLink to="/#sobre-nos" text="Sobre nós" />
-              </NavItem>
-              <NavItem className="px-2">
-                <InternalNavLink to="/#speakers" text="Speakers" />
-              </NavItem>
-              <NavItem className="px-2">
-                <InternalNavLink to="/#sponsors" text="Sponsors" />
-              </NavItem>
-              <NavItem className="px-2">
-                <NavLink
-                  className={NavbarStyles.navLink}
-                  href="https://www.eventbrite.com/e/semana-de-informatica-tickets-50695985056"
-                >
-                  Bilhetes
-                </NavLink>
-              </NavItem>
-              <NavItem className="px-2">
-                <InternalNavLink to="/#contactos" text="Contactos" />
-              </NavItem>
-            </Nav>
+            <NavWrapper className="mr-auto ml-0" links={this.leftLinks} />
           </Collapse>
           <div className="mx-auto order-0">
             <Link className="navbar-brand mx-auto" to="/">
@@ -79,28 +123,7 @@ export default class Example extends React.Component {
             navbar
             className="w-100 order-3 dual-collapse2"
           >
-            <Nav navbar className="ml-auto">
-              <NavItem className="px-2">
-                <InternalNavLink to="/programa" text="Programa" />
-              </NavItem>
-              <NavItem className="px-2">
-                <InternalNavLink to="/equipa" text="Equipa" />
-              </NavItem>
-              <NavItem className="px-2">
-                <InternalNavLink
-                  to="/competicao-programacao"
-                  text="Competição"
-                />
-              </NavItem>
-              <NavItem className="px-2">
-                <NavLink
-                  className={NavbarStyles.navLink}
-                  href="http://2018.sinf.pt"
-                >
-                  2018
-                </NavLink>
-              </NavItem>
-            </Nav>
+            <NavWrapper className="ml-auto" links={this.rightLinks} />
           </Collapse>
           <NavbarToggler onClick={this.toggle} />
         </Navbar>
