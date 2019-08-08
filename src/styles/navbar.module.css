@@ -8,7 +8,7 @@
 .navbar {
   background-color: var(--color1);
   font-family: "Roboto", sans-serif;
-  padding: 0.25rem 1rem;
+  padding: 0.4rem 1rem;
 }
 
 .navbar > a {
@@ -44,6 +44,18 @@
   .navLink:hover,
   .navLinkActive {
     border-bottom: none;
+  }
+
+  .navbar {
+    padding: 0.25rem 0;
+  }
+
+  .navbar > a {
+    padding-bottom: 0.5625rem;
+  }
+
+  .navbar div:first-child {
+    border-top: 1px solid var(--white);
   }
 }
 
