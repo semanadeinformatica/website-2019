@@ -2,23 +2,38 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 .logo {
-  width: 10rem;
-  height: 2rem;
+  height: 1.4rem;
 }
 
 .navbar {
   background-color: var(--color1);
   font-family: "Roboto", sans-serif;
+  padding: 0.25rem 1rem;
 }
 
 .navLink {
   color: var(--white) !important;
-  font-size: 0.9rem;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px transparent solid;
 }
 
 .navLink:hover,
 .navLinkActive {
-  border-bottom: 1px var(--white) solid;
+  border-color: var(--white);
+}
+
+.toggler {
+  position: absolute;
+  top: 4px;
+  right: 0.5rem;
+  border: none;
+}
+
+.toggler span {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(255, 255, 255)' stroke-width='1.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 @media (max-width: 768px) {

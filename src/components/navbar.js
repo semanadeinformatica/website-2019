@@ -105,27 +105,34 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar dark fixed="top" expand="md" className={NavbarStyles.navbar}>
+        <Navbar dark fixed="top" expand="lg" className={NavbarStyles.navbar}>
           <Collapse
             isOpen={this.state.isOpen}
             navbar
-            className=" w-100 order-1 order-md-0 dual-collapse2"
+            className=" w-100 order-1 order-lg-0 dual-collapse2"
           >
-            <NavWrapper className="mr-auto ml-0" links={this.leftLinks} />
+            <NavWrapper
+              className="ml-0 align-items-center"
+              links={this.leftLinks}
+            />
           </Collapse>
-          <div className="mx-auto order-0">
-            <Link className="navbar-brand mx-auto" to="/">
-              <Logo fill="#000" className={NavbarStyles.logo} />
-            </Link>
-          </div>
+          <Link className="navbar-brand mx-auto order-0" to="/">
+            <Logo fill="#000" className={NavbarStyles.logo} />
+          </Link>
           <Collapse
             isOpen={this.state.isOpen}
             navbar
             className="w-100 order-3 dual-collapse2"
           >
-            <NavWrapper className="ml-auto" links={this.rightLinks} />
+            <NavWrapper
+              className="ml-auto align-items-center"
+              links={this.rightLinks}
+            />
           </Collapse>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarToggler
+            className={NavbarStyles.toggler}
+            onClick={this.toggle}
+          />
         </Navbar>
       </div>
     )
