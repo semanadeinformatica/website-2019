@@ -1,0 +1,140 @@
+import React from "react"
+import { Link } from "gatsby"
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem,
+  NavLink,
+} from "reactstrap"
+
+import Logo from "../images/svg/logo_sinf_simp.inline.svg"
+import NavbarStyles from "../styles/navbar.module.css"
+
+const NavWrapper = ({ links, className }) => (
+  <Nav navbar className={className}>
+    {links.map(({ internal, url, text }) => (
+      <NavItem className="px-2" key={url}>
+        {internal ? (
+          <Link
+            className={`nav-link ${NavbarStyles.navLink}`}
+            activeClassName={NavbarStyles.navLinkActive}
+            to={url}
+          >
+            {text}
+          </Link>
+        ) : (
+          <NavLink className={NavbarStyles.navLink} href={url}>
+            {text}
+          </NavLink>
+        )}
+      </NavItem>
+    ))}
+  </Nav>
+)
+
+export default class NavBar extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.toggle = this.toggle.bind(this)
+    this.state = {
+      isOpen: false,
+    }
+
+    this.leftLinks = [
+      {
+        url: "/#sobre-nos",
+        text: "Sobre nós",
+        internal: true,
+      },
+      {
+        url: "/#speakers",
+        text: "Speakers",
+        internal: true,
+      },
+      {
+        url: "/#sponsors",
+        text: "Sponsors",
+        internal: true,
+      },
+      {
+        url:
+          "https://www.eventbrite.com/e/semana-de-informatica-tickets-50695985056",
+        text: "Bilhetes",
+        internal: false,
+      },
+      {
+        url: "/#contactos",
+        text: "Contactos",
+        internal: true,
+      },
+    ]
+
+    this.rightLinks = [
+      {
+        url: "/programa",
+        text: "Programa",
+        internal: true,
+      },
+      {
+        url: "/equipa",
+        text: "Equipa",
+        internal: true,
+      },
+      {
+        url: "/competicao-programacao",
+        text: "Competição",
+        internal: true,
+      },
+      {
+        url: "https://2018.sinf.pt",
+        text: "2018",
+        internal: false,
+      },
+    ]
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar dark fixed="top" expand="lg" className={NavbarStyles.navbar}>
+          <Collapse
+            isOpen={this.state.isOpen}
+            navbar
+            className=" w-100 order-1 order-lg-0 dual-collapse2"
+          >
+            <NavWrapper
+              className="ml-0 align-items-center"
+              links={this.leftLinks}
+            />
+          </Collapse>
+          <Link className="navbar-brand mx-auto order-0" to="/">
+            <Logo fill="#000" className={NavbarStyles.logo} />
+          </Link>
+          <Collapse
+            isOpen={this.state.isOpen}
+            navbar
+            className="w-100 order-3 dual-collapse2"
+          >
+            <NavWrapper
+              className="ml-auto align-items-center"
+              links={this.rightLinks}
+            />
+          </Collapse>
+          <NavbarToggler
+            className={NavbarStyles.toggler}
+            onClick={this.toggle}
+          />
+        </Navbar>
+      </div>
+    )
+  }
+}

@@ -1,12 +1,15 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import Layout from "../components/layout"
+import "bootstrap/dist/css/bootstrap.min.css"
+
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Navbar from "../components/navbar"
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <div>
+    <Navbar />
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -51,7 +54,7 @@ const IndexPage = ({ data }) => (
         </li>
       ))}
     </ul>
-  </Layout>
+  </div>
 )
 
 export const pageQuery = graphql`
