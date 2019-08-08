@@ -31,8 +31,8 @@
 
 .toggler {
   position: absolute;
-  top: 4px;
-  right: 0.5rem;
+  top: 1px;
+  right: 0.1rem;
   border: none;
 }
 
