@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Navbar from "../components/navbar"
+import Speakers from "../components/speakers"
 
 const IndexPage = ({ data }) => (
   <div>
@@ -17,6 +18,8 @@ const IndexPage = ({ data }) => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
+
+    <Speakers />
 
     <h2>Pages</h2>
     <div>
