@@ -1,5 +1,5 @@
 import React from "react"
-import { Col, Row } from "reactstrap"
+import { Container, Col, Row } from "reactstrap"
 import Contacts from "./contacts"
 import Location from "./location"
 
@@ -7,21 +7,25 @@ import ContactStyles from "../../styles/contacts.module.css"
 
 const ContactWrapper = () => {
   return (
-    <Col>
-      <Row>
-        <Col>
-          <Row>
+    <Container className={ContactStyles.wrapper} fluid>
+      <Row className={ContactStyles.container}>
+        <Col className={ContactStyles.container}>
+          <Row
+            className={
+              ContactStyles.container + " " + ContactStyles.info_container
+            }
+          >
             <Contacts />
           </Row>
         </Col>
 
-        <Col>
+        <Col className={ContactStyles.map_container}>
           <Row className={ContactStyles.map_container}>
             <Location />
           </Row>
         </Col>
       </Row>
-    </Col>
+    </Container>
   )
 }
 
