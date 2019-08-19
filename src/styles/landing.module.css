@@ -1,11 +1,19 @@
 @import "palette.css";
 
+.speakers {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  position: relative;
+}
+
 .speaker {
   list-style-type: none;
   position: relative;
 }
 
-.speakerOverlay {
+.speaker:before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -29,10 +37,50 @@
   text-decoration: underline;
 }
 
-.speaker:hover .speakerOverlay {
+.speaker:hover:before {
   opacity: 0.7;
 }
 
 .speaker:hover a {
   display: block;
+}
+
+.speakers button {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+
+  border: 2px solid white;
+  background-color: var(--color1);
+  color: white;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+  outline: none;
+}
+
+.prevButton {
+  left: 5px;
+}
+
+.nextButton {
+  right: 5px;
+}
+
+@media (max-width: 500px) {
+  .speaker {
+    position: static;
+  }
+
+  .speaker:before {
+    display: none;
+  }
+
+  .speaker a {
+    display: block;
+    position: static;
+    color: black;
+    transform: none;
+    text-align: center;
+  }
 }
