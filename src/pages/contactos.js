@@ -3,14 +3,14 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Contacts from "../components/contacts"
+import Contacts from "../components/contacts/wrapper"
 
 const ContactsPage = () => (
-  <Layout>
+  <>
     <SEO title="Contactos" />
     <Contacts />
     <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  </>
 )
 
 export default ContactsPage
