@@ -1,13 +1,16 @@
 import React from "react"
 import ContactStyles from "../../styles/contacts.module.css"
 
+const map_query = '"FEUP, Porto, Portugal"'
+const api_key = "AIzaSyD7BCaSIjFTOMKkzBMI6uzlJSsF19QJ4fs"
+const src = `https://www.google.com/maps/embed/v1/place?q=${map_query}&key=${api_key}`
 const Location = () => {
   return (
     <>
       <iframe
         className={ContactStyles.map}
         frameBorder={0}
-        src='https://www.google.com/maps/embed/v1/place?q="FEUP, Porto, Portugal"&key=AIzaSyDVsFrpBDLRcoCoEY8Ylk8AXwZl5Tgaa3M'
+        src={src}
         allowFullScreen
       ></iframe>
     </>
