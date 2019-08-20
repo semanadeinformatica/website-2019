@@ -12,7 +12,7 @@
 }
 
 .headingLine {
-  width: 5%;
+  width: 3.5rem;
   height: 2px;
   margin: 0 auto;
   color: var(--color1);
@@ -36,8 +36,9 @@
 }
 
 .speakersWrapper {
-  margin-top: 5rem;
+  margin-top: 7rem;
   position: relative;
+  overflow: hidden;
 }
 
 .previousSpeakers,
