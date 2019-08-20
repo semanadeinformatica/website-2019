@@ -1,9 +1,54 @@
 @import "palette.css";
 
-.speakers {
+.speakersSection {
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+.h2 {
+  text-align: center;
+  font-weight: bold;
+  color: var(--color1);
+}
+
+.headingLine {
+  width: 5%;
+  height: 2px;
+  margin: 0 auto;
+  color: var(--color1);
+  background-color: var(--color1);
+}
+
+.allLink {
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  float: right;
+}
+
+.allLink:hover {
+  color: black;
+}
+
+.allLink:before {
+  content: "-- ";
+}
+
+.speakersWrapper {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.previousSpeakers,
+.speakers1,
+.nextSpeakers {
   display: flex;
   flex-direction: row;
   margin: 0;
+}
+
+.speakersWrapper .speakers {
   position: relative;
 }
 
@@ -22,6 +67,7 @@
   background-color: var(--color2);
   z-index: 1;
   opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .speaker a {
@@ -30,11 +76,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  opacity: 1;
-  color: rgb(255, 255, 255, 1);
+  opacity: 0;
+  color: white;
   font-weight: bold;
-  display: none;
   text-decoration: underline;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .speaker:hover:before {
@@ -42,12 +88,13 @@
 }
 
 .speaker:hover a {
-  display: block;
+  opacity: 1;
 }
 
-.speakers button {
+.speakersWrapper button {
   position: absolute;
-  top: 45%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
 
   border: 2px solid white;
@@ -57,6 +104,13 @@
   padding: 0.3rem 0.5rem;
   border-radius: 50%;
   outline: none;
+
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.speakersWrapper button:hover {
+  opacity: 1;
 }
 
 .prevButton {
@@ -65,6 +119,30 @@
 
 .nextButton {
   right: 5px;
+}
+
+.previousSpeakers {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+}
+
+.nextSpeakers {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+}
+
+.moveLeft {
+  transition: transform 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.moveRight {
+  transition: transform 1s ease-in-out;
+  transform: translateX(100%);
 }
 
 @media (max-width: 500px) {
@@ -82,5 +160,6 @@
     color: black;
     transform: none;
     text-align: center;
+    opacity: 1;
   }
 }
