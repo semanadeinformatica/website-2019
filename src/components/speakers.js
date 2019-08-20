@@ -14,9 +14,11 @@ class Speakers extends Component {
   }
 
   componentWillMount() {
-    this.NUM_VISIBLE_SPEAKERS = window.matchMedia("(min-width: 500px)").matches
-      ? 4
-      : 1
+    this.isMobile =
+      (typeof window !== "undefined" &&
+        window.matchMedia("(min-width: 500px)").matches) ||
+      false
+    this.NUM_VISIBLE_SPEAKERS = this.isMobile ? 1 : 4
   }
 
   getAllSpeakers(data) {
@@ -29,9 +31,7 @@ class Speakers extends Component {
             key={`${speaker.name}${node.id}`}
             className={landingStyles.speaker}
             style={{
-              width: window.matchMedia("(min-width: 500px)").matches
-                ? "25%"
-                : "100%",
+              width: this.isMobile ? "100%" : "25%",
             }}
           >
             <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
