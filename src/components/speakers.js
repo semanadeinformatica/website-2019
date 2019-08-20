@@ -11,14 +11,15 @@ class Speakers extends Component {
     visibleSpeakersClass: landingStyles.speakers1,
     previousSpeakersClass: landingStyles.previousSpeakers,
     nextSpeakersClass: landingStyles.nextSpeakers,
+    isMobile: false,
   }
 
-  componentWillMount() {
-    this.isMobile =
-      (typeof window !== "undefined" &&
-        window.matchMedia("(max-width: 500px)").matches) ||
-      false
-    this.NUM_VISIBLE_SPEAKERS = this.isMobile ? 1 : 4
+  componentDidMount() {
+    const isMobile = window.matchMedia("(max-width: 500px)").matches
+    this.setState({
+      isMobile,
+    })
+    this.NUM_VISIBLE_SPEAKERS = isMobile ? 1 : 4
   }
 
   getAllSpeakers(data) {
@@ -31,7 +32,7 @@ class Speakers extends Component {
             key={`${speaker.name}${node.id}`}
             className={landingStyles.speaker}
             style={{
-              width: this.isMobile ? "100%" : "25%",
+              width: this.state.isMobile ? "100%" : "25%",
             }}
           >
             <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
