@@ -16,7 +16,7 @@ class Speakers extends Component {
   componentWillMount() {
     this.isMobile =
       (typeof window !== "undefined" &&
-        window.matchMedia("(min-width: 500px)").matches) ||
+        window.matchMedia("(max-width: 500px)").matches) ||
       false
     this.NUM_VISIBLE_SPEAKERS = this.isMobile ? 1 : 4
   }
