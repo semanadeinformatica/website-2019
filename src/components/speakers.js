@@ -1,119 +1,40 @@
 import React, { Component } from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import landingStyles from "../styles/landing.module.css"
+import Carousel from "./utils/Carousel"
 
 class Speakers extends Component {
-  state = {
-    index: 0,
-    animating: false,
-    visibleSpeakersClass: landingStyles.speakers1,
-    previousSpeakersClass: landingStyles.previousSpeakers,
-    nextSpeakersClass: landingStyles.nextSpeakers,
-    isMobile: false,
-  }
-
-  componentDidMount() {
-    const isMobile = window.matchMedia("(max-width: 500px)").matches
-    this.setState({
-      isMobile,
-    })
-    this.NUM_VISIBLE_SPEAKERS = isMobile ? 1 : 4
+  renderSpeaker(speaker, style) {
+    return (
+      <div
+        key={`${speaker.name}-${speaker.id}`}
+        className={landingStyles.speaker}
+        style={style}
+      >
+        <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
+        <Link to={speaker.path}>Ver palestra</Link>
+      </div>
+    )
   }
 
   getAllSpeakers(data) {
     let speakers = []
 
-    data.allMarkdownRemark.edges.map(({ node }) =>
+    data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const sp = node.frontmatter.speakers
+      const path = node.frontmatter.path
+
       speakers.push(
-        ...node.frontmatter.speakers.map(speaker => (
-          <div
-            key={`${speaker.name}${node.id}`}
-            className={landingStyles.speaker}
-            style={{
-              width: this.state.isMobile ? "100%" : "25%",
-            }}
-          >
-            <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
-            <Link to={node.frontmatter.path}>Ver palestra</Link>
-          </div>
-        ))
+        ...sp.map(speaker => ({
+          ...speaker,
+          path,
+          id: node.id,
+        }))
       )
-    )
-
-    return speakers
-  }
-
-  getSpeakers(index, allSpeakers) {
-    let speakers = []
-
-    if (index + this.NUM_VISIBLE_SPEAKERS > allSpeakers.length) {
-      speakers.push(...allSpeakers.slice(index, allSpeakers.length))
-      speakers.push(
-        ...allSpeakers.slice(
-          0,
-          index + this.NUM_VISIBLE_SPEAKERS - allSpeakers.length
-        )
-      )
-    } else {
-      speakers = allSpeakers.slice(index, index + this.NUM_VISIBLE_SPEAKERS)
-    }
-
-    return speakers
-  }
-
-  handleNextClick = speakers => {
-    if (this.state.animating) return false
-
-    this.setState({
-      animating: true,
-      visibleSpeakersClass: [
-        landingStyles.speakers1,
-        landingStyles.moveLeft,
-      ].join(" "),
-      nextSpeakersClass: [
-        landingStyles.nextSpeakers,
-        landingStyles.moveLeft,
-      ].join(" "),
     })
 
-    setTimeout(() => {
-      this.setState({
-        index: (this.state.index + this.NUM_VISIBLE_SPEAKERS) % speakers.length,
-        animating: false,
-        visibleSpeakersClass: landingStyles.speakers1,
-        nextSpeakersClass: landingStyles.nextSpeakers,
-      })
-    }, 1000)
-  }
-
-  handlePreviousClick = speakers => {
-    if (this.state.animating) return false
-
-    this.setState({
-      animating: true,
-      visibleSpeakersClass: [
-        landingStyles.speakers1,
-        landingStyles.moveRight,
-      ].join(" "),
-      previousSpeakersClass: [
-        landingStyles.previousSpeakers,
-        landingStyles.moveRight,
-      ].join(" "),
-    })
-
-    setTimeout(() => {
-      this.setState({
-        index:
-          this.state.index - this.NUM_VISIBLE_SPEAKERS < 0
-            ? speakers.length + this.state.index - this.NUM_VISIBLE_SPEAKERS
-            : this.state.index - this.NUM_VISIBLE_SPEAKERS,
-        animating: false,
-        visibleSpeakersClass: landingStyles.speakers1,
-        previousSpeakersClass: landingStyles.previousSpeakers,
-      })
-    }, 1000)
+    return speakers
   }
 
   render() {
@@ -154,42 +75,12 @@ class Speakers extends Component {
                 Speakers
                 <hr className={landingStyles.headingLine} />
               </h2>
-              <div className={landingStyles.speakersWrapper}>
-                <div className={this.state.previousSpeakersClass}>
-                  {this.getSpeakers(
-                    this.state.index - this.NUM_VISIBLE_SPEAKERS < 0
-                      ? speakers.length +
-                          this.state.index -
-                          this.NUM_VISIBLE_SPEAKERS
-                      : this.state.index - this.NUM_VISIBLE_SPEAKERS,
-                    speakers
-                  )}
-                </div>
-                <div className={landingStyles.speakers}>
-                  <button
-                    className={landingStyles.prevButton}
-                    onClick={() => this.handlePreviousClick(speakers)}
-                  >
-                    <FaArrowLeft />
-                  </button>
-                  <div className={this.state.visibleSpeakersClass}>
-                    {this.getSpeakers(this.state.index, speakers)}
-                  </div>
-                  <button
-                    className={landingStyles.nextButton}
-                    onClick={() => this.handleNextClick(speakers)}
-                  >
-                    <FaArrowRight />
-                  </button>
-                </div>
-                <div className={this.state.nextSpeakersClass}>
-                  {this.getSpeakers(
-                    (this.state.index + this.NUM_VISIBLE_SPEAKERS) %
-                      speakers.length,
-                    speakers
-                  )}
-                </div>
-              </div>
+              <Carousel
+                itemsData={speakers}
+                renderItem={this.renderSpeaker}
+                numMobileItems="1"
+                numDesktopItems="4"
+              />
               <Link className={landingStyles.allLink} to="/speakers">
                 Ver todos os speakers
               </Link>

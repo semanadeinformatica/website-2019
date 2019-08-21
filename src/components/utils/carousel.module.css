@@ -1,0 +1,70 @@
+.items {
+  position: relative;
+}
+
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.carouselWrapper button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  border: 2px solid white;
+  background-color: var(--color1);
+  color: white;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+  outline: none;
+
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carouselWrapper button:hover {
+  opacity: 1;
+}
+
+.prevButton {
+  left: 5px;
+}
+
+.nextButton {
+  right: 5px;
+}
+
+.previousItems {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+}
+
+.nextItems {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+}
+
+.moveLeft {
+  transition: transform 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.moveRight {
+  transition: transform 1s ease-in-out;
+  transform: translateX(100%);
+}
+
+.previousItems,
+.visibleItems,
+.nextItems {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
