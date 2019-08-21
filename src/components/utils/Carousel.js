@@ -53,7 +53,7 @@ class Carousel extends Component {
     return items
   }
 
-  handleNextClick = items => {
+  moveCarouselRight = items => {
     if (this.state.animating) return false
 
     this.setState(state => ({
@@ -75,7 +75,7 @@ class Carousel extends Component {
     }, 1000)
   }
 
-  handlePreviousClick = items => {
+  moveCarouselLeft = items => {
     if (this.state.animating) return false
 
     this.setState(state => ({
@@ -103,6 +103,14 @@ class Carousel extends Component {
     }, 1000)
   }
 
+  handleKeyUp = (e, items) => {
+    if (e.key === "ArrowRight") {
+      this.moveCarouselRight(items)
+    } else if (e.key === "ArrowLeft") {
+      this.moveCarouselLeft(items)
+    }
+  }
+
   renderItems = (itemsData, renderItem) =>
     itemsData.map(itemData =>
       renderItem(itemData, { width: 100 / this.NUM_VISIBLE_ITEMS + "%" })
@@ -119,7 +127,10 @@ class Carousel extends Component {
     const items = this.renderItems(itemsData, renderItem)
 
     return (
-      <div className={carouselStyles.carouselWrapper}>
+      <div
+        className={carouselStyles.carouselWrapper}
+        onKeyUp={e => this.handleKeyUp(e, items)}
+      >
         <div className={previousItemsClass}>
           {this.getItems(
             index - this.NUM_VISIBLE_ITEMS < 0
@@ -131,14 +142,14 @@ class Carousel extends Component {
         <div className={carouselStyles.items}>
           <button
             className={carouselStyles.prevButton}
-            onClick={() => this.handlePreviousClick(items)}
+            onClick={() => this.moveCarouselLeft(items)}
           >
             <FaArrowLeft />
           </button>
           <div className={visibleItemsClass}>{this.getItems(index, items)}</div>
           <button
             className={carouselStyles.nextButton}
-            onClick={() => this.handleNextClick(items)}
+            onClick={() => this.moveCarouselRight(items)}
           >
             <FaArrowRight />
           </button>
