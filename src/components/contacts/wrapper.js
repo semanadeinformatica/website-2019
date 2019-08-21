@@ -8,7 +8,9 @@ import ContactStyles from "../../styles/contacts.module.css"
 const ContactWrapper = () => {
   return (
     <Container className={ContactStyles.wrapper} fluid>
-      <Row className={ContactStyles.container}>
+      <Row
+        className={ContactStyles.container + " " + ContactStyles.main_container}
+      >
         <Col className={ContactStyles.container}>
           <Row
             className={
