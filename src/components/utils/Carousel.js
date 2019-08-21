@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 
 import carouselStyles from "./carousel.module.css"
 
@@ -152,14 +152,14 @@ class Carousel extends Component {
             className={carouselStyles.prevButton}
             onClick={() => this.moveCarouselLeft(items)}
           >
-            <FaArrowLeft />
+            <FaAngleLeft />
           </button>
           <div className={visibleItemsClass}>{this.getItems(index, items)}</div>
           <button
             className={carouselStyles.nextButton}
             onClick={() => this.moveCarouselRight(items)}
           >
-            <FaArrowRight />
+            <FaAngleRight />
           </button>
         </div>
         <div className={nextItemsClass}>

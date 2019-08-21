@@ -22,13 +22,10 @@ class Speakers extends Component {
     let speakers = []
 
     data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const sp = node.frontmatter.speakers
-      const path = node.frontmatter.path
-
       speakers.push(
-        ...sp.map(speaker => ({
+        ...node.frontmatter.speakers.map(speaker => ({
           ...speaker,
-          path,
+          path: node.frontmatter.path,
           id: node.id,
         }))
       )
@@ -78,8 +75,8 @@ class Speakers extends Component {
               <Carousel
                 itemsData={speakers}
                 renderItem={this.renderSpeaker}
-                numMobileItems="1"
-                numDesktopItems="4"
+                numMobileItems={1}
+                numDesktopItems={4}
               />
               <Link className={speakersStyles.allLink} to="/speakers">
                 Ver todos os speakers
