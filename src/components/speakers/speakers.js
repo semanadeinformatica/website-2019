@@ -70,7 +70,7 @@ class Speakers extends Component {
           const speakers = this.getAllSpeakers(data)
 
           return (
-            <section className={speakersStyles.speakersSection}>
+            <section id="speakers" className={speakersStyles.speakersSection}>
               <h2 className={speakersStyles.h2}>
                 Speakers
                 <hr className={speakersStyles.headingLine} />
