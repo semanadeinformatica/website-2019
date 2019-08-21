@@ -1,15 +1,15 @@
 import React, { Component } from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import landingStyles from "../styles/landing.module.css"
-import Carousel from "./utils/Carousel"
+import speakersStyles from "./speakers.module.css"
+import Carousel from "../utils/Carousel"
 
 class Speakers extends Component {
   renderSpeaker(speaker, style) {
     return (
       <div
         key={`${speaker.name}-${speaker.id}`}
-        className={landingStyles.speaker}
+        className={speakersStyles.speaker}
         style={style}
       >
         <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
@@ -70,10 +70,10 @@ class Speakers extends Component {
           const speakers = this.getAllSpeakers(data)
 
           return (
-            <section className={landingStyles.speakersSection}>
-              <h2 className={landingStyles.h2}>
+            <section className={speakersStyles.speakersSection}>
+              <h2 className={speakersStyles.h2}>
                 Speakers
-                <hr className={landingStyles.headingLine} />
+                <hr className={speakersStyles.headingLine} />
               </h2>
               <Carousel
                 itemsData={speakers}
@@ -81,7 +81,7 @@ class Speakers extends Component {
                 numMobileItems="1"
                 numDesktopItems="4"
               />
-              <Link className={landingStyles.allLink} to="/speakers">
+              <Link className={speakersStyles.allLink} to="/speakers">
                 Ver todos os speakers
               </Link>
             </section>
