@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import PropTypes from "prop-types"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 
 import carouselStyles from "./carousel.module.css"
@@ -11,6 +12,13 @@ class Carousel extends Component {
     visibleItemsClass: carouselStyles.visibleItems,
     previousItemsClass: carouselStyles.previousItems,
     nextItemsClass: carouselStyles.nextItems,
+  }
+
+  static propTypes = {
+    numMobileItems: PropTypes.number.isRequired,
+    numDesktopItems: PropTypes.number.isRequired,
+    itemsData: PropTypes.arrayOf(PropTypes.object).isRequired,
+    renderItem: PropTypes.func.isRequired,
   }
 
   handleWindowSizeChange = () => {
