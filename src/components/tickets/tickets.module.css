@@ -1,0 +1,47 @@
+.wrapper {
+  border: 4px var(--white) solid;
+  border-radius: 10px;
+  background: transparent;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wrapper li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2rem 1rem;
+}
+
+.wrapper li p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper li p:first-child {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.wrapper li p:last-child {
+  font-size: 1.5rem;
+}
+
+.section > p {
+  margin: 0 auto;
+  width: 35%;
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+.section {
+  margin: 2rem 0;
+  background: url("../../images/showcase_events_filter.jpg") center center /
+    cover;
+  text-align: center;
+  color: var(--white);
+  padding: 10rem;
+}
