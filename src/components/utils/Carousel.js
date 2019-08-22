@@ -17,8 +17,6 @@ class Carousel extends Component {
   static propTypes = {
     numMobileItems: PropTypes.number.isRequired,
     numDesktopItems: PropTypes.number.isRequired,
-    itemsData: PropTypes.arrayOf(PropTypes.object).isRequired,
-    renderItem: PropTypes.func.isRequired,
   }
 
   handleWindowSizeChange = () => {
@@ -119,10 +117,12 @@ class Carousel extends Component {
     }
   }
 
-  renderItems = (itemsData, renderItem) =>
-    itemsData.map(itemData =>
-      renderItem(itemData, { width: 100 / this.NUM_VISIBLE_ITEMS + "%" })
-    )
+  renderItems = items =>
+    items.map(item => (
+      <div key={item.key} style={{ width: 100 / this.NUM_VISIBLE_ITEMS + "%" }}>
+        {item}
+      </div>
+    ))
 
   render = () => {
     const {
@@ -131,8 +131,8 @@ class Carousel extends Component {
       nextItemsClass,
       visibleItemsClass,
     } = this.state
-    const { itemsData, renderItem } = this.props
-    const items = this.renderItems(itemsData, renderItem)
+    const { children } = this.props
+    const items = this.renderItems(children)
 
     return (
       <div
@@ -148,19 +148,32 @@ class Carousel extends Component {
           )}
         </div>
         <div className={carouselStyles.items}>
-          <button
-            className={carouselStyles.prevButton}
-            onClick={() => this.moveCarouselLeft(items)}
+          <div
+            className={[carouselStyles.button, carouselStyles.prevButton].join(
+              " "
+            )}
           >
-            <FaAngleLeft />
-          </button>
+            <button
+              className={carouselStyles.circle}
+              onClick={() => this.moveCarouselLeft(items)}
+            >
+              <FaAngleLeft className={carouselStyles.icon} />
+            </button>
+          </div>
+
           <div className={visibleItemsClass}>{this.getItems(index, items)}</div>
-          <button
-            className={carouselStyles.nextButton}
-            onClick={() => this.moveCarouselRight(items)}
+          <div
+            className={[carouselStyles.button, carouselStyles.nextButton].join(
+              " "
+            )}
           >
-            <FaAngleRight />
-          </button>
+            <button
+              className={carouselStyles.circle}
+              onClick={() => this.moveCarouselRight(items)}
+            >
+              <FaAngleRight className={carouselStyles.icon} />
+            </button>
+          </div>
         </div>
         <div className={nextItemsClass}>
           {this.getItems(

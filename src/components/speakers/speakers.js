@@ -4,20 +4,14 @@ import Img from "gatsby-image"
 import speakersStyles from "./speakers.module.css"
 import Carousel from "../utils/Carousel"
 
-class Speakers extends Component {
-  renderSpeaker(speaker, style) {
-    return (
-      <div
-        key={`${speaker.name}-${speaker.id}`}
-        className={speakersStyles.speaker}
-        style={style}
-      >
-        <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
-        <Link to={speaker.path}>Ver palestra</Link>
-      </div>
-    )
-  }
+const Speaker = ({ speaker }) => (
+  <div className={speakersStyles.speaker}>
+    <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
+    <Link to={speaker.path}>Ver palestra</Link>
+  </div>
+)
 
+class Speakers extends Component {
   getAllSpeakers(data) {
     let speakers = []
 
@@ -72,12 +66,14 @@ class Speakers extends Component {
                 Speakers
                 <hr className={speakersStyles.headingLine} />
               </h2>
-              <Carousel
-                itemsData={speakers}
-                renderItem={this.renderSpeaker}
-                numMobileItems={1}
-                numDesktopItems={4}
-              />
+              <Carousel numMobileItems={1} numDesktopItems={4}>
+                {speakers.map(speaker => (
+                  <Speaker
+                    key={`${speaker.name}-${speaker.id}`}
+                    speaker={speaker}
+                  />
+                ))}
+              </Carousel>
               <Link className={speakersStyles.allLink} to="/speakers">
                 Ver todos os speakers
               </Link>
