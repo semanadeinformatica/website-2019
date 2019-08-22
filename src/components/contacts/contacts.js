@@ -27,17 +27,13 @@ const links = [
   },
 ]
 
-const location = {
-  icon: <FaMapMarkerAlt />,
-  href:
-    "https://www.google.com/maps/place/FEUP+-+Faculdade+de+Engenharia+da+Universidade+do+Porto/@41.17794,-8.597688,15z/data=!4m5!3m4!1s0x0:0x8b1e4a0bcdacc840!8m2!3d41.1779401!4d-8.5976876?hl=en-US",
-  text: "R. Dr. Roberto Frias, 4200-465 Porto, Portugal",
-}
+const location =
+  "https://www.google.com/maps/place/FEUP+-+Faculdade+de+Engenharia+da+Universidade+do+Porto/@41.17794,-8.597688,15z/data=!4m5!3m4!1s0x0:0x8b1e4a0bcdacc840!8m2!3d41.1779401!4d-8.5976876?hl=en-US"
 
 const Contacts = () => (
   <div>
     <Col className={ContactStyles.title_container}>
-      <h2 className={ContactStyles.title}>Contacta-nos:</h2>
+      <h4 className={ContactStyles.title}>Contacta-nos:</h4>
       <hr className={ContactStyles.title_bar} />
     </Col>
 
@@ -57,10 +53,15 @@ const Contacts = () => (
             )
           })}
         </Col>
-        <Col className={ContactStyles.info_col}>
-          <a href={location.href} className={ContactStyles.location_link}>
-            <span className={ContactStyles.icon}>{location.icon}</span>
-            {location.text}
+        <Col
+          className={ContactStyles.info_col + " " + ContactStyles.location_col}
+        >
+          <a href={location} className={ContactStyles.location_link}>
+            <span className={ContactStyles.icon}>
+              <FaMapMarkerAlt />
+            </span>
+            FEUP <br />
+            R. Dr. Roberto Frias, 4200-465 Porto, Portugal
           </a>
         </Col>
       </Row>
