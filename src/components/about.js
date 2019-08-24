@@ -1,26 +1,64 @@
 import React from "react"
+import { Container, Row, Col } from "reactstrap"
+
+import AboutStyles from "../../styles/about.module.css"
 
 const About = () => (
   <div>
-    <h1>Semana de informática</h1>
-    <p>
-      A semana de informática (SINF) pretende oferecer aos estudantes de cursos
-      relacionados com informática um evento que promove a aprendizagem de
-      diferentes tópicos das diversas áreas da informática, o convívio através
-      de eventos sociais e o contacto com o mundo empresarial.
-    </p>
-    <p>
-      O evento decorre entre os dias 29 de outubro e 1 de novembro de 2018, na
-      Faculdade de Engenharia da Universidade do Porto e é organizado pelo
-      Núcleo de Informática da Associação de Estudantes da Faculdade de
-      Engenharia da Universidade do Porto (NIAEFEUP).
-    </p>
-    <p>
-      Durante a SINF os estudantes poderão participar em palestras, workshops e
-      sessões de convívio e networking, contactando assim com áreas e aspectos,
-      quer de carácter técnico ou soft skills, que não são abrangidos no seu
-      percurso académico.
-    </p>
+    <Container>
+      <Row>
+        <Col xs="6">
+          <h3>Semana de Informática</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet
+          </p>
+        </Col>
+        <Col xs="6">
+          <h3>SINF'2019</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper minim veniam, quis nostrud exerci tation ullamcorper
+          </p>
+        </Col>
+      </Row>
+      <Row className="justify-content-center">
+        <Col xs="6">
+          <Container>
+            <Row>
+              <Col xs="4" className="text-center">
+                04
+              </Col>
+              <Col xs="4" className="text-center">
+                04
+              </Col>
+              <Col xs="4" className="text-center">
+                04
+              </Col>
+            </Row>
+            <Row>
+              <Col xs="4" className="text-center">
+                meses
+              </Col>
+              <Col xs="4" className="text-center">
+                dias
+              </Col>
+              <Col xs="4" className="text-center">
+                horas
+              </Col>
+            </Row>
+          </Container>
+        </Col>
+      </Row>
+    </Container>
   </div>
 )
 
