@@ -1,14 +1,15 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
+import Countdown from "./countdown"
 import AboutStyles from "../../styles/about.module.css"
 
 const About = () => (
-  <div>
+  <div className={AboutStyles.aboutContainer}>
     <Container>
-      <Row>
+      <Row className="pt-5 pb-4">
         <Col xs="6">
-          <h3>Semana de Informática</h3>
+          <h3 className={AboutStyles.title}>Semana de Informática</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
@@ -21,7 +22,7 @@ const About = () => (
           </p>
         </Col>
         <Col xs="6">
-          <h3>SINF'2019</h3>
+          <h3 className={AboutStyles.title}>SINF'2019</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
@@ -31,31 +32,8 @@ const About = () => (
         </Col>
       </Row>
       <Row className="justify-content-center">
-        <Col xs="6">
-          <Container>
-            <Row>
-              <Col xs="4" className="text-center">
-                04
-              </Col>
-              <Col xs="4" className="text-center">
-                04
-              </Col>
-              <Col xs="4" className="text-center">
-                04
-              </Col>
-            </Row>
-            <Row>
-              <Col xs="4" className="text-center">
-                meses
-              </Col>
-              <Col xs="4" className="text-center">
-                dias
-              </Col>
-              <Col xs="4" className="text-center">
-                horas
-              </Col>
-            </Row>
-          </Container>
+        <Col xs="6" className={AboutStyles.countdownContainer}>
+          <Countdown />
         </Col>
       </Row>
     </Container>

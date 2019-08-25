@@ -1,0 +1,24 @@
+@import "./palette.css";
+
+.aboutContainer {
+  background-color: var(--color1);
+  color: var(--white);
+}
+
+.aboutContainer .title {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.aboutContainer .countdownContainer {
+  background-color: var(--color4);
+  position: relative;
+  top: 45px;
+}
+
+.aboutContainer .countdownContainer .number {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.9;
+}
