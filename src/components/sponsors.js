@@ -41,20 +41,27 @@ const Sponsors = () => {
       </h2>
 
       <div>
-        <h1>Patrocínios</h1>
-
+        <h2 className={sponsorsStyles.sponsorsType}>Main</h2>
         {getSponsors(data, "main")}
+      </div>
 
-        <h2>Patrocínio gold</h2>
+      <div>
+        <h2 className={sponsorsStyles.sponsorsType}>Gold</h2>
         {getSponsors(data, "gold")}
+      </div>
 
-        <h2>Patrocínio silver</h2>
+      <div>
+        <h2 className={sponsorsStyles.sponsorsType}>Silver</h2>
         {getSponsors(data, "silver")}
+      </div>
 
-        <h2>Patrocínio bronze</h2>
+      <div>
+        <h2 className={sponsorsStyles.sponsorsType}>Bronze</h2>
         {getSponsors(data, "bronze")}
+      </div>
 
-        <h2>Parceiros</h2>
+      <div>
+        <h2 className={sponsorsStyles.sponsorsType}>Parceiros</h2>
         {getSponsors(data, "partner")}
       </div>
     </section>

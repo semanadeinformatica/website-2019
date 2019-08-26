@@ -17,3 +17,8 @@
   color: var(--color1);
   background-color: var(--color1);
 }
+
+.sponsorsType {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
