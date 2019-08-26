@@ -11,11 +11,11 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 const links = [
   {
     icon: faLinkedin,
-    href: "https://www.linkedin.com/company/semanainformaticafeup/",
+    href: "https://www.linkedin.com/company/sinffeup/",
   },
   {
     icon: faFacebookSquare,
-    href: "https://facebook.com/semanainformaticaFEUP",
+    href: "https://facebook.com/sinfFEUP",
   },
   {
     icon: faEnvelope,
