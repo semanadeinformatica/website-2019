@@ -61,7 +61,11 @@ const Contacts = () => (
               <FaMapMarkerAlt />
             </span>
             FEUP <br />
-            R. Dr. Roberto Frias, 4200-465 Porto, Portugal
+            R. Dr. Roberto Frias
+            <br />
+            4200-465 Porto
+            <br />
+            Portugal
           </a>
         </Col>
       </Row>
