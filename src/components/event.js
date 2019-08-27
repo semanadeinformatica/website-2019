@@ -32,7 +32,9 @@ const Event = ({
       <h3>{title}</h3>
     )}
     {speakers != null && <p>{printSpeakers(speakers)}</p>}
-    {type != null && type.substring(2, type.length) === "workshop" && <p>Workshop</p>}
+    {type != null && type.substring(2, type.length) === "workshop" && (
+      <p>Workshop</p>
+    )}
     <p>
       {start_time} {end_time != null && <span> - {end_time}</span>}
       {place != null && <span> | {place}</span>}
