@@ -1,7 +1,7 @@
 ---
 name: Margarida Silva
 role: Tesoureira
-img: "../../images/gatsby-icon.png"
+img: "../../images/favicon.png"
 linkedin: https://www.linkedin.com/in/margarida-rp-silva/
 github: https://github.com/Margarida-Silva
 ---

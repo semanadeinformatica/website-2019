@@ -1,5 +1,5 @@
 ---
 name: ScaleUpPorto
 type: partner
-img: "../../images/gatsby-icon.png"
+img: "../../images/favicon.png"
 ---
