@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import "./palette.css";
+
+.sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 4;
+}

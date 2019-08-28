@@ -39,6 +39,9 @@ export default class NavBar extends React.Component {
     super(props)
 
     this.toggle = this.toggle.bind(this)
+    this.fixed = props.fixed
+    this.transparent = props.transparent
+    this.logo = props.logo
     this.state = {
       isOpen: false,
     }
@@ -105,7 +108,15 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar dark fixed="top" expand="lg" className={NavbarStyles.navbar}>
+        <Navbar
+          dark
+          fixed={this.fixed ? "top" : ""}
+          expand="lg"
+          className={
+            NavbarStyles.navbar +
+            (this.transparent ? " " + NavbarStyles.noBackground : "")
+          }
+        >
           <Collapse
             isOpen={this.state.isOpen}
             navbar
@@ -116,9 +127,13 @@ export default class NavBar extends React.Component {
               links={this.leftLinks}
             />
           </Collapse>
-          <Link className="navbar-brand mx-auto order-0" to="/">
-            <Logo fill="#000" className={NavbarStyles.logo} />
-          </Link>
+          {this.logo || this.state.isOpen ? (
+            <Link className="navbar-brand mx-auto order-0" to="/">
+              <Logo fill="#000" className={NavbarStyles.logo} />
+            </Link>
+          ) : (
+            ""
+          )}
           <Collapse
             isOpen={this.state.isOpen}
             navbar

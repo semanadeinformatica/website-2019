@@ -6,11 +6,19 @@ import Navbar from "../components/navbar"
 import Banner from "../components/mainpage/banner"
 import Contacts from "../components/contacts/wrapper"
 
+import MainpageStyles from "../styles/mainpage.module.css"
+
 const IndexPage = () => (
   <div>
     <SEO title="Home" />
     <Banner />
-    {/* <Navbar /> */}
+    <span className={MainpageStyles.sticky}>
+      <Navbar logo />
+    </span>
+    <Contacts />
+    <Contacts />
+    <Contacts />
+    <Contacts />
     <Contacts />
   </div>
 )
