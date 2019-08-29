@@ -22,3 +22,7 @@
   text-align: center;
   line-height: 0.9;
 }
+
+.aboutContainer .countdownContainer .timeType {
+  text-align: center;
+}
