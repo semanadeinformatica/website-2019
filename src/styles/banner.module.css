@@ -9,18 +9,28 @@
   color: white;
 }
 
+.banner_info_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.banner_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .icon {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
   padding: 0 5em;
-  max-width: 30em;
+  width: 30em;
 }
 
 .basic_info {
-  position: relative;
-  top: 50%;
+  margin-top: 5em;
 }
 
 .icon_links {

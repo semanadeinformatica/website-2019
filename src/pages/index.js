@@ -12,9 +12,9 @@ const IndexPage = () => (
   <div>
     <SEO title="Home" />
     <Banner />
-    <span className={MainpageStyles.sticky}>
+    <div className={MainpageStyles.sticky}>
       <Navbar logo />
-    </span>
+    </div>
     <Contacts />
     <Contacts />
     <Contacts />
