@@ -26,3 +26,31 @@
 .aboutContainer .countdownContainer .timeType {
   text-align: center;
 }
+
+@media screen and (max-width: 575px) {
+  .aboutContainer .countdownContainer .number {
+    font-size: 25px;
+  }
+
+  .aboutContainer .countdownContainer {
+    font-size: 80%;
+  }
+
+  .aboutContainer .countdownContainer {
+    top: 38.5px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .aboutContainer .countdownContainer .number {
+    font-size: 20px;
+  }
+
+  .aboutContainer .countdownContainer {
+    font-size: 60%;
+  }
+
+  .aboutContainer .countdownContainer {
+    top: 32px;
+  }
+}

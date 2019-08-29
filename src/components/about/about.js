@@ -8,7 +8,7 @@ const About = () => (
   <div className={AboutStyles.aboutContainer}>
     <Container>
       <Row className="pt-5 pb-4">
-        <Col xs="6">
+        <Col xs="12" md="6">
           <h3 className={AboutStyles.title}>Semana de Informática</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -21,7 +21,7 @@ const About = () => (
             nonummy nibh euismod tincidunt ut laoreet
           </p>
         </Col>
-        <Col xs="6">
+        <Col xs="12" md="6">
           <h3 className={AboutStyles.title}>SINF'2019</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -32,7 +32,13 @@ const About = () => (
         </Col>
       </Row>
       <Row className="justify-content-center">
-        <Col xs="6" className={AboutStyles.countdownContainer}>
+        <Col
+          xs="11"
+          sm="10"
+          md="8"
+          lg="6"
+          className={AboutStyles.countdownContainer}
+        >
           <Countdown />
         </Col>
       </Row>
