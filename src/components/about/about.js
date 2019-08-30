@@ -21,7 +21,7 @@ const About = () => (
             nonummy nibh euismod tincidunt ut laoreet
           </p>
         </Col>
-        <Col xs="12" md="6">
+        <Col xs="12" md="6" className="mt-5 mt-md-0">
           <h3 className={AboutStyles.title}>SINF'2019</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -32,13 +32,7 @@ const About = () => (
         </Col>
       </Row>
       <Row className="justify-content-center">
-        <Col
-          xs="11"
-          sm="10"
-          md="8"
-          lg="8"
-          className={AboutStyles.countdownContainer}
-        >
+        <Col xs="11" sm="10" md="8" className={AboutStyles.countdownContainer}>
           <Countdown />
         </Col>
       </Row>

@@ -13,11 +13,11 @@
 .aboutContainer .countdownContainer {
   background-color: var(--color4);
   position: relative;
-  top: 45px;
+  top: 58.5px;
 }
 
 .aboutContainer .countdownContainer .number {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   line-height: 0.9;
@@ -25,32 +25,19 @@
 
 .aboutContainer .countdownContainer .timeType {
   text-align: center;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 575px) {
   .aboutContainer .countdownContainer .number {
-    font-size: 25px;
+    font-size: 30px;
+  }
+
+  .aboutContainer .countdownContainer .timeType {
+    font-size: 15px;
   }
 
   .aboutContainer .countdownContainer {
-    font-size: 80%;
-  }
-
-  .aboutContainer .countdownContainer {
-    top: 38.5px;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .aboutContainer .countdownContainer .number {
-    font-size: 20px;
-  }
-
-  .aboutContainer .countdownContainer {
-    font-size: 60%;
-  }
-
-  .aboutContainer .countdownContainer {
-    top: 32px;
+    top: 48.5px;
   }
 }

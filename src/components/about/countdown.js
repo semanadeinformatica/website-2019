@@ -39,33 +39,31 @@ class Countdown extends Component {
       <Container className="py-4">
         <Row>
           <Col
-            xs="3"
-            xl={{ size: 2, offset: 2 }}
+            xs="4"
+            lg={{ size: 2, offset: 2 }}
             className={AboutStyles.number}
           >
-            {this.state.months}
-          </Col>
-          <Col xs="3" xl="2" className={AboutStyles.number}>
             {this.state.days}
           </Col>
-          <Col xs="3" xl="2" className={AboutStyles.number}>
+          <Col xs="4" className={AboutStyles.number}>
             {this.state.hours}
           </Col>
-          <Col xs="3" xl="2" className={AboutStyles.number}>
+          <Col xs="4" lg="2" className={AboutStyles.number}>
             {this.state.minutes}
           </Col>
         </Row>
         <Row>
-          <Col xs="3" xl={{ size: 2, offset: 2 }} className="text-center">
-            meses
-          </Col>
-          <Col xs="3" xl="2" className={AboutStyles.timeType}>
+          <Col
+            xs="4"
+            lg={{ size: 2, offset: 2 }}
+            className={AboutStyles.timeType}
+          >
             dias
           </Col>
-          <Col xs="3" xl="2" className={AboutStyles.timeType}>
+          <Col xs="4" className={AboutStyles.timeType}>
             horas
           </Col>
-          <Col xs="3" xl="2" className={AboutStyles.timeType}>
+          <Col xs="4" lg="2" className={AboutStyles.timeType}>
             minutos
           </Col>
         </Row>
