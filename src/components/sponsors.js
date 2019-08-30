@@ -40,7 +40,7 @@ const Sponsors = () => {
         <hr className={sponsorsStyles.headingLine} />
       </h2>
 
-      <div>
+      <div className={sponsorsStyles.mainSponsor}>
         <h2 className={sponsorsStyles.sponsorsType}>Main</h2>
         {getSponsors(data, "main")}
       </div>

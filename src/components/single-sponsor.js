@@ -1,18 +1,15 @@
 import React from "react"
 import Img from "gatsby-image"
-
-const styles = {
-  image: {
-    width: "100px",
-    height: "100px",
-  },
-}
+import sponsorsStyles from "../styles/sponsors.module.css"
 
 const SingleSponsor = ({ sponsor }) => (
-  <div>
-    <Img fluid={sponsor.img.childImageSharp.fluid} style={styles.image} />
+  <>
+    <Img
+      className={sponsorsStyles.sponsorImage}
+      fluid={sponsor.img.childImageSharp.fluid}
+    />
     <div>{sponsor.name}</div>
-  </div>
+  </>
 )
 
 export default SingleSponsor

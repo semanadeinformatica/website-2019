@@ -1,5 +1,5 @@
 ---
 name: Outsystems
 type: main
-img: "../../images/outsystems.png"
+img: "../../images/gatsby-icon.png"
 ---

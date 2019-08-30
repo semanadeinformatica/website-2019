@@ -22,3 +22,18 @@
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }
+
+.mainSponsor {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.mainSponsor .sponsorImage {
+  width: 1000px;
+  height: 100px;
+}
+
+.sponsorImage {
+  width: 100px;
+  height: 100px;
+}
