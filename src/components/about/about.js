@@ -36,7 +36,7 @@ const About = () => (
           xs="11"
           sm="10"
           md="8"
-          lg="6"
+          lg="8"
           className={AboutStyles.countdownContainer}
         >
           <Countdown />
