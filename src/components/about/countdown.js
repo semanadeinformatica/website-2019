@@ -43,13 +43,13 @@ class Countdown extends Component {
             lg={{ size: 2, offset: 2 }}
             className={AboutStyles.number}
           >
-            {this.state.days}
+            {String(this.state.days).padStart(2, "0")}
           </Col>
           <Col xs="4" className={AboutStyles.number}>
-            {this.state.hours}
+            {String(this.state.hours).padStart(2, "0")}
           </Col>
           <Col xs="4" lg="2" className={AboutStyles.number}>
-            {this.state.minutes}
+            {String(this.state.minutes).padStart(2, "0")}
           </Col>
         </Row>
         <Row>
