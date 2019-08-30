@@ -36,7 +36,7 @@ class Countdown extends Component {
 
   render() {
     return (
-      <Container className="py-3">
+      <Container className="py-4">
         <Row>
           <Col
             xs="3"
