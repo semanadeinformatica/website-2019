@@ -7,7 +7,7 @@ import AboutStyles from "../../styles/about.module.css"
 const About = () => (
   <div className={AboutStyles.aboutContainer}>
     <Container>
-      <Row className="pt-5 pb-4">
+      <Row className="pt-5 pb-4 mx-2 mx-sm-0">
         <Col xs="12" md="6">
           <h3 className={AboutStyles.title}>Semana de Informática</h3>
           <p>
