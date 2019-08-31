@@ -23,11 +23,7 @@ class Countdown extends Component {
     let timeLeft = sinf - today
 
     return {
-      months:
-        (sinf.getFullYear() - today.getFullYear()) * 12 -
-        (today.getMonth() - sinf.getMonth()) -
-        1,
-      days: Math.floor(timeLeft / 86400000) % 30.5,
+      days: Math.floor(timeLeft / 86400000),
       hours:
         (Math.floor(timeLeft / 36e5) % 24) + today.getTimezoneOffset() / 60,
       minutes: Math.round(((timeLeft % 86400000) % 3600000) / 60000) % 60,
