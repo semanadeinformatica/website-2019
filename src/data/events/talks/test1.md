@@ -8,7 +8,7 @@ speakers:
         where: outsystems
     bio: Almadense de gema, Proencense de coração, Ricardo Araújo tem 20 anos de carreira ligado ao desenvolvimento web, tendo aprendido e desenvolvido aplicações para diversas indústrias e clientes de diversos países. Em 2009 abriu o centro de desenvolvimento remoto da OutSystems situado em Proença-a-Nova e de lá tem ajudado a OutSystems a liderar o mercado de Low-Code. O actual desafio é o de aumentar o ecosistema em 50 000 programadores até final de 2020.
 
-    img: "../../../images/favicon.png"
+    img: "../../../images/JoseCarreiras.jpg"
     linkedin: https://www.linkedin.com/in/ricardonevesaraujo/
     website: https://davidsopas.com
     twitter: https://twitter.com/dsopas
@@ -19,7 +19,7 @@ speakers:
         where: outsystems
     bio: É um Engenheiro de Software na OutSystems, que busca excelência no seu trabalho. Com uma mente curiosa e um espírito inquisitivo desafia os seus colegas a percepcionar se estão a tomar as decisões mais acertadas. Actualmente, desenvolve funcionalidades colaborativas que visam aumentar a produtividade e desempenho de equipas de trabalho OutSystems.
 
-    img: "../../../images/favicon.png"
+    img: "../../../images/DiogoMonteiro.jpg"
 
 day: 2019-10-29
 start_time: 15h00

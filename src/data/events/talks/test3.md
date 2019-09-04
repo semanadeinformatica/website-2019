@@ -8,7 +8,7 @@ speakers:
         where: Checkmarx
     bio: David Sopas é security researcher com mais de 10 anos de experiência. Atualmente lidera uma equipa de researchers da Checkmarx, é co-fundador da Char49 e Pentester da Cobalt. Foi reconhecido publicamente por encontrar falhas em empresas como Google, Microsoft, Adobe, eBay, Amazon e muitas outras. Alguns trabalhos de research do David já foram apresentados em conferências de segurança, como por exemplo, na Defcon, BSides e OWASP Appsec.
 
-    img: "../../../images/favicon.png"
+    img: "../../../images/EduardoMarques.jpg"
     linkedin: https://www.linkedin.com/in/miguelpoliveira/
     website: https://davidsopas.com
     twitter: https://twitter.com/dsopas
