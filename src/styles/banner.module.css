@@ -17,6 +17,7 @@
 }
 
 .banner_info {
+  margin-top: 5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,8 +26,7 @@
 
 .icon {
   margin: 0 auto;
-  padding: 0 5em;
-  width: 30em;
+  width: 20em;
 }
 
 .basic_info {
@@ -57,4 +57,14 @@
 
 .info p {
   margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+  .basic_info {
+    font-size: 0.9em;
+  }
+
+  .icon {
+    width: 15em;
+  }
 }

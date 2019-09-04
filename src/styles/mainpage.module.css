@@ -10,3 +10,14 @@
   top: -1px;
   z-index: 4;
 }
+
+.top_bar {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 4;
+}
+
+.top_bar {
+  width: 100%;
+}

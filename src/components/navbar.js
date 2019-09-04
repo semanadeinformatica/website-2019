@@ -114,7 +114,9 @@ export default class NavBar extends React.Component {
           expand="lg"
           className={
             NavbarStyles.navbar +
-            (this.transparent ? " " + NavbarStyles.noBackground : "")
+            (this.transparent && !this.state.isOpen
+              ? " " + NavbarStyles.noBackground
+              : "")
           }
         >
           <Collapse

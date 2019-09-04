@@ -11,6 +11,9 @@ import MainpageStyles from "../styles/mainpage.module.css"
 const IndexPage = () => (
   <div>
     <SEO title="Home" />
+    <div className={MainpageStyles.top_bar}>
+      <Navbar transparent />
+    </div>
     <Banner />
     <div className={MainpageStyles.sticky}>
       <Navbar logo />
