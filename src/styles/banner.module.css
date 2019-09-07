@@ -23,7 +23,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
-  width: 30em;
+  width: 32em;
 }
 
 .basic_info {
@@ -39,7 +39,7 @@
 }
 
 .icon_links a {
-  margin: 0 1em;
+  margin: 0 0.3em;
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
