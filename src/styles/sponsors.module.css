@@ -22,18 +22,20 @@
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
   color: white;
+  text-align: center;
 }
 
 .mainSponsor {
   display: flex;
   margin-bottom: 5rem;
   background-color: var(--color1);
+  height: 20%;
 }
 
 .mainSponsor .sponsorImage {
-  width: 100px;
-  height: 100px;
-  margin: auto;
+  width: 75%;
+  height: 50%;
+  margin: 0 auto;
 }
 
 .sponsorImage {
