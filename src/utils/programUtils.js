@@ -16,4 +16,4 @@ export const splitDays = data => {
   days.push(day)
 
   return days
-}  
+}
