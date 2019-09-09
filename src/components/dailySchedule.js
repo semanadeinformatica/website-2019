@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {getMaxEndTime, length, sumTime} from "../utils/dailyScheduleUtils"
+import { getMaxEndTime, length, sumTime } from "../utils/dailyScheduleUtils"
 
 const DailySchedule = ({ date, events, increment }) => {
   const maxEndTime = getMaxEndTime(events)
@@ -31,9 +31,9 @@ const DailySchedule = ({ date, events, increment }) => {
       }
 
       if (row.length === 0) {
-
         if (time === last_start_time) {
-          let header_span = length(events[j].props.start_time, maxEndTime) / increment
+          let header_span =
+            length(events[j].props.start_time, maxEndTime) / increment
 
           blankCellIndex = i + span
           blankCellSpan = header_span - span
@@ -80,7 +80,7 @@ const DailySchedule = ({ date, events, increment }) => {
 DailySchedule.propTypes = {
   events: PropTypes.arrayOf(PropTypes.object).isRequired,
   date: PropTypes.string.isRequired,
-  increment: PropTypes.number.isRequired
+  increment: PropTypes.number.isRequired,
 }
 
 export default DailySchedule

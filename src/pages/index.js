@@ -7,6 +7,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Navbar from "../components/navbar"
 import Sponsors from "../components/sponsors"
+import Speakers from "../components/speakers"
 
 const IndexPage = ({ data }) => (
   <div>
@@ -20,6 +21,7 @@ const IndexPage = ({ data }) => (
     </div>
 
     <Sponsors />
+    <Speakers />
 
     <h2>Pages</h2>
     <div>

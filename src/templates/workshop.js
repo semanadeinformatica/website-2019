@@ -16,7 +16,7 @@ export default function Template({ data }) {
     end_time,
     place,
     speakers,
-    registration
+    registration,
   } = workshop.frontmatter
 
   return (
@@ -32,7 +32,9 @@ export default function Template({ data }) {
           </div>
           <div>{place}</div>
           <div dangerouslySetInnerHTML={{ __html: workshop.html }}></div>
-          <a type="button" href={registration}>Inscrições</a>
+          <a type="button" href={registration}>
+            Inscrições
+          </a>
 
           <div>
             <h2>Speakers</h2>
