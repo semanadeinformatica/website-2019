@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Navbar from "../components/navbar"
-import Tickets from "../components/tickets/tickets"
+import Tickets from "../components/tickets"
 
 const IndexPage = ({ data }) => (
   <div>
