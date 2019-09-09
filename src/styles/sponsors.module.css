@@ -21,24 +21,21 @@
 .sponsorsType {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
+  font-size: 2em;
   color: white;
   text-align: center;
+  border-radius: 15px;
+  border: 2px solid white;
 }
 
 .mainSponsor {
   display: flex;
   margin-bottom: 5rem;
   background-color: var(--color1);
-  height: 20%;
+  padding: 50px;
 }
 
 .mainSponsor .sponsorImage {
-  width: 75%;
-  height: 50%;
+  width: 35%;
   margin: 0 auto;
-}
-
-.sponsorImage {
-  width: 100px;
-  height: 100px;
 }

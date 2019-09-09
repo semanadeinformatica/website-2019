@@ -40,7 +40,7 @@ const Sponsors = () => {
       </h2>
 
       <div className={sponsorsStyles.mainSponsor}>
-        <h2 className={sponsorsStyles.sponsorsType}>Main</h2>
+        <div className={sponsorsStyles.sponsorsType}>Main</div>
         {getSponsors(data, "main")}
       </div>
 
