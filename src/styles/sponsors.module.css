@@ -21,16 +21,19 @@
 .sponsorsType {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
+  color: white;
 }
 
 .mainSponsor {
   display: flex;
   margin-bottom: 5rem;
+  background-color: var(--color1);
 }
 
 .mainSponsor .sponsorImage {
-  width: 1000px;
+  width: 100px;
   height: 100px;
+  margin: auto;
 }
 
 .sponsorImage {

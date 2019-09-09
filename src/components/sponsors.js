@@ -17,7 +17,6 @@ const Sponsors = () => {
           node {
             id
             frontmatter {
-              name
               type
               img {
                 childImageSharp {
