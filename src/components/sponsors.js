@@ -2,11 +2,14 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import SingleSponsor from "./single-sponsor"
 import sponsorsStyles from "../styles/sponsors.module.css"
+import Carousel from "./utils/carousel"
 
 const getSponsors = (data, type) => {
   return data.allMarkdownRemark.edges
     .filter(({ node }) => node.frontmatter.type === type)
-    .map(({ node }) => <SingleSponsor sponsor={node.frontmatter} />)
+    .map(({ node }) => (
+      <SingleSponsor sponsor={node.frontmatter} main={type === "main"} />
+    ))
 }
 
 const Sponsors = () => {
@@ -38,6 +41,11 @@ const Sponsors = () => {
         Sponsors
         <hr className={sponsorsStyles.headingLine} />
       </h2>
+
+      <Carousel numMobileItems={1} numDesktopItems={3}>
+        {getSponsors(data, "gold")}
+        {getSponsors(data, "silver")}
+      </Carousel>
 
       <div className={sponsorsStyles.mainSponsor}>
         <div className={sponsorsStyles.sponsorsType}>Main</div>
