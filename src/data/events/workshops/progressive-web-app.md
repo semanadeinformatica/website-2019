@@ -7,8 +7,8 @@ speakers:
         where: blip
 
     bio: Martins is a software engineer currently working at Paddypower Betfair (BLIP). He is enthusiastic about the future of the web, that's why his main focus is building faster JS applications and experimenting with new languages and frameworks.
-    
-    img: "../../../images/gatsby-icon.png"
+
+    img: "../../../images/favicon.png"
 
   - name: Ricardo Soares
     occupations:
@@ -17,10 +17,10 @@ speakers:
 
     bio: Ricardo is a software developer at Blip. He is not intimidated in switching between frontend and backend technologies, without forgetting to test everything to assure the quality of his code. He believes that with an amazing team the sky is the limit.
 
-    img: "../../../images/gatsby-icon.png"
+    img: "../../../images/favicon.png"
 
 day: 2019-10-31
-start_time: 14h00 
+start_time: 14h00
 end_time: 16h40
 place: B336
 path: /workshops/progressive-web-app/
