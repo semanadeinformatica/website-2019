@@ -8,11 +8,11 @@ speakers:
 
     bio: Atualmente a trabalhar no Abyssal a desenvolver software para veículos subaquáticos conta com 10 anos de experiência na área engenharia de software. Com experiência em demasiadas linguagens de programação, pode dizer com confiança que as odeia a todas um pouco. Tem um problema grave com código repetido e adora fazer otimizações de código, às vezes bem inúteis. Tem também um especial apreço por hardware, principalmente por desmontar e voltar coisas que levam à questão "Hum, onde é que entrava este parafuso?"
 
-    img: "../../../images/gatsby-icon.png"
+    img: "../../../images/favicon.png"
     linkedin: https://www.linkedin.com/in/heldertavaressilva/
 
 day: 2019-10-29
-start_time: 15h00 
+start_time: 15h00
 end_time: 16h40
 place: B336
 path: /workshops/hitchhiker-guide-to-hardware-maintenance/
