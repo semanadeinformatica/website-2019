@@ -19,10 +19,7 @@
 }
 
 .sponsorsType {
-  display: block;
   position: absolute;
-  top: 30%;
-  left: 5%;
   padding: 10px;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
@@ -45,10 +42,6 @@
 }
 
 .mainSponsor {
-  display: flex;
-  position: relative;
-  padding: 50px;
-  margin-bottom: 5rem;
   background-color: var(--color1);
 }
 

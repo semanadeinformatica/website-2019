@@ -8,7 +8,11 @@ const getSponsors = (data, type) => {
   return data.allMarkdownRemark.edges
     .filter(({ node }) => node.frontmatter.type === type)
     .map(({ node }) => (
-      <SingleSponsor sponsor={node.frontmatter} main={type === "main"} />
+      <SingleSponsor
+        key={node.frontmatter.name}
+        sponsor={node.frontmatter}
+        main={type === "main"}
+      />
     ))
 }
 
@@ -20,6 +24,7 @@ const Sponsors = () => {
           node {
             id
             frontmatter {
+              name
               type
               img {
                 childImageSharp {
@@ -42,34 +47,39 @@ const Sponsors = () => {
         <hr className={sponsorsStyles.headingLine} />
       </h2>
 
-      <Carousel numMobileItems={1} numDesktopItems={3}>
-        {getSponsors(data, "gold")}
-        {getSponsors(data, "silver")}
-      </Carousel>
-
       <div className={sponsorsStyles.mainSponsor}>
         <div className={sponsorsStyles.sponsorsType}>Main</div>
-        {getSponsors(data, "main")}
+        <Carousel numMobileItems={1} numDesktopItems={1}>
+          {getSponsors(data, "main")}
+        </Carousel>
       </div>
 
-      <div>
-        <h2 className={sponsorsStyles.sponsorsType}>Gold</h2>
-        {getSponsors(data, "gold")}
+      <div className={sponsorsStyles.mainSponsor}>
+        <div className={sponsorsStyles.sponsorsType}>Gold</div>
+        <Carousel numMobileItems={1} numDesktopItems={1}>
+          {getSponsors(data, "gold")}
+        </Carousel>
       </div>
 
-      <div>
-        <h2 className={sponsorsStyles.sponsorsType}>Silver</h2>
-        {getSponsors(data, "silver")}
+      <div className={sponsorsStyles.mainSponsor}>
+        <div className={sponsorsStyles.sponsorsType}>Silver</div>
+        <Carousel numMobileItems={1} numDesktopItems={1}>
+          {getSponsors(data, "silver")}
+        </Carousel>
       </div>
 
-      <div>
-        <h2 className={sponsorsStyles.sponsorsType}>Bronze</h2>
-        {getSponsors(data, "bronze")}
+      <div className={sponsorsStyles.mainSponsor}>
+        <div className={sponsorsStyles.sponsorsType}>Bronze</div>
+        <Carousel numMobileItems={1} numDesktopItems={1}>
+          {getSponsors(data, "bronze")}
+        </Carousel>
       </div>
 
-      <div>
-        <h2 className={sponsorsStyles.sponsorsType}>Parceiros</h2>
-        {getSponsors(data, "partner")}
+      <div className={sponsorsStyles.mainSponsor}>
+        <div className={sponsorsStyles.sponsorsType}>Partner</div>
+        <Carousel numMobileItems={1} numDesktopItems={1}>
+          {getSponsors(data, "partner")}
+        </Carousel>
       </div>
     </section>
   )
