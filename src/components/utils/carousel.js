@@ -17,6 +17,7 @@ class Carousel extends Component {
   static propTypes = {
     numMobileItems: PropTypes.number.isRequired,
     numDesktopItems: PropTypes.number.isRequired,
+    removeArrows: PropTypes.bool,
   }
 
   handleWindowSizeChange = () => {
@@ -153,12 +154,14 @@ class Carousel extends Component {
               " "
             )}
           >
-            <button
-              className={carouselStyles.circle}
-              onClick={() => this.moveCarouselLeft(items)}
-            >
-              <FaAngleLeft className={carouselStyles.icon} />
-            </button>
+            {!this.props.removeArrows && (
+              <button
+                className={carouselStyles.circle}
+                onClick={() => this.moveCarouselLeft(items)}
+              >
+                <FaAngleLeft className={carouselStyles.icon} />
+              </button>
+            )}
           </div>
 
           <div className={visibleItemsClass}>{this.getItems(index, items)}</div>
@@ -167,12 +170,14 @@ class Carousel extends Component {
               " "
             )}
           >
-            <button
-              className={carouselStyles.circle}
-              onClick={() => this.moveCarouselRight(items)}
-            >
-              <FaAngleRight className={carouselStyles.icon} />
-            </button>
+            {!this.props.removeArrows && (
+              <button
+                className={carouselStyles.circle}
+                onClick={() => this.moveCarouselRight(items)}
+              >
+                <FaAngleRight className={carouselStyles.icon} />
+              </button>
+            )}
           </div>
         </div>
         <div className={nextItemsClass}>

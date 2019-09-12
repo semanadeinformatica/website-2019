@@ -1,5 +1,5 @@
 ---
 name: aubay
 type: silver
-img: "../../images/gatsby-icon.png"
+img: "../../images/aubay.png"
 ---

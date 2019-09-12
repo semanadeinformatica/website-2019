@@ -23,15 +23,16 @@
   padding: 10px;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
-  font-size: 1.75em;
-  color: white;
-  border-radius: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: cyan;
+  border-radius: 10px;
   border: 2px solid white;
 }
 
 @media (max-width: 766px) {
   .sponsorsType {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 }
 
@@ -43,11 +44,16 @@
 
 .mainSponsor {
   background-color: var(--color1);
+  text-align: center;
+  align-content: center;
 }
 
 .mainSponsor .sponsorImage {
-  width: 35%;
-  position: relative;
+  width: 50%;
   margin: 0 auto;
-  text-align: center;
+}
+
+.sponsorImage {
+  width: 100px;
+  margin-left: 100px;
 }

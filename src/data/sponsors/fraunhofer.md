@@ -1,5 +1,5 @@
 ---
 name: fraunhofer
 type: bronze
-img: "../../images/gatsby-icon.png"
+img: "../../images/fraunhofer.png"
 ---

@@ -1,5 +1,5 @@
 ---
 name: aptiv
 type: gold
-img: "../../images/gatsby-icon.png"
+img: "../../images/aptiv.png"
 ---

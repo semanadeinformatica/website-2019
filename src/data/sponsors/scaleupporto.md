@@ -1,5 +1,5 @@
 ---
 name: scaleupporto
 type: partner
-img: "../../images/gatsby-icon.png"
+img: "../../images/scaleupporto.png"
 ---
