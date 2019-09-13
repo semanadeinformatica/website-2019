@@ -63,7 +63,7 @@ const Sponsors = () => {
         >
           Gold
         </div>
-        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={false}>
+        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
           {getSponsors(data, "gold")}
         </Carousel>
       </div>
@@ -77,7 +77,7 @@ const Sponsors = () => {
         >
           Silver
         </div>
-        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={false}>
+        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
           {getSponsors(data, "silver")}
         </Carousel>
       </div>
