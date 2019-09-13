@@ -37,9 +37,27 @@
   border: 2px solid var(--color2);
 }
 
-@media (max-width: 766px) {
+.mainSponsor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color1);
+  height: 35%;
+}
+
+.mainWrapper {
+  width: 75%;
+  padding-right: 2.5%;
+}
+
+@media (max-width: 768px) {
   .sponsorsType {
-    font-size: 1.25em;
+    font-size: 1.5em;
+  }
+
+  .mainWrapper {
+    width: 100%;
+    padding-right: 0;
   }
 }
 
@@ -47,18 +65,6 @@
   .sponsorsType {
     font-size: 1em;
   }
-}
-
-.mainSponsor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color1);
-  height: 25%;
-}
-
-.carouselWrapper {
-  position: fixed;
 }
 
 .otherSponsors {

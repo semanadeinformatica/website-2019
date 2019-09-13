@@ -49,10 +49,8 @@ const Sponsors = () => {
 
       <div className={sponsorsStyles.mainSponsor}>
         <div className={sponsorsStyles.sponsorsType}>Main</div>
-        <div className={sponsorsStyles.carouselWrapper}>
-          <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
-            {getSponsors(data, "main")}
-          </Carousel>
+        <div className={sponsorsStyles.mainWrapper}>
+          {getSponsors(data, "main")}
         </div>
       </div>
 
