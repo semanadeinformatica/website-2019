@@ -49,26 +49,23 @@ const Sponsors = () => {
 
       <div className={sponsorsStyles.mainSponsor}>
         <div className={sponsorsStyles.sponsorsType}>Main</div>
-        <Carousel
-          className={sponsorsStyles.carousel}
-          numMobileItems={1}
-          numDesktopItems={1}
-          removeArrows={true}
-        >
-          {getSponsors(data, "main")}
-        </Carousel>
+        <div className={sponsorsStyles.carouselWrapper}>
+          <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
+            {getSponsors(data, "main")}
+          </Carousel>
+        </div>
       </div>
 
       <div className={sponsorsStyles.otherSponsors}>
         <div className={sponsorsStyles.sponsorsType}>Gold</div>
-        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
+        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={false}>
           {getSponsors(data, "gold")}
         </Carousel>
       </div>
 
       <div className={sponsorsStyles.otherSponsors}>
         <div className={sponsorsStyles.sponsorsType}>Silver</div>
-        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
+        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={false}>
           {getSponsors(data, "silver")}
         </Carousel>
       </div>
