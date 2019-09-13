@@ -55,30 +55,44 @@ const Sponsors = () => {
       </div>
 
       <div className={sponsorsStyles.otherSponsors}>
-        <div className={sponsorsStyles.sponsorsType}>Gold</div>
+        <div
+          className={[
+            sponsorsStyles.sponsorsType,
+            sponsorsStyles.goldSponsor,
+          ].join(" ")}
+        >
+          Gold
+        </div>
         <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={false}>
           {getSponsors(data, "gold")}
         </Carousel>
       </div>
 
       <div className={sponsorsStyles.otherSponsors}>
-        <div className={sponsorsStyles.sponsorsType}>Silver</div>
+        <div
+          className={[
+            sponsorsStyles.sponsorsType,
+            sponsorsStyles.silverSponsor,
+          ].join(" ")}
+        >
+          Silver
+        </div>
         <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={false}>
           {getSponsors(data, "silver")}
         </Carousel>
       </div>
 
       <div className={sponsorsStyles.otherSponsors}>
-        <div className={sponsorsStyles.sponsorsType}>Bronze</div>
+        <div
+          className={[
+            sponsorsStyles.sponsorsType,
+            sponsorsStyles.bronzeSponsor,
+          ].join(" ")}
+        >
+          Bronze
+        </div>
         <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
           {getSponsors(data, "bronze")}
-        </Carousel>
-      </div>
-
-      <div className={sponsorsStyles.otherSponsors}>
-        <div className={sponsorsStyles.sponsorsType}>Partner</div>
-        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
-          {getSponsors(data, "partner")}
         </Carousel>
       </div>
     </section>
