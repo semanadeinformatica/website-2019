@@ -1,5 +1,5 @@
 ---
 name: fraunhofer
-type: bronze
+type: gold
 img: "../../images/fraunhofer.png"
 ---

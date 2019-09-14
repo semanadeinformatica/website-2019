@@ -81,6 +81,7 @@
 .previousItems,
 .visibleItems,
 .nextItems {
+  align-items: center;
   display: flex;
   flex-direction: row;
   margin: 0;

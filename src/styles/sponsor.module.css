@@ -2,3 +2,21 @@
   width: 50%;
   margin-left: 25%;
 }
+
+.otherSponsor {
+  width: 50%;
+  margin-left: 30%;
+}
+
+@media (max-width: 1000px) {
+  .otherSponsor {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .otherSponsor {
+    width: 50%;
+    margin-left: 25%;
+  }
+}

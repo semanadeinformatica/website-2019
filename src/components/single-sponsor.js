@@ -5,7 +5,7 @@ import sponsorStyles from "../styles/sponsor.module.css"
 const SingleSponsor = ({ sponsor, main }) => (
   <>
     <Img
-      className={sponsorStyles.image}
+      className={main ? sponsorStyles.image : sponsorStyles.otherSponsor}
       fluid={sponsor.img.childImageSharp.fluid}
     />
   </>

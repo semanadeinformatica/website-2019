@@ -26,25 +26,25 @@
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 600;
   color: white;
   border-radius: 10px;
   border: 2px solid white;
 }
 
 .goldSponsor {
-  color: var(--color2);
-  border: 2px solid var(--color2);
+  background-color: var(--color2);
+  border: 2px solid;
 }
 
 .silverSponsor {
-  color: var(--color3);
-  border: 2px solid var(--color3);
+  background-color: var(--color3);
+  border: 2px solid;
 }
 
 .bronzeSponsor {
-  color: var(--color4);
-  border: 2px solid var(--color4);
+  background-color: var(--color4);
+  border: 2px solid;
 }
 
 .mainSponsor {
@@ -58,6 +58,19 @@
 .mainWrapper {
   width: 75%;
   padding-right: 2.5%;
+}
+
+.otherSponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  height: 20%;
+}
+
+.otherSponsors img {
+  bottom: 10% !important;
 }
 
 @media (max-width: 768px) {
@@ -75,11 +88,12 @@
   .sponsorsType {
     font-size: 1em;
   }
-}
 
-.otherSponsors {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20%;
+  .mainSponsor {
+    height: 25%;
+  }
+
+  .otherSponsors {
+    width: 100%;
+  }
 }
