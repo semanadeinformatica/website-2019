@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import SEO from "../components/common/seo"
 import Navbar from "../components/common/navbar"
+import Layout from "../components/common/layout"
 
 import About from "../components/mainpage/about/about"
 import Tickets from "../components/mainpage/tickets"
@@ -19,14 +20,13 @@ const IndexPage = () => (
       <Navbar transparent />
     </div>
     <Banner />
-    <div className={MainpageStyles.sticky}>
-      <Navbar logo />
-    </div>
-    <About />
-    <Speakers />
-    <Tickets />
-    {/* <Sponsors /> */}
-    <Contacts />
+    <Layout>
+      <About />
+      <Speakers />
+      <Tickets />
+      {/* <Sponsors /> */}
+      <Contacts />
+    </Layout>
   </div>
 )
 export default IndexPage
