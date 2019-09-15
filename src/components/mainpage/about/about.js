@@ -5,7 +5,7 @@ import Countdown from "./countdown"
 import AboutStyles from "../../../styles/mainpage/about.module.css"
 
 const About = () => (
-  <div className={AboutStyles.aboutContainer}>
+  <div className={AboutStyles.aboutContainer + " pt-4"}>
     <Container>
       <Row className="pt-5 pb-4 mx-2 mx-sm-0">
         <Col xs="12" md="6">
