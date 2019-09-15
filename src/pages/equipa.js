@@ -1,24 +1,45 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Layout from "../components/common/layout"
-import SEO from "../components/common/seo"
-import Member from "../components/member"
+import { Container } from "reactstrap"
 
-const TeamPage = ({ data }) => (
-  <Layout>
-    <SEO title="Equipa" />
-    <h1>Equipa</h1>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        <div key={node.frontmatter.name}>
-          <Member key={node.frontmatter.name} data={node.frontmatter} />
-        </div>
-      </div>
-    ))}
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+import SEO from "../components/seo"
+import Team from "../components/team/team"
+import PageBanner from "../components/utils/page_banner"
+
+import Icon from "../images/svg/equipa.inline.svg"
+
+const extractByTeam = data => {
+  let members = {}
+  data.allMarkdownRemark.edges.map(value => {
+    const k = value.node.frontmatter.role
+    if (members.hasOwnProperty(k)) {
+      members[k].push(value.node.frontmatter)
+    } else {
+      members[k] = [value.node.frontmatter]
+    }
+    return value.node.frontmatter
+  })
+  return members
+}
+
+const TeamPage = ({ data }) => {
+  const members = extractByTeam(data)
+
+  return (
+    <>
+      <SEO title="Equipa" />
+      <PageBanner>
+        <Icon />
+      </PageBanner>
+      <Container>
+        {Object.keys(members).map(key => {
+          return <Team name={key} members={members[key]} key={key} />
+        })}
+      </Container>
+    </>
+  )
+}
 
 export const pageQuery = graphql`
   query TeamQuery {

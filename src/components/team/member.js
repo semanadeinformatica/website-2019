@@ -11,15 +11,13 @@ const styles = {
 const Member = ({ data }) => {
   return (
     <div>
-      <div>
-        <Img fluid={data.img.childImageSharp.fluid} style={styles.image} />
-        <div>
+      <Img fluid={data.img.childImageSharp.fluid} style={styles.image} />
+      {/* <div>
           <div>{data.name}</div>
           <div>{data.role}</div>
           <div>{data.linkedin ? <a href={data.linkedin}>LinkedIn</a> : ""}</div>
           <div>{data.github ? <a href={data.github}>GitHub</a> : ""}</div>
-        </div>
-      </div>
+        </div> */}
     </div>
   )
 }

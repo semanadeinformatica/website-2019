@@ -1,0 +1,9 @@
+@import "../palette.css";
+
+.container {
+  background-color: var(--color1);
+  width: 100vw;
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+}
