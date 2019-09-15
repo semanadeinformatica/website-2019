@@ -1,6 +1,6 @@
 import React from "react"
 import { FaLinkedin, FaFacebookSquare, FaEnvelope } from "react-icons/fa"
-import BannerStyles from "../../styles/banner.module.css"
+import BannerStyles from "../../../styles/mainpage/banner.module.css"
 
 const links = [
   {

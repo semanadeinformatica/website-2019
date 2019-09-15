@@ -3,7 +3,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
 import Speaker from "../components/speaker"
 
 export default function Template({ data }) {

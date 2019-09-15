@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-@import "./palette.css";
+@import "../common/palette.css";
 
 .banner {
   width: 100%;
   height: 100vh;
-  background-image: url("../images/showcase.png");
+  background-image: url("../../images/showcase.png");
   font-family: "Roboto", sans-serif;
   color: white;
 }

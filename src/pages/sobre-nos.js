@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
 import About from "../components/about/about"
 
 const AboutUsPage = () => (

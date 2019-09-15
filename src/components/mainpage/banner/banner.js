@@ -2,8 +2,8 @@ import React from "react"
 
 import BasicInfo from "./basic-info"
 
-import BannerStyles from "../../styles/banner.module.css"
-import Icon from "../../images/svg/logo_sinf_comp.inline.svg"
+import BannerStyles from "../../../styles/mainpage/banner.module.css"
+import Icon from "../../../images/svg/logo_sinf_comp.inline.svg"
 
 const Banner = () => {
   return (

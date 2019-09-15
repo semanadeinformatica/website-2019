@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Container } from "reactstrap"
-import ticketsStyles from "../styles/tickets.module.css"
+import ticketsStyles from "../../styles/mainpage/tickets.module.css"
 
 const countEvents = (data, event) => {
   let count = data.allMarkdownRemark.edges.filter(({ node }) =>

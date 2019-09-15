@@ -3,7 +3,7 @@ import { Container, Col, Row } from "reactstrap"
 import Contacts from "./contacts"
 import Location from "./location"
 
-import ContactStyles from "../../styles/contacts.module.css"
+import ContactStyles from "../../../styles/mainpage/contacts.module.css"
 
 const ContactWrapper = () => {
   return (

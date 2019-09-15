@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 
-import carouselStyles from "../../styles/carousel.module.css"
+import carouselStyles from "../../styles/utils/carousel.module.css"
 
 class Carousel extends Component {
   state = {

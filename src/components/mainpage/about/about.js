@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
 import Countdown from "./countdown"
-import AboutStyles from "../../styles/about.module.css"
+import AboutStyles from "../../../styles/mainpage/about.module.css"
 
 const About = () => (
   <div className={AboutStyles.aboutContainer}>

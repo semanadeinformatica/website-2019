@@ -10,7 +10,7 @@ import {
 } from "reactstrap"
 
 import Logo from "../images/svg/logo_sinf_simp.inline.svg"
-import NavbarStyles from "../styles/navbar.module.css"
+import NavbarStyles from "../styles/common/navbar.module.css"
 
 const NavWrapper = ({ links, className }) => (
   <Nav navbar className={className}>

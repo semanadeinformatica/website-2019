@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import speakersStyles from "../styles/speakers.module.css"
-import Carousel from "./utils/carousel"
+import speakersStyles from "../../styles/mainpage/speakers.module.css"
+import Carousel from "../utils/carousel"
 
 const Speaker = ({ speaker }) => (
   <div className={speakersStyles.speaker}>

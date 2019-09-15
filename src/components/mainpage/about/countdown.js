@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
 
-import AboutStyles from "../../styles/about.module.css"
+import AboutStyles from "../../../styles/mainpage/about.module.css"
 
 class Countdown extends Component {
   constructor(props) {
