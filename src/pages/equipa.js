@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Team from "../components/team/team"
 import PageBanner from "../components/utils/page_banner"
 
+import TeamStyles from "../styles/team/team.module.css"
 import Icon from "../images/svg/equipa.inline.svg"
 
 const extractByTeam = data => {
@@ -32,7 +33,7 @@ const TeamPage = ({ data }) => {
       <PageBanner>
         <Icon />
       </PageBanner>
-      <Container>
+      <Container className={TeamStyles.container} fluid>
         {Object.keys(members).map(key => {
           return <Team name={key} members={members[key]} key={key} />
         })}

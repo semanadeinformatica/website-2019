@@ -7,9 +7,11 @@ import TeamStyles from "../../styles/team/team.module.css"
 const Team = ({ name, members }) => {
   return (
     <Row>
-      <Col className={TeamStyles.team_container}>{name}</Col>
+      <Col className={TeamStyles.name_container}>
+        <h2>{name}</h2>
+      </Col>
       <Col>
-        <Row>
+        <Row className={TeamStyles.member_row}>
           {members.map(value => (
             <Col key={value.name} className={TeamStyles.member_container}>
               <Member data={value} />
