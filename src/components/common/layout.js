@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Navbar from "./navbar"
+import Footer from "./footer"
 
 import Utils from "../../styles/utils/utils.module.css"
 
@@ -17,6 +18,7 @@ const Layout = ({ children }) => (
       <Navbar logo />
     </div>
     <main>{children}</main>
+    <Footer />
   </>
 )
 
