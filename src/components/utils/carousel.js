@@ -154,7 +154,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {!this.props.removeArrows && (
+            {(!this.props.removeArrows || this.state.isMobile) && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselLeft(items)}
@@ -170,7 +170,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {!this.props.removeArrows && (
+            {(!this.props.removeArrows || this.state.isMobile) && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselRight(items)}

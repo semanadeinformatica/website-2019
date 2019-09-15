@@ -36,7 +36,7 @@
 }
 
 @media (max-width: 600px) {
-  .image {
+  .main {
     width: 75%;
     margin-left: 10%;
   }
