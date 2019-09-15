@@ -1,6 +1,6 @@
 import React from "react"
 
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
 import SoonStyles from "../styles/soon.module.css"
 import Brevemente from "../components/brevemente/brevemente"
 import Info from "../components/brevemente/info"

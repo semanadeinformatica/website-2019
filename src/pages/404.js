@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
 
 import Face from "../images/svg/not_found_face.inline.svg"
 import Numbers from "../images/svg/not_found_numbers.inline.svg"
