@@ -20,8 +20,6 @@
 }
 
 .sponsorsType {
-  position: absolute;
-  left: 5%;
   padding: 10px;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);

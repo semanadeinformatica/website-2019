@@ -1,5 +1,5 @@
 ---
 name: fraunhofer
 type: gold
-img: "../../images/fraunhofer.png"
+img: "../../images/favicon.png"
 ---

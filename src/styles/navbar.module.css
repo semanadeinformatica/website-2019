@@ -11,6 +11,10 @@
   padding: 0.4rem 1rem;
 }
 
+.noBackground {
+  background-color: transparent;
+}
+
 .navbar > a {
   line-height: 1rem;
 }
