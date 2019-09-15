@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import SEO from "../components/seo"
 import Navbar from "../components/navbar"
 
-import Sponsors from "../components/sponsors"
+import Sponsors from "../components/mainpage/sponsors/sponsors"
 import Tickets from "../components/tickets"
 import Speakers from "../components/speakers"
 import Banner from "../components/mainpage/banner"

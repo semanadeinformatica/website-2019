@@ -1,5 +1,5 @@
 ---
 name: outsystems
 type: main
-img: "../../images/favicon.png"
+img: "../../images/outsystems.png"
 ---

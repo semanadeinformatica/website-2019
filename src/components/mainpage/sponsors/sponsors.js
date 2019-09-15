@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import SingleSponsor from "./single-sponsor"
-import sponsorsStyles from "../styles/sponsors.module.css"
-import Carousel from "./utils/carousel"
+import sponsorsStyles from "../../../styles/sponsors.module.css"
+import Carousel from "../../utils/carousel"
 
 const getSponsors = (data, type) => {
   return data.allMarkdownRemark.edges
@@ -11,7 +11,7 @@ const getSponsors = (data, type) => {
       <SingleSponsor
         key={node.frontmatter.name}
         sponsor={node.frontmatter}
-        main={type === "main"}
+        type={type}
       />
     ))
 }
@@ -54,7 +54,12 @@ const Sponsors = () => {
         </div>
       </div>
 
-      <div className={sponsorsStyles.otherSponsors}>
+      <div
+        className={[
+          sponsorsStyles.otherSponsors,
+          sponsorsStyles.goldWrapper,
+        ].join(" ")}
+      >
         <div
           className={[
             sponsorsStyles.sponsorsType,
@@ -63,12 +68,17 @@ const Sponsors = () => {
         >
           Gold
         </div>
-        <Carousel numMobileItems={1} numDesktopItems={3} removeArrows={false}>
+        <Carousel numMobileItems={1} numDesktopItems={4} removeArrows={true}>
           {getSponsors(data, "gold")}
         </Carousel>
       </div>
 
-      <div className={sponsorsStyles.otherSponsors}>
+      <div
+        className={[
+          sponsorsStyles.otherSponsors,
+          sponsorsStyles.silverWrapper,
+        ].join(" ")}
+      >
         <div
           className={[
             sponsorsStyles.sponsorsType,
@@ -77,12 +87,17 @@ const Sponsors = () => {
         >
           Silver
         </div>
-        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
+        <Carousel numMobileItems={1} numDesktopItems={7} removeArrows={true}>
           {getSponsors(data, "silver")}
         </Carousel>
       </div>
 
-      <div className={sponsorsStyles.otherSponsors}>
+      <div
+        className={[
+          sponsorsStyles.otherSponsors,
+          sponsorsStyles.bronzeWrapper,
+        ].join(" ")}
+      >
         <div
           className={[
             sponsorsStyles.sponsorsType,
@@ -91,7 +106,7 @@ const Sponsors = () => {
         >
           Bronze
         </div>
-        <Carousel numMobileItems={1} numDesktopItems={1} removeArrows={true}>
+        <Carousel numMobileItems={1} numDesktopItems={10} removeArrows={true}>
           {getSponsors(data, "bronze")}
         </Carousel>
       </div>

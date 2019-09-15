@@ -1,5 +1,4 @@
 .sponsorsSection {
-  height: 100vh;
   margin-top: 5rem;
   margin-bottom: 8rem;
 }
@@ -21,6 +20,7 @@
 
 .sponsorsType {
   padding: 10px;
+  margin-left: 5%;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
   font-size: 1.5em;
@@ -47,15 +47,16 @@
 
 .mainSponsor {
   display: flex;
+  padding-top: 5%;
+  padding-bottom: 5%;
   justify-content: center;
   align-items: center;
   background-color: var(--color1);
-  height: 35%;
 }
 
 .mainWrapper {
-  width: 75%;
-  padding-right: 2.5%;
+  width: 100%;
+  padding-right: 10%;
 }
 
 .otherSponsors {
@@ -63,12 +64,19 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 5%;
-  margin-top: 10%;
-  height: 20%;
+  margin-top: 5%;
 }
 
-.otherSponsors img {
-  bottom: 10% !important;
+@media (max-width: 1000px) {
+  .mainWrapper {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .mainSponsor {
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -80,18 +88,15 @@
     width: 100%;
     padding-right: 0;
   }
+
+  .mainSponsor {
+    padding-bottom: 15%;
+    padding-top: 15%;
+  }
 }
 
 @media (max-width: 600px) {
   .sponsorsType {
     font-size: 1em;
-  }
-
-  .mainSponsor {
-    height: 25%;
-  }
-
-  .otherSponsors {
-    width: 100%;
   }
 }

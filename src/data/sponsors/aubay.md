@@ -1,5 +1,5 @@
 ---
 name: aubay
-type: gold
+type: silver
 img: "../../images/aubay.png"
 ---

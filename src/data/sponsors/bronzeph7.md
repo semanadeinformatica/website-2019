@@ -1,5 +1,5 @@
 ---
-name: fraunhofer
-type: silver
+name: bplaceholder7
+type: bronze
 img: "../../images/favicon.png"
 ---
