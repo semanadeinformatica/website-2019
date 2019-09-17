@@ -12,8 +12,8 @@ const Team = ({ name, members }) => {
       </Col>
       <Col>
         <Row className={TeamStyles.member_row}>
-          {members.map(value => (
-            <Col key={value.name} className={TeamStyles.member_container}>
+          {members.map((value, index) => (
+            <Col key={"member" + index} className={TeamStyles.member_container}>
               <Member data={value} />
             </Col>
           ))}
