@@ -24,3 +24,19 @@ div.member_row {
   width: 100%;
   justify-content: flex-start;
 }
+
+@media (max-width: 575.98px) {
+  div.member_row {
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 2em;
+  }
+
+  div.name_container {
+    margin: 0 auto;
+  }
+
+  div.name_container h2 {
+    text-align: center;
+  }
+}
