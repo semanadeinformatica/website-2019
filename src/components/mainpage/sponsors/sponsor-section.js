@@ -16,21 +16,19 @@ export const getSponsors = (data, type) => {
     ))
 }
 
-const SponsorSection = ({ type }) => {
-  const data = useStaticQuery(graphql`
-    query SponsorsQuery2 {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/sponsors/" } }) {
-        edges {
-          node {
-            id
-            frontmatter {
-              name
-              type
-              img {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
+export const SponsorsQuery = graphql`
+  query SponsorsQuery {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/sponsors/" } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            name
+            type
+            img {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -38,7 +36,11 @@ const SponsorSection = ({ type }) => {
         }
       }
     }
-  `)
+  }
+`
+
+const SponsorSection = ({ type }) => {
+  const data = useStaticQuery(SponsorsQuery)
 
   let wrapperType, sponsorText, sponsorType, numDesktop
   if (type === "gold") {
