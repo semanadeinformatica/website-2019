@@ -1,5 +1,5 @@
 ---
 name: outsystems
-type: main
+type: gold
 img: "../../images/outsystems.png"
 ---

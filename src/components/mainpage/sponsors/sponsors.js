@@ -5,6 +5,10 @@ import { useSponsors } from "../../hooks/sponsors-query"
 
 const Sponsors = () => {
   const data = useSponsors()
+  const mainSponsors = getSponsors(data, "main")
+  const goldSponsors = getSponsors(data, "gold")
+  const silverSponsors = getSponsors(data, "silver")
+  const bronzeSponsors = getSponsors(data, "bronze")
 
   return (
     <section id="sponsors" className={sponsorsStyles.sponsorsSection}>
@@ -13,16 +17,18 @@ const Sponsors = () => {
         <hr className={sponsorsStyles.headingLine} />
       </h2>
 
-      <div className={sponsorsStyles.mainSponsor}>
-        <div className={sponsorsStyles.sponsorsType}>Main</div>
-        <div className={sponsorsStyles.mainWrapper}>
-          {getSponsors(data, "main")}
+      {mainSponsors.length > 0 && (
+        <div className={sponsorsStyles.mainSponsor}>
+          <div className={sponsorsStyles.sponsorsType}>Main</div>
+          <div className={sponsorsStyles.mainWrapper}>
+            {getSponsors(data, "main")}
+          </div>
         </div>
-      </div>
+      )}
 
-      <SponsorSection type="gold" />
-      <SponsorSection type="silver" />
-      <SponsorSection type="bronze" />
+      {goldSponsors.length > 0 && <SponsorSection type="gold" />}
+      {silverSponsors.length > 0 && <SponsorSection type="silver" />}
+      {bronzeSponsors.length > 0 && <SponsorSection type="bronze" />}
     </section>
   )
 }
