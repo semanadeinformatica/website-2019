@@ -1,8 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import SingleSponsor from "./single-sponsor"
 import sponsorsStyles from "../../../styles/sponsors.module.css"
 import Carousel from "../../utils/carousel"
+import { useSponsors } from "../../hooks/sponsors-query"
 
 export const getSponsors = (data, type) => {
   return data.allMarkdownRemark.edges
@@ -16,31 +16,8 @@ export const getSponsors = (data, type) => {
     ))
 }
 
-export const SponsorsQuery = graphql`
-  query SponsorsQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/sponsors/" } }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            name
-            type
-            img {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
 const SponsorSection = ({ type }) => {
-  const data = useStaticQuery(SponsorsQuery)
+  const data = useSponsors()
 
   let wrapperType, sponsorText, sponsorType, numDesktop
   if (type === "gold") {

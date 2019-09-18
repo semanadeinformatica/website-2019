@@ -1,13 +1,10 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
 import sponsorsStyles from "../../../styles/sponsors.module.css"
-import SponsorSection, {
-  SponsorsQuery,
-  getSponsors,
-} from "../sponsors/sponsor-section"
+import SponsorSection, { getSponsors } from "../sponsors/sponsor-section"
+import { useSponsors } from "../../hooks/sponsors-query"
 
 const Sponsors = () => {
-  const data = useStaticQuery(SponsorsQuery)
+  const data = useSponsors()
 
   return (
     <section id="sponsors" className={sponsorsStyles.sponsorsSection}>
