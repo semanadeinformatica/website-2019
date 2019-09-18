@@ -29,10 +29,9 @@ const Team = ({ name, members, n_per_row, start_odd }) => {
       <Col className={TeamStyles.name_container}>
         <h2>{name}</h2>
       </Col>
-      <Col>
+      <Col className={TeamStyles.members_container}>
         {member_rows.map((row_members, row_index) => {
           odd ^= true
-          console.log(row_members, odd)
 
           return (
             <Row className={TeamStyles.member_row} key={"row" + row_index}>

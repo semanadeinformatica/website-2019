@@ -40,3 +40,9 @@ div.member_row {
     text-align: center;
   }
 }
+
+@media (max-width: 1200px) {
+  div.container {
+    max-width: 800px;
+  }
+}
