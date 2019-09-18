@@ -1,20 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import SingleSponsor from "./single-sponsor"
 import sponsorsStyles from "../../../styles/sponsors.module.css"
-import Carousel from "../../utils/carousel"
-
-const getSponsors = (data, type) => {
-  return data.allMarkdownRemark.edges
-    .filter(({ node }) => node.frontmatter.type === type)
-    .map(({ node }) => (
-      <SingleSponsor
-        key={node.frontmatter.name}
-        sponsor={node.frontmatter}
-        type={type}
-      />
-    ))
-}
+import SponsorSection, { getSponsors } from "../sponsors/sponsor-section"
 
 const Sponsors = () => {
   const data = useStaticQuery(graphql`
@@ -54,62 +41,9 @@ const Sponsors = () => {
         </div>
       </div>
 
-      <div
-        className={[
-          sponsorsStyles.otherSponsors,
-          sponsorsStyles.goldWrapper,
-        ].join(" ")}
-      >
-        <div
-          className={[
-            sponsorsStyles.sponsorsType,
-            sponsorsStyles.goldSponsor,
-          ].join(" ")}
-        >
-          Gold
-        </div>
-        <Carousel numMobileItems={1} numDesktopItems={4} removeArrows={true}>
-          {getSponsors(data, "gold")}
-        </Carousel>
-      </div>
-
-      <div
-        className={[
-          sponsorsStyles.otherSponsors,
-          sponsorsStyles.silverWrapper,
-        ].join(" ")}
-      >
-        <div
-          className={[
-            sponsorsStyles.sponsorsType,
-            sponsorsStyles.silverSponsor,
-          ].join(" ")}
-        >
-          Silver
-        </div>
-        <Carousel numMobileItems={1} numDesktopItems={7} removeArrows={true}>
-          {getSponsors(data, "silver")}
-        </Carousel>
-      </div>
-
-      <div
-        className={[
-          sponsorsStyles.otherSponsors,
-          sponsorsStyles.bronzeWrapper,
-        ].join(" ")}
-      >
-        <div
-          className={[
-            sponsorsStyles.sponsorsType,
-            sponsorsStyles.bronzeSponsor,
-          ].join(" ")}
-        >
-          Bronze
-        </div>
-        <Carousel numMobileItems={1} numDesktopItems={10} removeArrows={true}>
-          {getSponsors(data, "bronze")}
-        </Carousel>
-      </div>
+      <SponsorSection type="gold" />
+      <SponsorSection type="silver" />
+      <SponsorSection type="bronze" />
     </section>
   )
 }
