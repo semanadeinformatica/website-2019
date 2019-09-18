@@ -3,14 +3,29 @@ import Img from "gatsby-image"
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa"
 import MemberStyles from "../../styles/team/member.module.css"
 
-const Member = ({ data }) => {
+const colors = [
+  MemberStyles.bg1,
+  MemberStyles.bg2,
+  MemberStyles.bg3,
+  MemberStyles.bg4,
+]
+
+const Member = ({ data, color }) => {
   return (
     <div className={MemberStyles.container}>
       <Img
         fluid={data.img.childImageSharp.fluid}
         className={MemberStyles.image}
       />
-      <div className={MemberStyles.info_overlay + " " + MemberStyles.overlay}>
+      <div
+        className={
+          MemberStyles.info_overlay +
+          " " +
+          MemberStyles.overlay +
+          " " +
+          colors[color]
+        }
+      >
         <div className={MemberStyles.links}>
           {data.linkedin ? (
             <a href={data.linkedin} className={MemberStyles.link}>
@@ -31,7 +46,13 @@ const Member = ({ data }) => {
       </div>
 
       <div
-        className={MemberStyles.color_overlay + " " + MemberStyles.overlay}
+        className={
+          MemberStyles.color_overlay +
+          " " +
+          MemberStyles.overlay +
+          " " +
+          colors[color]
+        }
       ></div>
     </div>
   )
