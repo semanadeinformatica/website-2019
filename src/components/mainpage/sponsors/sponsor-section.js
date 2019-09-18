@@ -57,7 +57,7 @@ const SponsorSection = ({ type }) => {
     wrapperType = sponsorsStyles.bronzeWrapper
     sponsorText = sponsorsStyles.bronzeSponsor
     sponsorType = "Bronze"
-    numDesktop = 14
+    numDesktop = 10
   }
 
   return (
