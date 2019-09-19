@@ -67,7 +67,7 @@ const Speakers = () => {
             <Speaker key={`${speaker.name}-${speaker.id}`} speaker={speaker} />
           ))}
         </Carousel>
-        <Link className={speakersStyles.allLink} to="/speakers">
+        <Link className={speakersStyles.allLink} to="/coming">
           Ver todos os speakers
         </Link>
       </section>
