@@ -5,10 +5,11 @@ import SEO from "../components/common/seo"
 import Navbar from "../components/common/navbar"
 import Layout from "../components/common/layout"
 
-import About from "../components/mainpage/about/about"
-import Tickets from "../components/mainpage/tickets"
-import Speakers from "../components/mainpage/speakers"
 import Banner from "../components/mainpage/banner/banner"
+import About from "../components/mainpage/about/about"
+import Speakers from "../components/mainpage/speakers"
+import Tickets from "../components/mainpage/tickets"
+import Sponsors from "../components/mainpage/sponsors/sponsors"
 import Contacts from "../components/mainpage/contacts/wrapper"
 
 import MainpageStyles from "../styles/mainpage/mainpage.module.css"
@@ -24,7 +25,7 @@ const IndexPage = () => (
       <About />
       <Speakers />
       <Tickets />
-      {/* <Sponsors /> */}
+      <Sponsors />
       <Contacts />
     </Layout>
   </div>

@@ -1,5 +1,5 @@
 ---
-name: Aptiv
-type: silver
+name: aptiv
+type: gold
 img: "../../images/favicon.png"
 ---
