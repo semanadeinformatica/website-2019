@@ -2,7 +2,6 @@ import React from "react"
 import SingleSponsor from "./single-sponsor"
 import sponsorsStyles from "../../../styles/sponsors.module.css"
 import Carousel from "../../utils/carousel"
-import { useSponsors } from "../../hooks/sponsors-query"
 
 export const getSponsors = (data, type) => {
   return data.allMarkdownRemark.edges
@@ -16,40 +15,40 @@ export const getSponsors = (data, type) => {
     ))
 }
 
-const SponsorSection = ({ type }) => {
-  const data = useSponsors()
-
+const SponsorSection = ({ sponsorData, type }) => {
   let wrapperType, sponsorText, sponsorType, numDesktop
   if (type === "gold") {
     wrapperType = sponsorsStyles.goldWrapper
     sponsorText = sponsorsStyles.goldSponsor
     sponsorType = "Gold"
-    numDesktop = 4
+    numDesktop = sponsorData.length
   } else if (type === "silver") {
     wrapperType = sponsorsStyles.silverWrapper
     sponsorText = sponsorsStyles.silverSponsor
     sponsorType = "Silver"
-    numDesktop = 7
+    numDesktop = sponsorData.length
   } else {
     wrapperType = sponsorsStyles.bronzeWrapper
     sponsorText = sponsorsStyles.bronzeSponsor
     sponsorType = "Bronze"
-    numDesktop = 10
+    numDesktop = sponsorData.length
   }
 
   return (
-    <div className={[sponsorsStyles.otherSponsors, wrapperType].join(" ")}>
-      <div className={[sponsorsStyles.sponsorsType, sponsorText].join(" ")}>
-        {sponsorType}
+    numDesktop > 0 && (
+      <div className={[sponsorsStyles.otherSponsors, wrapperType].join(" ")}>
+        <div className={[sponsorsStyles.sponsorsType, sponsorText].join(" ")}>
+          {sponsorType}
+        </div>
+        <Carousel
+          numMobileItems={1}
+          numDesktopItems={numDesktop}
+          removeArrows={true}
+        >
+          {sponsorData}
+        </Carousel>
       </div>
-      <Carousel
-        numMobileItems={1}
-        numDesktopItems={numDesktop}
-        removeArrows={true}
-      >
-        {getSponsors(data, type)}
-      </Carousel>
-    </div>
+    )
   )
 }
 

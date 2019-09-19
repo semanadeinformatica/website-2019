@@ -26,9 +26,9 @@ const Sponsors = () => {
         </div>
       )}
 
-      {goldSponsors.length > 0 && <SponsorSection type="gold" />}
-      {silverSponsors.length > 0 && <SponsorSection type="silver" />}
-      {bronzeSponsors.length > 0 && <SponsorSection type="bronze" />}
+      <SponsorSection sponsorData={goldSponsors} type="gold" />
+      <SponsorSection sponsorData={silverSponsors} type="silver" />
+      <SponsorSection sponsorData={bronzeSponsors} type="bronze" />
     </section>
   )
 }
