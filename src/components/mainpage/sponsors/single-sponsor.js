@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import sponsorStyles from "../../../styles/single-sponsor.module.css"
+import sponsorStyles from "../../../styles/mainpage/single-sponsor.module.css"
 
 const SingleSponsor = ({ sponsor, type }) => {
   return (

@@ -56,20 +56,22 @@ const Speakers = () => {
   const speakers = getAllSpeakers(data)
 
   return (
-    <section id="speakers" className={speakersStyles.speakersSection}>
-      <h2 className={speakersStyles.h2}>
-        Speakers
-        <hr className={speakersStyles.headingLine} />
-      </h2>
-      <Carousel numMobileItems={1} numDesktopItems={4}>
-        {speakers.map(speaker => (
-          <Speaker key={`${speaker.name}-${speaker.id}`} speaker={speaker} />
-        ))}
-      </Carousel>
-      <Link className={speakersStyles.allLink} to="/speakers">
-        Ver todos os speakers
-      </Link>
-    </section>
+    speakers.length > 0 && (
+      <section id="speakers" className={speakersStyles.speakersSection}>
+        <h2 className={speakersStyles.h2}>
+          Speakers
+          <hr className={speakersStyles.headingLine} />
+        </h2>
+        <Carousel numMobileItems={1} numDesktopItems={4}>
+          {speakers.map(speaker => (
+            <Speaker key={`${speaker.name}-${speaker.id}`} speaker={speaker} />
+          ))}
+        </Carousel>
+        <Link className={speakersStyles.allLink} to="/speakers">
+          Ver todos os speakers
+        </Link>
+      </section>
+    )
   )
 }
 
