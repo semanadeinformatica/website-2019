@@ -1,0 +1,43 @@
+.main {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.gold {
+  width: 50%;
+  margin-left: 30%;
+}
+
+.silver {
+  width: 55%;
+  margin-left: 35%;
+}
+
+.bronze {
+  width: 50%;
+  margin-left: 40%;
+}
+
+@media (max-width: 1000px) {
+  .gold {
+    width: 50% !important;
+    margin-left: 25% !important;
+  }
+
+  .silver {
+    width: 40% !important;
+    margin-left: 30% !important;
+  }
+
+  .bronze {
+    width: 30% !important;
+    margin-left: 35% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 75%;
+    margin-left: 10%;
+  }
+}
