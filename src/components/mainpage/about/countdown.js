@@ -18,16 +18,22 @@ class Countdown extends Component {
   }
 
   getTimeLeft() {
-    let today = new Date()
-    let sinf = new Date(2019, 10, 28, 14, 30)
-    let timeLeft = sinf - today
-
-    return {
-      days: Math.floor(timeLeft / 86400000),
+    const today = new Date()
+    const sinf = new Date(2019, 10, 28, 14, 30)
+    const millisLeft = sinf - today
+    const timeLeft = {
+      days: Math.floor(millisLeft / 86400000),
       hours:
-        (Math.floor(timeLeft / 36e5) % 24) + today.getTimezoneOffset() / 60,
-      minutes: Math.round(((timeLeft % 86400000) % 3600000) / 60000) % 60,
+        (Math.floor(millisLeft / 36e5) % 24) + today.getTimezoneOffset() / 60,
+      minutes: Math.round(((millisLeft % 86400000) % 3600000) / 60000) % 60,
     }
+
+    if (timeLeft.hours === -1) {
+      timeLeft.hours = 23
+      timeLeft.days--
+    }
+
+    return timeLeft
   }
 
   render() {
