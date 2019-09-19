@@ -7,7 +7,7 @@ import Carousel from "../utils/carousel"
 const Speaker = ({ speaker }) => (
   <div className={speakersStyles.speaker}>
     <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
-    <Link to={speaker.path}>Ver palestra</Link>
+    <Link to="/coming">Ver palestra</Link>
   </div>
 )
 
