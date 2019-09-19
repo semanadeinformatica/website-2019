@@ -20,9 +20,7 @@ const Sponsors = () => {
       {mainSponsors.length > 0 && (
         <div className={sponsorsStyles.mainSponsor}>
           <div className={sponsorsStyles.sponsorsType}>Main</div>
-          <div className={sponsorsStyles.mainWrapper}>
-            {getSponsors(data, "main")}
-          </div>
+          <div className={sponsorsStyles.mainWrapper}>{mainSponsors}</div>
         </div>
       )}
 

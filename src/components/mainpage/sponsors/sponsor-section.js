@@ -17,21 +17,20 @@ export const getSponsors = (data, type) => {
 
 const SponsorSection = ({ sponsorData, type }) => {
   let wrapperType, sponsorText, sponsorType, numDesktop
+  numDesktop = sponsorData.length
+
   if (type === "gold") {
     wrapperType = sponsorsStyles.goldWrapper
     sponsorText = sponsorsStyles.goldSponsor
     sponsorType = "Gold"
-    numDesktop = sponsorData.length
   } else if (type === "silver") {
     wrapperType = sponsorsStyles.silverWrapper
     sponsorText = sponsorsStyles.silverSponsor
     sponsorType = "Silver"
-    numDesktop = sponsorData.length
   } else {
     wrapperType = sponsorsStyles.bronzeWrapper
     sponsorText = sponsorsStyles.bronzeSponsor
     sponsorType = "Bronze"
-    numDesktop = sponsorData.length
   }
 
   return (
