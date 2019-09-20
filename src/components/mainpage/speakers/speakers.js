@@ -1,15 +1,8 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import speakersStyles from "../../styles/mainpage/speakers.module.css"
-import Carousel from "../utils/carousel"
-
-const Speaker = ({ speaker }) => (
-  <div className={speakersStyles.speaker}>
-    <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
-    <Link to="/coming">Ver palestra</Link>
-  </div>
-)
+import speakersStyles from "../../../styles/mainpage/speakers.module.css"
+import Carousel from "../../utils/carousel"
+import SingleSpeaker from "./SingleSpeaker"
 
 const getAllSpeakers = data => {
   let speakers = []
@@ -64,7 +57,10 @@ const Speakers = () => {
         </h2>
         <Carousel numMobileItems={1} numDesktopItems={4}>
           {speakers.map(speaker => (
-            <Speaker key={`${speaker.name}-${speaker.id}`} speaker={speaker} />
+            <SingleSpeaker
+              key={`${speaker.name}-${speaker.id}`}
+              speaker={speaker}
+            />
           ))}
         </Carousel>
         <Link className={speakersStyles.allLink} to="/coming">

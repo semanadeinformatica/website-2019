@@ -7,7 +7,7 @@ import Layout from "../components/common/layout"
 
 import Banner from "../components/mainpage/banner/banner"
 import About from "../components/mainpage/about/about"
-import Speakers from "../components/mainpage/speakers"
+import Speakers from "../components/mainpage/speakers/speakers"
 import Tickets from "../components/mainpage/tickets"
 import Sponsors from "../components/mainpage/sponsors/sponsors"
 import Contacts from "../components/mainpage/contacts/wrapper"
