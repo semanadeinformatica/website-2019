@@ -25,7 +25,7 @@ const Team = ({ name, members, n_per_row, start_odd }) => {
   let odd = start_odd
 
   return (
-    <Row>
+    <Row className={TeamStyles.team_container}>
       <Col className={TeamStyles.name_container}>
         <h2>{name}</h2>
       </Col>
@@ -35,17 +35,17 @@ const Team = ({ name, members, n_per_row, start_odd }) => {
 
           return (
             <Row className={TeamStyles.member_row} key={"row" + row_index}>
-              {row_members.map((value, index) => (
-                <Col
-                  key={"member" + index}
-                  className={TeamStyles.member_container}
-                >
-                  <Member
-                    data={value}
-                    color={!odd ? index : row_members.length - index}
-                  />
-                </Col>
-              ))}
+              {row_members.map((value, index) => {
+                const color = !odd ? n_per_row - index - 1 : index
+                return (
+                  <Col
+                    key={"member" + index}
+                    className={TeamStyles.member_container}
+                  >
+                    <Member data={value} color={color} />
+                  </Col>
+                )
+              })}
             </Row>
           )
         })}

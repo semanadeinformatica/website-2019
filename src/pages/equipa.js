@@ -10,31 +10,17 @@ import PageBanner from "../components/utils/page_banner"
 import TeamStyles from "../styles/team/team.module.css"
 import Icon from "../images/svg/equipa.inline.svg"
 
-const extractByTeam = data => {
-  let members = {}
-  data.allMarkdownRemark.edges.map(value => {
-    const k = value.node.frontmatter.role
-    if (members.hasOwnProperty(k)) {
-      members[k].push(value.node.frontmatter)
-    } else {
-      members[k] = [value.node.frontmatter]
-    }
-    return value.node.frontmatter
-  })
-  return members
-}
-
-const determine_first = (members, n_per_row) => {
+const determine_first = (teams, n_per_row) => {
   const odd_row = [true]
-  for (const team_name in members) {
-    if (members.hasOwnProperty(team_name)) {
-      const element = members[team_name]
-      const rows = Math.ceil(element.length / n_per_row)
-      if (rows % 2 === 0) {
-        odd_row.push(true)
-      } else {
-        odd_row.push(false)
-      }
+  let rows = 0
+  for (const team of teams) {
+    const element = team.members
+    rows += Math.ceil(element.length / n_per_row)
+
+    if (rows % 2 === 0) {
+      odd_row.push(true)
+    } else {
+      odd_row.push(false)
     }
   }
 
@@ -42,9 +28,9 @@ const determine_first = (members, n_per_row) => {
 }
 
 const TeamPage = ({ data }) => {
-  const members = extractByTeam(data)
+  const teams = data.allTeamJson.nodes
   const n_per_row = 4
-  const is_starting_row_odd = determine_first(members, n_per_row)
+  const is_starting_row_odd = determine_first(teams, n_per_row)
 
   return (
     <>
@@ -53,12 +39,12 @@ const TeamPage = ({ data }) => {
         <Icon />
       </PageBanner>
       <Container className={TeamStyles.container}>
-        {Object.keys(members).map((key, index) => {
+        {teams.map((team, index) => {
           return (
             <Team
-              name={key}
-              members={members[key]}
-              key={key}
+              name={team.name}
+              members={team.members}
+              key={index}
               n_per_row={n_per_row}
               start_odd={is_starting_row_odd[index]}
             />
@@ -70,26 +56,20 @@ const TeamPage = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query TeamQuery {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/team/" } }
-      sort: { fields: [frontmatter___role], order: ASC }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            name
-            role
-            img {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
+  query MyQuery {
+    allTeamJson {
+      nodes {
+        name
+        members {
+          github
+          linkedin
+          name
+          img {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
               }
             }
-            linkedin
-            github
           }
         }
       }

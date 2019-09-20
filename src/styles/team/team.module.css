@@ -4,6 +4,10 @@ div.container {
   margin-top: 4em;
 }
 
+div.team_container {
+  margin-bottom: 1em;
+}
+
 div.name_container {
   flex-grow: initial;
   min-width: 16em;
