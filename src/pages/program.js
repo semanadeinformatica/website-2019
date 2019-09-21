@@ -4,7 +4,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
 import DailySchedule from "../components/dailySchedule"
-import Event from "../components/event"
+import DefaultEvent from "../components/program/DefaultEvent"
+import Talk from "../components/program/Talk"
 
 import { splitDays } from "../utils/programUtils"
 
@@ -22,6 +23,8 @@ export const eventsQuery = graphql`
     ) {
       edges {
         node {
+          fileAbsolutePath
+          html
           frontmatter {
             day(formatString: "D MMMM", locale: "pt-PT")
             end_time
@@ -29,9 +32,12 @@ export const eventsQuery = graphql`
             start_time
             title
             path
-            type
             speakers {
               name
+              occupations {
+                what
+                where
+              }
             }
           }
         }
@@ -46,22 +52,36 @@ const ProgramPage = ({ data }) => (
     <div>
       <h1>Program</h1>
       {splitDays(data).map(day => (
-        <DailySchedule
-          key={day[0].node.frontmatter.day}
-          date={day[0].node.frontmatter.day}
-          events={day.map(event => (
-            <Event
-              title={event.node.frontmatter.title}
-              type={event.node.frontmatter.type}
-              speakers={event.node.frontmatter.speakers}
-              start_time={event.node.frontmatter.start_time}
-              end_time={event.node.frontmatter.end_time}
-              place={event.node.frontmatter.place}
-              path={event.node.frontmatter.path}
-            />
-          ))}
-          increment={10}
-        />
+        <DailySchedule key={day[0].node.frontmatter.day}>
+          {day
+            .filter(
+              event =>
+                event.node.fileAbsolutePath.includes("default") ||
+                event.node.fileAbsolutePath.includes("talks")
+            )
+            .map(event =>
+              event.node.fileAbsolutePath.includes("default") ? (
+                <DefaultEvent
+                  title={event.node.frontmatter.title}
+                  start_time={event.node.frontmatter.start_time}
+                  end_time={event.node.frontmatter.end_time}
+                  place={event.node.frontmatter.place}
+                  icon={event.node.frontmatter.icon}
+                />
+              ) : (
+                <Talk
+                  title={event.node.frontmatter.title}
+                  start_time={event.node.frontmatter.start_time}
+                  end_time={event.node.frontmatter.end_time}
+                  place={event.node.frontmatter.place}
+                  icon={event.node.frontmatter.icon}
+                  path={event.node.frontmatter.path}
+                  speakers={event.node.frontmatter.speakers}
+                  description={event.node.html}
+                />
+              )
+            )}
+        </DailySchedule>
       ))}
     </div>
   </Layout>
