@@ -77,6 +77,11 @@
 }
 
 @media (max-width: 500px) {
+  .speakersSection {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
   .speaker {
     position: static;
   }

@@ -72,6 +72,7 @@
   .section {
     background: var(--color2);
     padding: 10% 5%;
+    margin-top: 10rem;
   }
 
   .wrapper li span:first-child {
