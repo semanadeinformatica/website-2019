@@ -19,8 +19,17 @@ class Countdown extends Component {
 
   getTimeLeft() {
     const today = new Date()
-    const sinf = new Date(2019, 10, 28, 14, 30)
+    const sinf = new Date(2019, 9, 28, 14, 30)
     const millisLeft = sinf - today
+
+    if (millisLeft <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+      }
+    }
+
     const timeLeft = {
       days: Math.floor(millisLeft / 86400000),
       hours:
