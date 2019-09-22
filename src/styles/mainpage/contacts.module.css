@@ -1,4 +1,4 @@
-@import "./palette.css";
+@import "../common/palette.css";
 
 div.wrapper {
   padding: 0;

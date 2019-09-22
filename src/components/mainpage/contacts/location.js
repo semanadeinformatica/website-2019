@@ -1,5 +1,5 @@
 import React from "react"
-import ContactStyles from "../../styles/contacts.module.css"
+import ContactStyles from "../../../styles/mainpage/contacts.module.css"
 
 const Location = () => {
   return (

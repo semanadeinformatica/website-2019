@@ -1,16 +1,18 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import SEO from "../components/seo"
-import Navbar from "../components/navbar"
+import SEO from "../components/common/seo"
+import Navbar from "../components/common/navbar"
+import Layout from "../components/common/layout"
 
+import Banner from "../components/mainpage/banner/banner"
+import About from "../components/mainpage/about/about"
+import Speakers from "../components/mainpage/speakers/speakers"
+import Tickets from "../components/mainpage/tickets"
 import Sponsors from "../components/mainpage/sponsors/sponsors"
-import Tickets from "../components/tickets"
-import Speakers from "../components/speakers"
-import Banner from "../components/mainpage/banner"
-import Contacts from "../components/contacts/wrapper"
+import Contacts from "../components/mainpage/contacts/wrapper"
 
-import MainpageStyles from "../styles/mainpage.module.css"
+import MainpageStyles from "../styles/mainpage/mainpage.module.css"
 
 const IndexPage = () => (
   <div>
@@ -19,17 +21,13 @@ const IndexPage = () => (
       <Navbar transparent />
     </div>
     <Banner />
-    <div className={MainpageStyles.sticky}>
-      <Navbar logo />
-    </div>
-    <Speakers />
-    <Tickets />
-    <Sponsors />
-    <Contacts />
-    <Contacts />
-    <Contacts />
-    <Contacts />
-    <Contacts />
+    <Layout>
+      <About />
+      <Speakers />
+      <Tickets />
+      <Sponsors />
+      <Contacts />
+    </Layout>
   </div>
 )
 export default IndexPage

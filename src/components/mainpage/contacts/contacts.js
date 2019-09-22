@@ -7,7 +7,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa"
 
-import ContactStyles from "../../styles/contacts.module.css"
+import ContactStyles from "../../../styles/mainpage/contacts.module.css"
 
 const links = [
   {

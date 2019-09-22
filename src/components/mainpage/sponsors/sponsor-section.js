@@ -1,6 +1,6 @@
 import React from "react"
 import SingleSponsor from "./single-sponsor"
-import sponsorsStyles from "../../../styles/sponsors.module.css"
+import sponsorsStyles from "../../../styles/mainpage/sponsors.module.css"
 import Carousel from "../../utils/carousel"
 
 export const getSponsors = (data, type) => {

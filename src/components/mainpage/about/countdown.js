@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "reactstrap"
 
-import AboutStyles from "../../styles/about.module.css"
+import AboutStyles from "../../../styles/mainpage/about.module.css"
 
 class Countdown extends Component {
   constructor(props) {
@@ -18,16 +18,31 @@ class Countdown extends Component {
   }
 
   getTimeLeft() {
-    let today = new Date()
-    let sinf = new Date(2019, 10, 28, 14, 30)
-    let timeLeft = sinf - today
+    const today = new Date()
+    const sinf = new Date(2019, 9, 28, 14, 30)
+    const millisLeft = sinf - today
 
-    return {
-      days: Math.floor(timeLeft / 86400000),
-      hours:
-        (Math.floor(timeLeft / 36e5) % 24) + today.getTimezoneOffset() / 60,
-      minutes: Math.round(((timeLeft % 86400000) % 3600000) / 60000) % 60,
+    if (millisLeft <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+      }
     }
+
+    const timeLeft = {
+      days: Math.floor(millisLeft / 86400000),
+      hours:
+        (Math.floor(millisLeft / 36e5) % 24) + today.getTimezoneOffset() / 60,
+      minutes: Math.round(((millisLeft % 86400000) % 3600000) / 60000) % 60,
+    }
+
+    if (timeLeft.hours === -1) {
+      timeLeft.hours = 23
+      timeLeft.days--
+    }
+
+    return timeLeft
   }
 
   render() {

@@ -3,11 +3,11 @@ import { Container, Col, Row } from "reactstrap"
 import Contacts from "./contacts"
 import Location from "./location"
 
-import ContactStyles from "../../styles/contacts.module.css"
+import ContactStyles from "../../../styles/mainpage/contacts.module.css"
 
 const ContactWrapper = () => {
   return (
-    <Container className={ContactStyles.wrapper} fluid>
+    <Container id="contactos" className={ContactStyles.wrapper} fluid>
       <Row
         className={ContactStyles.container + " " + ContactStyles.main_container}
       >

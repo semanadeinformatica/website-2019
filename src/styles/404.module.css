@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-@import "./palette.css";
+@import "./common/palette.css";
 
 .face {
   max-width: 75%;

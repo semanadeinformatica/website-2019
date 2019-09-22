@@ -1,5 +1,7 @@
+@import "../common/palette.css";
+
 .speakersSection {
-  margin-top: 5rem;
+  margin-top: 13rem;
   margin-bottom: 8rem;
 }
 
@@ -75,6 +77,11 @@
 }
 
 @media (max-width: 500px) {
+  .speakersSection {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
   .speaker {
     position: static;
   }

@@ -9,13 +9,13 @@ import {
   NavLink,
 } from "reactstrap"
 
-import Logo from "../images/svg/logo_sinf_simp.inline.svg"
-import NavbarStyles from "../styles/navbar.module.css"
+import Logo from "../../images/svg/logo_sinf_simp.inline.svg"
+import NavbarStyles from "../../styles/common/navbar.module.css"
 
 const NavWrapper = ({ links, className }) => (
   <Nav navbar className={className}>
     {links.map(({ internal, url, text }) => (
-      <NavItem className="px-2" key={url}>
+      <NavItem className="px-2" key={text}>
         {internal ? (
           <Link
             className={`nav-link ${NavbarStyles.navLink}`}
@@ -77,17 +77,17 @@ export default class NavBar extends React.Component {
 
     this.rightLinks = [
       {
-        url: "/programa",
+        url: "/coming",
         text: "Programa",
         internal: true,
       },
       {
-        url: "/equipa",
+        url: "/coming",
         text: "Equipa",
         internal: true,
       },
       {
-        url: "/competicao-programacao",
+        url: "/coming",
         text: "Competição",
         internal: true,
       },

@@ -1,4 +1,4 @@
-@import "./palette.css";
+@import "../common/palette.css";
 
 .aboutContainer {
   background-color: var(--color1);
