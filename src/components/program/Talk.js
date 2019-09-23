@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { FaAngleDown } from "react-icons/fa"
-import { TimePlace, Speakers } from "../utils/programUtils"
+import { Collapse } from "reactstrap"
+import { TimePlace, Speakers, DescriptionToggler } from "../utils/programUtils"
+import eventsStyles from "../../styles/program/events.module.css"
 
 const Talk = ({
   title,
@@ -14,22 +15,27 @@ const Talk = ({
 }) => {
   const [showAll, setShowAll] = useState(false)
   return (
-    <div>
-      <div>
-        <button onClick={() => setShowAll(!showAll)}>
-          <FaAngleDown />
-        </button>
-      </div>
+    <div
+      data-date={start_time}
+      className={[eventsStyles.talk, eventsStyles.main].join(" ")}
+    >
+      <DescriptionToggler
+        id={`toggleShowAll-${title}`}
+        showAll={showAll}
+        setShowAll={setShowAll}
+      />
       <div>
         <h3>
           <Link to={path}>{title}</Link>
         </h3>
-        <TimePlace start_time={start_time} end_time={end_time} place={place} />
         <Speakers speakers={speakers} path={path} />
-        <p
-          style={{ display: showAll ? "block" : "none" }}
-          dangerouslySetInnerHTML={{ __html: description }}
-        ></p>
+        <TimePlace start_time={start_time} end_time={end_time} place={place} />
+        <Collapse isOpen={showAll}>
+          <p
+            className={eventsStyles.description}
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
+        </Collapse>
       </div>
     </div>
   )

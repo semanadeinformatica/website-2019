@@ -1,25 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Container } from "reactstrap"
 
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
-import DailySchedule from "../components/dailySchedule"
 import DefaultEvent from "../components/program/DefaultEvent"
 import Talk from "../components/program/Talk"
 
 import { splitDays } from "../utils/programUtils"
+import programStyles from "../styles/program/program.module.css"
 
 export const eventsQuery = graphql`
   query Events {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/events/" } }
-      sort: {
-        fields: [
-          frontmatter___day
-          frontmatter___start_time
-          frontmatter___type
-        ]
-      }
+      sort: { fields: [frontmatter___day, frontmatter___start_time] }
     ) {
       edges {
         node {
@@ -32,6 +27,7 @@ export const eventsQuery = graphql`
             start_time
             title
             path
+            icon
             speakers {
               name
               occupations {
@@ -46,13 +42,15 @@ export const eventsQuery = graphql`
   }
 `
 
-const ProgramPage = ({ data }) => (
-  <Layout>
-    <SEO title="Program" />
-    <div>
-      <h1>Program</h1>
-      {splitDays(data).map(day => (
-        <DailySchedule key={day[0].node.frontmatter.day}>
+const ProgramPage = ({ data }) => {
+  const days = splitDays(data)
+  const day = days[0]
+  return (
+    <Layout>
+      <SEO title="Program" />
+      <Container>
+        <h1>Program</h1>
+        <div className={programStyles.schedule}>
           {day
             .filter(
               event =>
@@ -81,10 +79,10 @@ const ProgramPage = ({ data }) => (
                 />
               )
             )}
-        </DailySchedule>
-      ))}
-    </div>
-  </Layout>
-)
+        </div>
+      </Container>
+    </Layout>
+  )
+}
 
 export default ProgramPage

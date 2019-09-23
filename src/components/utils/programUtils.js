@@ -1,9 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FaAngleUp } from "react-icons/fa"
+
+import eventsStyles from "../../styles/program/events.module.css"
 
 export const TimePlace = ({ start_time, end_time, place }) => (
-  <p>
-    {start_time}-{end_time} | {place}
+  <p className={eventsStyles.timePlace}>
+    {start_time} {end_time && <span>- {end_time}</span>}{" "}
+    {place && <span>| {place}</span>}
   </p>
 )
 
@@ -24,4 +28,18 @@ export const Speakers = ({ speakers, path }) => (
       )}
     </h5>
   </>
+)
+
+export const DescriptionToggler = ({ id, showAll, setShowAll }) => (
+  <div className={eventsStyles.toggler}>
+    <input
+      type="checkbox"
+      checked={showAll}
+      onChange={e => setShowAll(e.target.checked)}
+      id={id}
+    />
+    <label for={id}>
+      <FaAngleUp color="white" size="1.5rem" />
+    </label>
+  </div>
 )

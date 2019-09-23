@@ -1,12 +1,23 @@
 ---
-title: Breaking IoT
+title: 9 anos de front-end na feedzai
 
 speakers:
-  - name: David Sopas
+  - name: Luís Cardoso
     occupations:
-      - what: Security Researcher
-        where: Checkmarx
-    bio: David Sopas é security researcher com mais de 10 anos de experiência. Atualmente lidera uma equipa de researchers da Checkmarx, é co-fundador da Char49 e Pentester da Cobalt. Foi reconhecido publicamente por encontrar falhas em empresas como Google, Microsoft, Adobe, eBay, Amazon e muitas outras. Alguns trabalhos de research do David já foram apresentados em conferências de segurança, como por exemplo, na Defcon, BSides e OWASP Appsec.
+      - what: front-end engineer
+        where: feedzai
+    bio: Sou Front-end Engineer na Feedzai há 7 anos. Estou na empresa praticamente desde o seu início e tive um grande papel no que é o Front-end na Feedzai atualmente (para o bom e mau). Algumas das coisas em que estive envolvido foram - manter uma grande SPA, recrutamento, decisões de arquitetura e várias iniciativas dentro da empresa. Nos tempos livres sou fotógrafo amador.
+
+    img: "../../../images/EduardoMarques.jpg"
+    linkedin: https://www.linkedin.com/in/miguelpoliveira/
+    website: https://davidsopas.com
+    twitter: https://twitter.com/dsopas
+
+  - name: Victor Fernandes
+    occupations:
+      - what: front-end engineer
+        where: feedzai
+    bio: Actualmente, sou front-end engineer na Feedzai há 1 ano e meio mas já conto com quase 5 anos de experiência como Front-end Engineer. Anteriormente trabalhei na MOG Technologies e tive a sorte de desde sempre lidar com problemas que levam os Web-Browser ao limite, tais como criar video players no browser, criar editores de vídeos em SPA e representar muita informação. Atualmente o meu maior desafio é desenvolver uma aplicação que seja consiga representar mais de 15000 nós de um grafo sem perder a performance do browser.
 
     img: "../../../images/EduardoMarques.jpg"
     linkedin: https://www.linkedin.com/in/miguelpoliveira/
@@ -19,9 +30,7 @@ end_time: 18h10
 place: B032
 type: 0-talk
 
-path: /talks/breaking-iot
+path: /talks/9-anos-front-end-na-feedzai/
 ---
 
-A Internet da Coisas está a mudar os nossos hábitos de vida. Desde a utilização de wearables que nos informam que perdemos menos calorias que no dia anterior até aos dispositivos médicos que administram automaticamente a dose necessária para o doente. Esta "sede" de desenvolver dispositivos "inteligentes" está a gerar oportunidades aos
-utilizadores maliciosos de comprometerem muito mais que páginas web mas também o nosso quotidiano.
-Nesta palestra, David Sopas vai falar um pouco dos perigos associados ao IoT - desde a privacidade dos utilizadores até à segurança de dispositivos.
+O Front-end na Feedzai começou como uma série de plugins de jQuery, passou por uma aplicação em RequireJS e Backbone, e neste momento temos 3 aplicações, duas em React & Redux e uma em Backbone/React. Pelo meio houveram muitas migrações, refactors e decisões. Esta apresentação é sobre esta viagem.

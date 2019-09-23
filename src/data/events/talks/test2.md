@@ -1,27 +1,22 @@
 ---
-title: Breaking IoT
+title: qual o papel do data scientist nas empresas?
 
 speakers:
-  - name: David Sopas
+  - name: daniel ferrari
     occupations:
-      - what: Security Researcher
-        where: Checkmarx
-    bio: David Sopas é security researcher com mais de 10 anos de experiência. Atualmente lidera uma equipa de researchers da Checkmarx, é co-fundador da Char49 e Pentester da Cobalt. Foi reconhecido publicamente por encontrar falhas em empresas como Google, Microsoft, Adobe, eBay, Amazon e muitas outras. Alguns trabalhos de research do David já foram apresentados em conferências de segurança, como por exemplo, na Defcon, BSides e OWASP Appsec.
+      - what: data scientist
+        where: talkdesk
+    bio: Licenciado em Ciências da Computação e doutorado em IA e Machine Learning. Atuando como researcher publicou um livro e diversos artigos em parceria com laboratórios de Computação e Biologia. Como Engenheiro de Software, contribuiu no desenvolvimento de um sistema de planeamento de recurso corporativo (ERP). Como Data Scientist, combina a sua experiência como engenheiro e researcher para desenvolver pipelines completos desde a extração e manipulação de dados até a distribuição em produção de modelos de Machine Learning.
 
     img: "../../../images/DomingosMartins.jpg"
-    linkedin: https://www.linkedin.com/in/miguelpoliveira/
-    website: https://davidsopas.com
-    twitter: https://twitter.com/dsopas
+    linkedin: https://www.linkedin.com/in/danielgomesferrari/
 
 day: 2019-10-29
 start_time: 16h00
 end_time: 16h40
 place: B032
-type: 0-talk
 
-path: /talks/breaking-iot
+path: /talks/qual-o-papel-do-data-scientist/
 ---
 
-A Internet da Coisas está a mudar os nossos hábitos de vida. Desde a utilização de wearables que nos informam que perdemos menos calorias que no dia anterior até aos dispositivos médicos que administram automaticamente a dose necessária para o doente. Esta "sede" de desenvolver dispositivos "inteligentes" está a gerar oportunidades aos
-utilizadores maliciosos de comprometerem muito mais que páginas web mas também o nosso quotidiano.
-Nesta palestra, David Sopas vai falar um pouco dos perigos associados ao IoT - desde a privacidade dos utilizadores até à segurança de dispositivos.
+Conceitos sobre data science e aplicação das técnicas nas empresas e produtos e definição dos papéis que os data scientists podem desempenhar no desenvolvimento de produtos até as customizações para clientes.

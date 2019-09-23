@@ -1,12 +1,12 @@
 ---
-title: Breaking IoT
+title: programação competitiva - o quê? quando? como? porquê?
 
 speakers:
-  - name: David Sopas
+  - name: miguel oliveira
     occupations:
-      - what: Security Researcher
-        where: Checkmarx
-    bio: David Sopas é security researcher com mais de 10 anos de experiência. Atualmente lidera uma equipa de researchers da Checkmarx, é co-fundador da Char49 e Pentester da Cobalt. Foi reconhecido publicamente por encontrar falhas em empresas como Google, Microsoft, Adobe, eBay, Amazon e muitas outras. Alguns trabalhos de research do David já foram apresentados em conferências de segurança, como por exemplo, na Defcon, BSides e OWASP Appsec.
+      - what: software engineer
+        where: facebook
+    bio: Miguel Oliveira, software engineer no Facebook. Concluiu o MIEIC em 2010. Iniciou o doutoramento no mesmo ano e fez estágios na Google e Facebook durante o mesmo. Em 2017, interrompeu o doutoramento para trabalhar no Facebook full-time. Participou em inúmeros concursos de programação desde o ensino secundário e conquistou uma medalha de ouro no SWERC 2009, o nosso concurso Europeu da ACM.
 
     img: "../../../images/DavidSopas.jpg"
     linkedin: https://www.linkedin.com/in/miguelpoliveira/
@@ -19,9 +19,7 @@ end_time: 18h40
 place: B032
 type: 0-talk
 
-path: /talks/breaking-iot
+path: /talks/programacao-competitiva/
 ---
 
-A Internet da Coisas está a mudar os nossos hábitos de vida. Desde a utilização de wearables que nos informam que perdemos menos calorias que no dia anterior até aos dispositivos médicos que administram automaticamente a dose necessária para o doente. Esta "sede" de desenvolver dispositivos "inteligentes" está a gerar oportunidades aos
-utilizadores maliciosos de comprometerem muito mais que páginas web mas também o nosso quotidiano.
-Nesta palestra, David Sopas vai falar um pouco dos perigos associados ao IoT - desde a privacidade dos utilizadores até à segurança de dispositivos.
+Esta apresentação começa por uma introdução à Programação Competitiva: em que consiste, tipos de concursos e exemplos de problemas. O porquê da participação nestas actividades originar ofertas de emprego e a sua contribuição para o orador passar as entrevistas da Google e Facebook.

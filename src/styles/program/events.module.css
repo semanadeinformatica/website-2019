@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import "../common/palette.css";
+
+.main {
+  border-bottom: 1px #ccc solid;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.main:first-child {
+  padding-top: 2rem;
+}
+
+.main:last-child {
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: none;
+}
+
+.defaultEvent {
+  position: relative;
+}
+
+.defaultEvent:after {
+  position: absolute;
+  content: "";
+  background-color: var(--color4);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  bottom: 2rem;
+  left: -3.25rem;
+}
+
+.main:before {
+  position: absolute;
+  content: attr(data-date);
+  top: 0.5rem;
+  left: -8rem;
+}
+
+.defaultEvent:before {
+  position: absolute;
+  content: attr(data-date);
+  bottom: 2rem;
+  top: unset;
+  left: -8rem;
+}
+
+.talk {
+  padding-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.talk h3 a:before {
+  content: open-quote;
+}
+
+.talk h3 a:after {
+  content: close-quote;
+}
+
+.talk h3 a {
+  color: var(--color3);
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.talk h4,
+.talk h5 {
+  margin-bottom: 0;
+}
+
+.talk h4 a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: underline;
+}
+
+.talk h5 {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.withIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.withIcon .info {
+  margin-left: 1rem;
+}
+
+.timePlace {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.info h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.toggler input {
+  display: none;
+}
+
+.toggler label {
+  background-color: var(--color3);
+  border-radius: 5px;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: -3.7rem;
+}
+
+.toggler svg {
+  transition: 0.5s ease-in-out;
+}
+
+.toggler label:hover svg {
+  transform: rotateZ(-180deg);
+}
+
+.toggler input:checked + label svg {
+  transform: rotateZ(-180deg);
+}
+
+.description {
+  padding-top: 1rem;
+}
