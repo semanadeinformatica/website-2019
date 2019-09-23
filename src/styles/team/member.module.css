@@ -1,4 +1,4 @@
-@import "../palette.css";
+@import "../common/palette.css";
 
 .container {
   position: relative;

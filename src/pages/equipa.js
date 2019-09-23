@@ -3,7 +3,9 @@ import { graphql } from "gatsby"
 
 import { Container } from "reactstrap"
 
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
+import Layout from "../components/common/layout"
+
 import Team from "../components/team/team"
 import PageBanner from "../components/utils/page_banner"
 
@@ -33,7 +35,7 @@ const TeamPage = ({ data }) => {
   const is_starting_row_odd = determine_first(teams, n_per_row)
 
   return (
-    <>
+    <Layout>
       <SEO title="Equipa" />
       <PageBanner>
         <Icon />
@@ -51,7 +53,7 @@ const TeamPage = ({ data }) => {
           )
         })}
       </Container>
-    </>
+    </Layout>
   )
 }
 
