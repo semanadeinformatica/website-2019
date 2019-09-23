@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import Occupations from "./occupations"
+import Occupations from "./utils/occupations"
 
 const styles = {
   image: {
