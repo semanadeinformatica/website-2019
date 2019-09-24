@@ -28,9 +28,13 @@ const DailySpeakers = ({ talks, day }) => {
       </Col>
       <Col md="10" xs="12">
         <Row>
-          {speakers.map(speaker => (
-            <Speaker speaker={speaker} />
-          ))}
+          {speakers.map((speaker, index) =>
+            index % 8 < 4 ? (
+              <Speaker speaker={speaker} color={index % 4} />
+            ) : (
+              <Speaker speaker={speaker} color={3 - (index % 4)} />
+            )
+          )}
         </Row>
       </Col>
     </Row>
