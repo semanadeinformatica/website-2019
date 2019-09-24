@@ -4,7 +4,7 @@ import { Collapse } from "reactstrap"
 import { TimePlace, Speakers, DescriptionToggler } from "../utils/programUtils"
 import eventsStyles from "../../styles/program/events.module.css"
 
-const Talk = ({
+const CommonEvent = ({
   title,
   path,
   speakers,
@@ -12,23 +12,32 @@ const Talk = ({
   end_time,
   place,
   description,
+  color,
 }) => {
   const [showAll, setShowAll] = useState(false)
   return (
     <div
       data-date={start_time}
-      className={[eventsStyles.talk, eventsStyles.main].join(" ")}
+      className={[eventsStyles.commonEvent, eventsStyles.main].join(" ")}
     >
       <DescriptionToggler
         id={`toggleShowAll-${title}`}
         showAll={showAll}
         setShowAll={setShowAll}
+        backgroundColor={color}
       />
       <div>
         <h3>
-          <Link to={path}>{title}</Link>
+          <Link style={{ color }} to={path}>
+            {path.includes("workshops") && "Workshop: "}{" "}
+            <span
+              className={!path.includes("sessions") && eventsStyles.eventTitle}
+            >
+              {title}
+            </span>
+          </Link>
         </h3>
-        <Speakers speakers={speakers} path={path} />
+        {speakers && <Speakers speakers={speakers} path={path} />}
         <TimePlace start_time={start_time} end_time={end_time} place={place} />
         <Collapse isOpen={showAll}>
           <p
@@ -41,4 +50,4 @@ const Talk = ({
   )
 }
 
-export default Talk
+export default CommonEvent

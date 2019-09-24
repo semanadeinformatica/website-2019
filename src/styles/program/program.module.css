@@ -2,3 +2,20 @@
   border-left: 1px #ccc solid;
   padding-left: 2.5rem;
 }
+
+.headingLine {
+  width: 3.5rem;
+  height: 2px;
+  margin: 0.2rem auto;
+  color: #361784;
+  background-color: #361784;
+}
+
+.innerTab {
+  color: #bebebe !important;
+  font-weight: 500;
+}
+
+.innerTab.active {
+  color: #361784 !important;
+}

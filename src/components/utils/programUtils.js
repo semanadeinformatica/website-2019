@@ -30,7 +30,12 @@ export const Speakers = ({ speakers, path }) => (
   </>
 )
 
-export const DescriptionToggler = ({ id, showAll, setShowAll }) => (
+export const DescriptionToggler = ({
+  id,
+  showAll,
+  setShowAll,
+  backgroundColor,
+}) => (
   <div className={eventsStyles.toggler}>
     <input
       type="checkbox"
@@ -38,7 +43,7 @@ export const DescriptionToggler = ({ id, showAll, setShowAll }) => (
       onChange={e => setShowAll(e.target.checked)}
       id={id}
     />
-    <label for={id}>
+    <label htmlFor={id} style={{ backgroundColor }}>
       <FaAngleUp color="white" size="1.5rem" />
     </label>
   </div>

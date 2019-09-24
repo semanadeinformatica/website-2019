@@ -8,14 +8,12 @@ const icons = {
   coffee: <FaCoffee color="#0c0044" size="2.5em" />,
 }
 
-const DefaultEvent = ({ title, start_time, end_time, place, icon }) => {
+const SimpleEvent = ({ title, start_time, end_time, place, icon }) => {
   const className = icon
-    ? [
-        eventsStyles.main,
-        eventsStyles.defaultEvent,
-        eventsStyles.withIcon,
-      ].join(" ")
-    : [eventsStyles.main, eventsStyles.defaultEvent].join(" ")
+    ? [eventsStyles.main, eventsStyles.simpleEvent, eventsStyles.withIcon].join(
+        " "
+      )
+    : [eventsStyles.main, eventsStyles.simpleEvent].join(" ")
   return (
     <div data-date={start_time} className={className}>
       {icon && icons[icon]}
@@ -27,4 +25,4 @@ const DefaultEvent = ({ title, start_time, end_time, place, icon }) => {
   )
 }
 
-export default DefaultEvent
+export default SimpleEvent
