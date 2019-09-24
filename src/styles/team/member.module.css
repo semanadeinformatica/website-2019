@@ -110,3 +110,7 @@
 .bg4 {
   background-color: rgba(45, 166, 176, 0.37);
 }
+
+.container:hover .bg2 {
+  background-color: rgba(155, 216, 220, 0.6);
+}
