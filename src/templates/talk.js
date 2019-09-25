@@ -1,38 +1,27 @@
 import React from "react"
-// import Helmet from "react-helmet"
 import { graphql } from "gatsby"
+import { Container } from "reactstrap"
 
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
-import Speaker from "../components/speaker"
+import Speaker from "../components/talk/speaker"
+import Talk from "../components/talk/talk"
+import Participate from "../components/talk/participate"
 
 export default function Template({ data }) {
   const { markdownRemark: talk } = data
+  const info = { ...talk.frontmatter }
 
   return (
     <Layout>
-      <SEO title={talk.frontmatter.title} />
-      <div>
-        <h2>talk</h2>
-        <div>
-          <h1>{talk.frontmatter.title}</h1>
-          <div>{talk.frontmatter.day}</div>
-          <div>
-            {talk.frontmatter.start_time} {" - "} {talk.frontmatter.end_time}
-          </div>
-          <div>{talk.frontmatter.place}</div>
+      <SEO title={info.title} />
+      <Container fluid>
+        <Speaker data={info.speakers[0]} />
+        <Talk data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
-
-          <div>
-            <h2>Speakers</h2>
-            <div>
-              {talk.frontmatter.speakers.map(speaker => {
-                return <Speaker key={speaker.name} data={speaker} />
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
+        </Talk>
+        <Participate href={info.href ? info.href : "/coming"} />
+      </Container>
     </Layout>
   )
 }
