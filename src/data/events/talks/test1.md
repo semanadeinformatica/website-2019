@@ -13,11 +13,12 @@ speakers:
     website: https://davidsopas.com
     twitter: https://twitter.com/dsopas
 
+n_day: 3
 day: 2019-10-29
 start_time: 15h00
 end_time: 16h00
 place: B032
-type: 0-talk
+type: Palestra
 
 path: /talks/software-engineering-at-outsystems
 ---

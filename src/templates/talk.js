@@ -34,6 +34,8 @@ export const talkQuery = graphql`
       frontmatter {
         path
         title
+        n_day
+        type
         day(formatString: "D MMMM", locale: "pt-PT")
         place
         start_time
