@@ -82,7 +82,7 @@ export default class NavBar extends React.Component {
         internal: true,
       },
       {
-        url: "/coming",
+        url: "/equipa",
         text: "Equipa",
         internal: true,
       },
