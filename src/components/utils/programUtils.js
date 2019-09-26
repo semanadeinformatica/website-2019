@@ -1,6 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaAngleUp } from "react-icons/fa"
+import {
+  FaAngleUp,
+  FaCalendarCheck,
+  FaCoffee,
+  FaRobot,
+  FaShieldAlt,
+  FaUserTie,
+} from "react-icons/fa"
 
 import eventsStyles from "../../styles/program/events.module.css"
 
@@ -48,3 +55,11 @@ export const DescriptionToggler = ({
     </label>
   </div>
 )
+
+export const icons = {
+  "calendar-check": <FaCalendarCheck color="#0c0044" size="2em" />,
+  coffee: <FaCoffee color="#0c0044" size="2.5em" />,
+  robot: <FaRobot />,
+  "shield-alt": <FaShieldAlt />,
+  "user-tie": <FaUserTie />,
+}

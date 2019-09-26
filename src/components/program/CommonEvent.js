@@ -31,7 +31,9 @@ const CommonEvent = ({
           <Link style={{ color }} to={path}>
             {path.includes("workshops") && "Workshop: "}{" "}
             <span
-              className={!path.includes("sessions") && eventsStyles.eventTitle}
+              className={
+                !path.includes("sessions") ? eventsStyles.eventTitle : undefined
+              }
             >
               {title}
             </span>
