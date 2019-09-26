@@ -6,7 +6,7 @@ import Styles from "../../styles/talk/description.module.css"
 
 const Description = ({ data, children }) => {
   return (
-    <Row>
+    <Row className={Styles.row}>
       <Col>
         <Container className={Styles.container}>
           <h2 className={Styles.title}>{data.type + ": " + data.title}</h2>

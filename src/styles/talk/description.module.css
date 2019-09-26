@@ -1,5 +1,9 @@
 @import "../common/palette.css";
 
+.row {
+  max-width: 100%;
+}
+
 .container {
   padding-bottom: 4em;
 }

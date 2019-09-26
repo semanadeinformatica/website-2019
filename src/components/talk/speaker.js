@@ -20,6 +20,14 @@ const Speaker = ({ data }) => {
           </Col>
         </Row>
       </div>
+
+      <div className={Styles.mb_id_container}>
+        <div className={Styles.mb_blue}>
+          <SpeakerName {...data} />
+          <SpeakerFrame {...data} />
+        </div>
+        <p className={Styles.bio}>{data.bio}</p>
+      </div>
     </Container>
   )
 }
