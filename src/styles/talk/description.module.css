@@ -1,5 +1,9 @@
 @import "../common/palette.css";
 
+.container {
+  padding-bottom: 4em;
+}
+
 .title {
   text-decoration: underline;
   margin-bottom: 0.5em;

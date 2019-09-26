@@ -22,7 +22,11 @@ export default function Template({ data }) {
         <Description data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
         </Description>
-        <Participate href={info.href ? info.href : "/coming"} />
+        {info.href ? (
+          <Participate href={info.href ? info.href : "/coming"} />
+        ) : (
+          " "
+        )}
       </Container>
     </Layout>
   )

@@ -20,7 +20,6 @@ const Speaker = ({ data }) => {
           </Col>
         </Row>
       </div>
-      <Container></Container>
     </Container>
   )
 }

@@ -3,14 +3,14 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 import speakersStyles from "../../../styles/mainpage/speakers.module.css"
 
-const SingleSpeaker = ({ speaker }) => (
+const SingleSpeaker = ({ speaker, path }) => (
   <div className={speakersStyles.speaker}>
     <Img
       fluid={speaker.img.childImageSharp.fluid}
       alt={speaker.name}
       className={speakersStyles.image}
     />
-    <Link to="/coming">Ver palestra</Link>
+    <Link to={path}>Ver palestra</Link>
   </div>
 )
 
