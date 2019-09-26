@@ -1,11 +1,16 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Container, TabContent, TabPane } from "reactstrap"
+
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
 
 import ProgramNav from "../components/program/ProgramNav"
 import DailySchedule from "../components/program/DailySchedule"
+import PageBanner from "../components/utils/page_banner"
+
+import PageHeader from "../images/svg/programa.inline.svg"
+import programStyles from "../styles/program/program.module.css"
 
 import { splitDays } from "../utils/programUtils"
 
@@ -73,8 +78,10 @@ const ProgramPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Program" />
-      <Container>
-        <h1>Program</h1>
+      <PageBanner>
+        <PageHeader />
+      </PageBanner>
+      <Container className={programStyles.container}>
         <ProgramNav
           days={data.allThemesJson.edges}
           activeTab={activeTab}

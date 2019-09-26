@@ -1,3 +1,7 @@
+.container {
+  margin-top: 3rem;
+}
+
 .schedule {
   border-left: 1px #ccc solid;
   padding-left: 2.5rem;
@@ -14,6 +18,7 @@
 .innerTab {
   color: #bebebe !important;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .innerTab:hover {
@@ -33,6 +38,7 @@
 .navItemWrapper {
   border: 1px solid #dbdada;
   padding: 0.5rem 0.8rem;
+  cursor: pointer;
 }
 
 .navItemWrapper:first-child {
@@ -49,6 +55,16 @@
 
 .navItem h3 {
   margin-bottom: 0;
+}
+
+.navItemWrapper:hover {
+  background-color: #5f36c7 !important;
+  border-color: #5f36c7 !important;
+}
+
+.navItemWrapper:hover .navItem h3,
+.navItemWrapper:hover .navItem span {
+  color: var(--white);
 }
 
 .navItemWrapper.active {
