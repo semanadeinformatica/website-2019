@@ -5,8 +5,10 @@ import { Container } from "reactstrap"
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
 import Speaker from "../components/talk/speaker"
-import Talk from "../components/talk/talk"
+import Description from "../components/talk/description"
 import Participate from "../components/talk/participate"
+
+import Styles from "../styles/talk/talk.module.css"
 
 export default function Template({ data }) {
   const { markdownRemark: talk } = data
@@ -15,11 +17,11 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={info.title} />
-      <Container fluid>
+      <Container fluid className={Styles.container}>
         <Speaker data={info.speakers[0]} />
-        <Talk data={info}>
+        <Description data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
-        </Talk>
+        </Description>
         <Participate href={info.href ? info.href : "/coming"} />
       </Container>
     </Layout>
@@ -57,6 +59,7 @@ export const talkQuery = graphql`
           linkedin
           twitter
           website
+          github
         }
       }
     }

@@ -2,9 +2,9 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 import TimePlace from "./time_place"
 
-import Styles from "../../styles/talk/talk.module.css"
+import Styles from "../../styles/talk/description.module.css"
 
-const Talk = ({ data, children }) => {
+const Description = ({ data, children }) => {
   return (
     <Row>
       <Col>
@@ -26,4 +26,4 @@ const Talk = ({ data, children }) => {
   )
 }
 
-export default Talk
+export default Description

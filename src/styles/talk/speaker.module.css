@@ -1,0 +1,58 @@
+@import "../common/palette.css";
+
+div.container {
+  padding: 0;
+}
+
+.id_container {
+  display: flex;
+  align-items: flex-end;
+
+  background-color: var(--color1);
+  height: 300px;
+  margin-bottom: 20em;
+  padding: 0;
+}
+
+div.id_wrapper {
+  position: relative;
+  top: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.frame {
+  flex-grow: unset;
+}
+
+.name {
+  margin-top: 5em;
+}
+
+.bio {
+  margin-top: 3em;
+}
+
+@media (min-width: 576px) {
+  div.id_wrapper {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  div.id_wrapper {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  div.id_wrapper {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.id_wrapper {
+    max-width: 1140px;
+  }
+}

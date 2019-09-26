@@ -11,6 +11,7 @@ speakers:
     img: "../../../images/JoseCarreiras.jpg"
     linkedin: https://www.linkedin.com/in/ricardonevesaraujo/
     website: https://davidsopas.com
+    github: https://www.github.com
     twitter: https://twitter.com/dsopas
 
 n_day: 3

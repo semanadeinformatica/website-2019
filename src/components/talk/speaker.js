@@ -1,29 +1,27 @@
 import React from "react"
-import Img from "gatsby-image"
-import Occupations from "../occupations"
+import { Container, Col, Row } from "reactstrap"
 
-const styles = {
-  image: {
-    width: "100px",
-    height: "100px",
-  },
-}
+import SpeakerFrame from "./speaker_frame"
+import SpeakerName from "./speaker_name"
+
+import Styles from "../../styles/talk/speaker.module.css"
 
 const Speaker = ({ data }) => {
   return (
-    <div>
-      <div>
-        <Img fluid={data.img.childImageSharp.fluid} style={styles.image} />
-        <div>{data.name}</div>
-        <div>
-          <Occupations occupations={data.occupations} />
-        </div>
+    <Container className={Styles.container} fluid>
+      <div className={Styles.id_container}>
+        <Row className={Styles.id_wrapper}>
+          <Col className={Styles.frame}>
+            <SpeakerFrame {...data} />
+          </Col>
+          <Col className={Styles.name}>
+            <SpeakerName {...data} />
+            <p className={Styles.bio}>{data.bio}</p>
+          </Col>
+        </Row>
       </div>
-      <p>{data.bio}</p>
-      {data.twitter ? <a href={data.twitter}>Twitter</a> : ""}
-      {data.linkedin ? <a href={data.linkedin}>LinkedIn</a> : ""}
-      {data.website ? <a href={data.website}>Website</a> : ""}
-    </div>
+      <Container></Container>
+    </Container>
   )
 }
 

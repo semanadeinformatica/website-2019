@@ -1,0 +1,36 @@
+@import "../common/palette.css";
+
+.container {
+  display: flex;
+  align-items: center;
+  /* background-color: var(--color1); */
+}
+
+.name_container {
+  margin-right: 1.5em;
+}
+
+.name_container hr {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border: 0;
+  background-color: white;
+  height: 5px;
+  width: 60%;
+}
+
+.name {
+  color: white;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.link {
+  font-size: 1.5em;
+  color: white;
+}
+
+.link:hover {
+  color: white;
+  text-decoration: none;
+}
