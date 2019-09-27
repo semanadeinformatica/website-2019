@@ -18,6 +18,10 @@
   text-decoration: none;
 }
 
+.link svg {
+  width: 0.9em;
+}
+
 @media (max-width: 767.99px) {
   .image {
     width: 300px;

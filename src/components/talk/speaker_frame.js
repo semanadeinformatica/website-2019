@@ -1,7 +1,9 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import { FaLinkedin, FaGithubSquare, FaGlobe } from "react-icons/fa"
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa"
+import Globe from "../../images/svg/web_icon.inline.svg"
+
 import Styles from "../../styles/talk/speaker_frame.module.css"
 
 const SpeakerFrame = ({ img, website, linkedin, github }) => {
@@ -25,7 +27,7 @@ const SpeakerFrame = ({ img, website, linkedin, github }) => {
         )}
         {website ? (
           <a href={website} className={Styles.link}>
-            <FaGlobe />
+            <Globe />
           </a>
         ) : (
           ""
