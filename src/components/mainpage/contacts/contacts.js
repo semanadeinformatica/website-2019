@@ -17,12 +17,12 @@ const links = [
   },
   {
     icon: <FaLinkedin />,
-    href: "https://www.linkedin.com/company/semanainformaticafeup/",
+    href: "https://www.linkedin.com/company/sinffeup/",
     text: "sinffeup",
   },
   {
     icon: <FaFacebookSquare />,
-    href: "https://facebook.com/semanainformaticaFEUP",
+    href: "https://facebook.com/sinfFEUP",
     text: "sinfFEUP",
   },
 ]
