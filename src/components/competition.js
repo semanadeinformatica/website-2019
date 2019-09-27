@@ -6,15 +6,14 @@ import { Container, Row, Col } from "reactstrap"
 const Competition = () => (
   <Container>
     <Row>
-      <Col>
-        A semana de informática irá contar com uma Competição de Programação a
-        realizar-se durante todos os dias evento. Serão lançados dois exercícios
-        por dia nos primeiros três dias, de dificuldade crescente. A
-        participação é individual, estará aberta a partir da sessão de abertura,
-        dia 29 de Outubro (segunda-feira), até às 14h00 de 1 de Novembro
-        (quinta-feira), e os vencedores serão anunciados na cerimónia de
-        encerramento. A competição decorrá online no HackerRank, onde serão
-        utilizados mecanismos anti-cópia para detetar infracções.
+      <Col xs="12" className="my-5 py-5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        vitae pulvinar orci, et placerat diam. Proin eu nulla lacus. Cras eu
+        pellentesque nisl. Integer quis blandit dolor, a egestas lorem.
+        Vestibulum sem nisl, cursus sed tristique nec, pulvinar lacinia risus.
+        Suspendisse maximus mattis hendrerit. In eget lacinia eros. In tempor
+        sollicitudin lobortis. Fusce interdum aliquam consectetur. Curabitur
+        volutpat nisl ut tristique fermentum.
       </Col>
     </Row>
 
