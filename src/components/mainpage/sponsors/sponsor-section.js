@@ -45,7 +45,7 @@ const SponsorSection = ({ sponsorData, type }) => {
           numMobileItems={1}
           numTabletItems={1}
           numDesktopItems={numDesktop}
-          removeArrows={false}
+          auto={true}
         >
           {sponsorData}
         </Carousel>

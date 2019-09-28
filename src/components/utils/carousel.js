@@ -19,7 +19,7 @@ class Carousel extends Component {
     numMobileItems: PropTypes.number.isRequired,
     numTabletItems: PropTypes.number.isRequired,
     numDesktopItems: PropTypes.number.isRequired,
-    removeArrows: PropTypes.bool,
+    auto: PropTypes.bool,
   }
 
   handleWindowSizeChange = () => {
@@ -29,9 +29,6 @@ class Carousel extends Component {
       isMobile,
       isTablet,
     })
-    console.log(this.props.numMobileItems)
-    console.log(this.props.numTabletItems)
-    console.log(this.props.numDesktopItems)
 
     if (isMobile && this.props.numMobileItems !== null) {
       this.NUM_VISIBLE_ITEMS = parseInt(this.props.numMobileItems)
@@ -46,6 +43,10 @@ class Carousel extends Component {
     if (typeof window !== "undefined") {
       this.handleWindowSizeChange()
       window.addEventListener("resize", this.handleWindowSizeChange)
+    }
+
+    if (this.props.auto) {
+      setInterval(() => this.moveCarouselRight(this.props.children), 2000);
     }
   }
 
@@ -73,7 +74,7 @@ class Carousel extends Component {
   }
 
   moveCarouselRight = items => {
-    if (this.state.animating) return false
+    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length) return false
 
     this.setState(state => ({
       animating: true,
@@ -95,7 +96,7 @@ class Carousel extends Component {
   }
 
   moveCarouselLeft = items => {
-    if (this.state.animating) return false
+    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length) return false
 
     this.setState(state => ({
       animating: true,
@@ -144,7 +145,7 @@ class Carousel extends Component {
       nextItemsClass,
       visibleItemsClass,
     } = this.state
-    const { children } = this.props
+    const { children, auto } = this.props
     const items = this.renderItems(children)
 
     return (
@@ -166,7 +167,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {(!this.props.removeArrows || this.state.isMobile) && (
+            {(!auto) && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselLeft(items)}
@@ -182,7 +183,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {(!this.props.removeArrows || this.state.isMobile) && (
+            {(!auto) && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselRight(items)}
