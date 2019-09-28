@@ -5,7 +5,11 @@ import speakersStyles from "../../../styles/mainpage/speakers.module.css"
 
 const SingleSpeaker = ({ speaker }) => (
   <div className={speakersStyles.speaker}>
-    <Img fluid={speaker.img.childImageSharp.fluid} alt={speaker.name} />
+    <Img
+      fluid={speaker.img.childImageSharp.fluid}
+      alt={speaker.name}
+      className={speakersStyles.image}
+    />
     <Link to="/coming">Ver palestra</Link>
   </div>
 )
