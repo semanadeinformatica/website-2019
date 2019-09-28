@@ -6,39 +6,35 @@
 .sponsorContainer {
   display: flex;
   align-items: center;
-  height: 200px;
+  height: 250px;
 }
 
 .gold {
-  width: 300px;
+  width: 60%;
   margin: 0 auto;
 }
 
 .silver {
-  width: 175px;
+  width: 50%;
   margin: 0 auto;
 }
 
 .bronze {
-  width: 150px;
+  width: 40%;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 1200px) {
-  .sponsorContainer {
-    height: 125px;
-  }
-
   .gold {
-    width: 175px;
+    width: 55%;
   }
 
   .silver {
-    width: 125px;
+    width: 45%;
   }
 
   .bronze {
-    width: 100px;
+    width: 35%;
   }
 }
 
@@ -48,15 +44,33 @@
   }
 
   .gold {
-    width: 150px;
+    width: 50%;
   }
 
   .silver {
-    width: 100px;
+    width: 40%;
   }
 
   .bronze {
-    width: 75px;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sponsorContainer {
+    height: 125px;
+  }
+
+  .gold {
+    width: 45%;
+  }
+
+  .silver {
+    width: 35%;
+  }
+
+  .bronze {
+    width: 25%;
   }
 }
 

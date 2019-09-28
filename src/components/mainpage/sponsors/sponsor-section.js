@@ -17,20 +17,22 @@ export const getSponsors = (data, type) => {
 
 const SponsorSection = ({ sponsorData, type }) => {
   let wrapperType, sponsorText, sponsorType, numDesktop
-  numDesktop = sponsorData.length
 
   if (type === "gold") {
     wrapperType = sponsorsStyles.goldWrapper
     sponsorText = sponsorsStyles.goldSponsor
     sponsorType = "Gold"
+    numDesktop = sponsorData.length < 2 ? sponsorData.length : 2
   } else if (type === "silver") {
     wrapperType = sponsorsStyles.silverWrapper
     sponsorText = sponsorsStyles.silverSponsor
     sponsorType = "Silver"
+    numDesktop = sponsorData.length < 3 ? sponsorData.length : 3
   } else {
     wrapperType = sponsorsStyles.bronzeWrapper
     sponsorText = sponsorsStyles.bronzeSponsor
     sponsorType = "Bronze"
+    numDesktop = sponsorData.length < 5 ? sponsorData.length : 5
   }
 
   return (
@@ -41,8 +43,9 @@ const SponsorSection = ({ sponsorData, type }) => {
         </div>
         <Carousel
           numMobileItems={1}
+          numTabletItems={1}
           numDesktopItems={numDesktop}
-          removeArrows={true}
+          removeArrows={false}
         >
           {sponsorData}
         </Carousel>

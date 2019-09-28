@@ -9,6 +9,7 @@ class Carousel extends Component {
     index: 0,
     animating: false,
     isMobile: false,
+    isTablet: false,
     visibleItemsClass: carouselStyles.visibleItems,
     previousItemsClass: carouselStyles.previousItems,
     nextItemsClass: carouselStyles.nextItems,
@@ -16,18 +17,29 @@ class Carousel extends Component {
 
   static propTypes = {
     numMobileItems: PropTypes.number.isRequired,
+    numTabletItems: PropTypes.number.isRequired,
     numDesktopItems: PropTypes.number.isRequired,
     removeArrows: PropTypes.bool,
   }
 
   handleWindowSizeChange = () => {
-    const isMobile = window.matchMedia("(max-width: 500px)").matches
+    const isMobile = window.matchMedia("(max-width: 575px)").matches
+    const isTablet = window.matchMedia("(max-width: 767px)").matches
     this.setState({
       isMobile,
+      isTablet,
     })
-    this.NUM_VISIBLE_ITEMS = isMobile
-      ? parseInt(this.props.numMobileItems)
-      : parseInt(this.props.numDesktopItems)
+    console.log(this.props.numMobileItems)
+    console.log(this.props.numTabletItems)
+    console.log(this.props.numDesktopItems)
+
+    if (isMobile && this.props.numMobileItems !== null) {
+      this.NUM_VISIBLE_ITEMS = parseInt(this.props.numMobileItems)
+    } else if (isTablet && this.props.numTabletItems !== null) {
+      this.NUM_VISIBLE_ITEMS = parseInt(this.props.numTabletItems)
+    } else if (this.props.numDesktopItems !== null) {
+      this.NUM_VISIBLE_ITEMS = parseInt(this.props.numDesktopItems)
+    }
   }
 
   componentDidMount = () => {
