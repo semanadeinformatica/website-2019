@@ -22,10 +22,24 @@ const Competition = () => (
       </Row>
     </Container>
 
-    <div className="container-fluid">
-      <Row className={competitionStyles.conditions}>
-        <Col>Condições</Col>
-      </Row>
+    <div className={competitionStyles.conditions + " container-fluid"}>
+      <Container>
+        <Row>
+          <Col className={competitionStyles.conditionsText}>
+            Condições
+            <hr className={competitionStyles.horizontalRuler} />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs="12" className={competitionStyles.conditionList}>
+            <ul>
+              <li>Regra 1</li>
+              <li>Regra 2</li>
+              <li>Regra 3</li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
     </div>
   </div>
 )

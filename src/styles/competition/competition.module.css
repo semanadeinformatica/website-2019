@@ -3,8 +3,22 @@
 }
 
 .conditions {
-  width: 100%;
   background-color: var(--color3);
+}
+
+.conditionsText {
+  font-size: 1.55em;
+  font-weight: 600;
+  color: white;
+}
+
+.horizontalRuler {
+  width: 75px;
+  border: 2px solid white;
+}
+
+.conditionList {
+  color: white;
 }
 
 @media (max-width: 500px) {
