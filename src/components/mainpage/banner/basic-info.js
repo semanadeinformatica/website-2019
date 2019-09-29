@@ -20,7 +20,7 @@ const links = [
 const BasicInfo = () => {
   return (
     <div className={BannerStyles.info}>
-      <p>2º EDIÇÂO</p>
+      <p>2ª EDIÇÃO</p>
       <p>28 A 30 OUTUBRO 2019 | FEUP</p>
       <div className={BannerStyles.icon_links}>
         {links.map(({ icon, href }, index) => (

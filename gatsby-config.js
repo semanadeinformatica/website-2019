@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Semana de informática`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `A Semana de Informática é uma conferência a decorrer nos dias 28 a 30 de outubro na Faculdade de Engenharia da Universidade do Porto. Entre workshops e competições, palestras e networking, serão 3 dias com atividades variadas que procuram aproximar o mundo empresarial com os futuros profissionais.`,
+    author: `NIAEFEUP, https://niaefeup.pt`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,11 +32,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Semana de Informática`,
+        short_name: `SINF`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#0C0044`,
+        theme_color: `#0C0044`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
