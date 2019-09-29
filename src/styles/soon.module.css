@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import "./common/palette.css";
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    320deg,
+    rgba(157, 211, 217, 1) 0%,
+    rgba(0, 176, 205, 1) 30%,
+    #1f76af 46.14%,
+    rgba(56, 72, 152, 1) 60.49%,
+    rgba(65, 55, 143, 1) 67.69%,
+    rgba(65, 55, 143, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.banner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  max-width: 20em;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.banner_icon {
+  -webkit-animation: rotating 10s linear infinite;
+  -moz-animation: rotating 10s linear infinite;
+  -ms-animation: rotating 10s linear infinite;
+  -o-animation: rotating 10s linear infinite;
+  animation: rotating 10s linear infinite;
+  width: 80%;
+}
+
+.title {
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  color: var(--white);
+  font-size: 1.8em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.link {
+  color: var(--white);
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--white);
+}
+
+div.content_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3.5em 3em 3em 3em;
+}
+
+.top_row div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom_row > div {
+  padding: 0;
+}
+
+.logo {
+  height: 10em;
+  width: 10em;
+}
+
+.info {
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+
+.icon_links {
+  display: flex;
+  justify-content: center;
+}
+
+.icon_links a {
+  margin-left: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.icon_links a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.text_info {
+  text-align: center;
+}
+
+.text_info p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .left_text p {
+    text-align: end;
+  }
+
+  .text_info {
+    text-align: start;
+  }
+
+  .logo {
+    max-height: 8em;
+  }
+
+  .top_row div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .icon_links {
+    justify-content: flex-end;
+  }
+}
+
+/* Making the banner disapear on phones flipped horizontaly*/
+@media (max-height: 530px) {
+  .banner {
+    display: none;
+  }
+}
+
+@media (max-height: 630px) {
+  div.content_container {
+    padding-top: 1em;
+  }
+}

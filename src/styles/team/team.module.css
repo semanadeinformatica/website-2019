@@ -1,0 +1,55 @@
+@import "../common/palette.css";
+
+div.container {
+  margin-top: 4em;
+}
+
+div.team_container {
+  margin-bottom: 1em;
+}
+
+div.name_container {
+  flex-grow: initial;
+  min-width: 16em;
+}
+
+div.name_container h2 {
+  color: var(--color1);
+  font-size: 1em;
+  text-align: right;
+}
+
+div.member_container {
+  padding: 0;
+  flex-grow: initial;
+}
+
+div.member_row {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+@media (max-width: 575.98px) {
+  div.member_row {
+    justify-content: center;
+    margin: 0;
+  }
+  
+  div.member_row:last-child {
+    margin-bottom: 2em;
+  }
+
+  div.name_container {
+    margin: 0 auto;
+  }
+
+  div.name_container h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  div.container {
+    max-width: 800px;
+  }
+}

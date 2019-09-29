@@ -1,0 +1,48 @@
+@import "../common/palette.css";
+
+.aboutContainer {
+  background-color: var(--color1);
+  color: var(--white);
+}
+
+.aboutContainer .title {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.aboutContainer .countdownContainer {
+  background-color: var(--color4);
+  position: relative;
+  top: 58.5px;
+}
+
+.aboutContainer .countdownContainer .number {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.9;
+}
+
+.aboutContainer .countdownContainer .timeType {
+  text-align: center;
+  font-size: 18px;
+}
+
+.aboutContainer p a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 575px) {
+  .aboutContainer .countdownContainer .number {
+    font-size: 30px;
+  }
+
+  .aboutContainer .countdownContainer .timeType {
+    font-size: 15px;
+  }
+
+  .aboutContainer .countdownContainer {
+    top: 48.5px;
+  }
+}

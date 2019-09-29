@@ -1,0 +1,86 @@
+@import "../common/palette.css";
+
+div.wrapper {
+  padding: 0;
+}
+
+div.container,
+div.map_container,
+iframe.map {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+}
+
+.info_container {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color1);
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.title_bar {
+  width: 4em;
+  height: 0.2em;
+  background-color: white;
+  border-top: 0;
+  margin: 0.5em auto 2em auto;
+}
+
+div.info_row {
+  justify-content: center;
+  margin: 0 6em;
+}
+
+div.info_col {
+  padding: 0 1em;
+  flex-grow: 1;
+}
+
+div.location_col {
+  flex-grow: 2;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.location_link {
+  display: flex;
+}
+
+.link,
+.location_link {
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.link:hover,
+.location_link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  margin-right: 0.6em;
+  font-size: 1.6em;
+}
+
+@media (max-width: 767.98px) {
+  .main_container {
+    flex-direction: column;
+  }
+
+  div.info_row {
+    margin: 0 2em;
+  }
+}

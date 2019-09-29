@@ -1,0 +1,88 @@
+.items {
+  position: relative;
+}
+
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.circle {
+  background-color: var(--color1);
+  width: 2.2rem;
+  height: 2.2rem;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.circle:focus {
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  display: block;
+  color: var(--white);
+}
+
+.carouselWrapper .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carouselWrapper button:hover {
+  opacity: 0.6;
+}
+
+.prevButton {
+  left: 2rem;
+}
+
+.nextButton {
+  right: 2rem;
+}
+
+.previousItems {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+}
+
+.nextItems {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+}
+
+.moveLeft {
+  transition: transform 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.moveRight {
+  transition: transform 1s ease-in-out;
+  transform: translateX(100%);
+}
+
+.previousItems,
+.visibleItems,
+.nextItems {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}

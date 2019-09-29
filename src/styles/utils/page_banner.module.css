@@ -1,0 +1,13 @@
+@import "../common/palette.css";
+
+.container {
+  background-color: var(--color1);
+  width: 100%;
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container > svg {
+  max-height: 120px;
+}

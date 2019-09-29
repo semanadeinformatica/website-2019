@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap");
+@import "../common/palette.css";
+
+.wrapper {
+  border: 4px var(--white) solid;
+  border-radius: 10px;
+  background: transparent;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto 2rem auto;
+}
+
+.wrapper li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.wrapper li span {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper li span:first-child {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 4rem;
+}
+
+.wrapper li span:last-child {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+.lead {
+  margin: 0 auto;
+  width: 50%;
+  line-height: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.section {
+  margin-top: 15rem;
+  background: url("../../images/showcase_events_filter.jpg") center center /
+    cover;
+  text-align: center;
+  color: var(--white);
+  padding: 15% 20%;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lead {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper {
+    border: none;
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    background: var(--color2);
+    padding: 10% 5%;
+    margin-top: 10rem;
+  }
+
+  .wrapper li span:first-child {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  .wrapper li span:last-child {
+    font-weight: 100;
+  }
+
+  .lead {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
