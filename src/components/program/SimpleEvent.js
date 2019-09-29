@@ -2,7 +2,9 @@ import React from "react"
 import { TimePlace, icons } from "../utils/programUtils"
 import eventsStyles from "../../styles/program/events.module.css"
 
-const SimpleEvent = ({ title, start_time, end_time, place, icon }) => {
+const SimpleEvent = ({
+  event: { title, start_time, end_time, place, icon },
+}) => {
   const className = icon
     ? [eventsStyles.main, eventsStyles.simpleEvent, eventsStyles.withIcon].join(
         " "

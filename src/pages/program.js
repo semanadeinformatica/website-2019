@@ -32,6 +32,7 @@ export const eventsQuery = graphql`
     ) {
       edges {
         node {
+          id
           fileAbsolutePath
           html
           frontmatter {
@@ -89,7 +90,10 @@ const ProgramPage = ({ data }) => {
         />
         <TabContent activeTab={activeTab.date}>
           {days.map(day => (
-            <TabPane tabId={day[0].node.frontmatter.day}>
+            <TabPane
+              key={day[0].node.frontmatter.day}
+              tabId={day[0].node.frontmatter.day}
+            >
               <DailySchedule events={day} />
             </TabPane>
           ))}

@@ -29,22 +29,13 @@ const DailySchedule = ({ events }) => {
               .map(event =>
                 event.node.fileAbsolutePath.includes("default") ? (
                   <SimpleEvent
-                    title={event.node.frontmatter.title}
-                    start_time={event.node.frontmatter.start_time}
-                    end_time={event.node.frontmatter.end_time}
-                    place={event.node.frontmatter.place}
-                    icon={event.node.frontmatter.icon}
+                    key={event.node.id}
+                    event={event.node.frontmatter}
                   />
                 ) : (
                   <CommonEvent
-                    title={event.node.frontmatter.title}
-                    start_time={event.node.frontmatter.start_time}
-                    end_time={event.node.frontmatter.end_time}
-                    place={event.node.frontmatter.place}
-                    icon={event.node.frontmatter.icon}
-                    path={event.node.frontmatter.path}
-                    speakers={event.node.frontmatter.speakers}
-                    description={event.node.html}
+                    key={event.node.id}
+                    event={event.node}
                     color="#2da6b0"
                   />
                 )
@@ -59,42 +50,39 @@ const DailySchedule = ({ events }) => {
                 const path = event.node.fileAbsolutePath
                 let toRender
 
-                if (path.includes("default") || path.includes("visits")) {
+                if (path.includes("default")) {
                   toRender = (
                     <SimpleEvent
-                      title={event.node.frontmatter.title}
-                      start_time={event.node.frontmatter.start_time}
-                      end_time={event.node.frontmatter.end_time}
-                      place={event.node.frontmatter.place}
-                      icon={event.node.frontmatter.icon}
+                      key={event.node.id}
+                      event={event.node.frontmatter}
                     />
                   )
                 } else if (path.includes("sessions")) {
                   toRender = (
                     <CommonEvent
-                      title={event.node.frontmatter.title}
-                      start_time={event.node.frontmatter.start_time}
-                      end_time={event.node.frontmatter.end_time}
-                      place={event.node.frontmatter.place}
-                      path={event.node.frontmatter.path}
-                      description={event.node.html}
+                      key={event.node.frontmatter.start_time}
+                      event={event.node}
                       color="#0c0044"
                     />
                   )
                 } else if (path.includes("workshops")) {
                   toRender = (
                     <CommonEvent
-                      title={event.node.frontmatter.title}
-                      start_time={event.node.frontmatter.start_time}
-                      end_time={event.node.frontmatter.end_time}
-                      place={event.node.frontmatter.place}
-                      path={event.node.frontmatter.path}
-                      speakers={event.node.frontmatter.speakers}
-                      description={event.node.html}
+                      key={event.node.frontmatter.start_time}
+                      event={event.node}
                       color="#2da6b0"
                     />
                   )
+                } else {
+                  toRender = (
+                    <CommonEvent
+                      key={event.node.frontmatter.start_time}
+                      event={event.node}
+                      color="#000000"
+                    />
+                  )
                 }
+
                 return toRender
               })}
           </div>

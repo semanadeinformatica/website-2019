@@ -20,14 +20,14 @@ export const TimePlace = ({ start_time, end_time, place }) => (
 
 export const Speakers = ({ speakers, path }) => (
   <>
-    <h4>
+    <h3 className={eventsStyles.speakers}>
       <Link to={path}>
         {speakers.map((speaker, i) =>
           i > 0 ? `, ${speaker.name}` : speaker.name
         )}
       </Link>
-    </h4>
-    <h5>
+    </h3>
+    <h5 className={eventsStyles.occupations}>
       {speakers.map(({ occupations }, i) =>
         i > 0
           ? `, ${occupations[0].what} @ ${occupations[0].where}`

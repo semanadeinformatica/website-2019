@@ -11,7 +11,7 @@ const DayNavItem = ({ icon, date, day, active }) => (
     >
       <div>{icons[icon]}</div>
     </IconContext.Provider>
-    <div>
+    <div className={programStyles.navItemText}>
       <h3>{day}º dia</h3>
       <span>{date}</span>
     </div>
