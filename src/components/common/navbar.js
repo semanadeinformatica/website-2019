@@ -63,10 +63,9 @@ export default class NavBar extends React.Component {
         internal: true,
       },
       {
-        url:
-          "https://www.eventbrite.com/e/semana-de-informatica-tickets-50695985056",
+        url: "/#tickets",
         text: "Bilhetes",
-        internal: false,
+        internal: true,
       },
       {
         url: "/#contactos",
