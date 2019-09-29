@@ -106,51 +106,46 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar
-          dark
-          fixed={this.fixed ? "top" : ""}
-          expand="lg"
-          className={
-            NavbarStyles.navbar +
-            (this.transparent && !this.state.isOpen
-              ? " " + NavbarStyles.noBackground
-              : "")
-          }
+      <Navbar
+        dark
+        fixed={this.fixed ? "top" : ""}
+        expand="lg"
+        className={
+          NavbarStyles.navbar +
+          (this.transparent && !this.state.isOpen
+            ? " " + NavbarStyles.noBackground
+            : "")
+        }
+      >
+        <Collapse
+          isOpen={this.state.isOpen}
+          navbar
+          className=" w-100 order-1 order-lg-0 dual-collapse2"
         >
-          <Collapse
-            isOpen={this.state.isOpen}
-            navbar
-            className=" w-100 order-1 order-lg-0 dual-collapse2"
-          >
-            <NavWrapper
-              className="ml-0 align-items-center"
-              links={this.leftLinks}
-            />
-          </Collapse>
-          {this.logo || this.state.isOpen ? (
-            <Link className="navbar-brand mx-auto order-0" to="/">
-              <Logo fill="#000" className={NavbarStyles.logo} />
-            </Link>
-          ) : (
-            ""
-          )}
-          <Collapse
-            isOpen={this.state.isOpen}
-            navbar
-            className="w-100 order-3 dual-collapse2"
-          >
-            <NavWrapper
-              className="ml-auto align-items-center"
-              links={this.rightLinks}
-            />
-          </Collapse>
-          <NavbarToggler
-            className={NavbarStyles.toggler}
-            onClick={this.toggle}
+          <NavWrapper
+            className="ml-0 align-items-center"
+            links={this.leftLinks}
           />
-        </Navbar>
-      </div>
+        </Collapse>
+        {this.logo || this.state.isOpen ? (
+          <Link className="navbar-brand mx-auto order-0" to="/">
+            <Logo fill="#000" className={NavbarStyles.logo} />
+          </Link>
+        ) : (
+          ""
+        )}
+        <Collapse
+          isOpen={this.state.isOpen}
+          navbar
+          className="w-100 order-3 dual-collapse2"
+        >
+          <NavWrapper
+            className="ml-auto align-items-center"
+            links={this.rightLinks}
+          />
+        </Collapse>
+        <NavbarToggler className={NavbarStyles.toggler} onClick={this.toggle} />
+      </Navbar>
     )
   }
 }
