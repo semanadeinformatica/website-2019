@@ -6,6 +6,14 @@ start_time: 17h20
 end_time: 18h10
 type: Visita
 
+speakers:
+  - name: miguel oliveira
+    occupations:
+      - what: software engineer
+        where: facebook
+    bio: Miguel Oliveira, software engineer no Facebook. Concluiu o MIEIC em 2010. Iniciou o doutoramento no mesmo ano e fez estágios na Google e Facebook durante o mesmo. Em 2017, interrompeu o doutoramento para trabalhar no Facebook full-time. Participou em inúmeros concursos de programação desde o ensino secundário e conquistou uma medalha de ouro no SWERC 2009, o nosso concurso Europeu da ACM.
+    img: ../../../images/DavidSopas.jpg
+
 img: ../../../images/aubay.png
 
 registration: https://www.eventbrite.com/e/hitchhikers-guide-to-hardware-maintenance-tickets-51765175032
