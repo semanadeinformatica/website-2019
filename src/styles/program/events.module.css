@@ -33,7 +33,7 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 5px;
-  bottom: 50%;
+  bottom: 60%;
   left: -3.25rem;
 }
 
@@ -52,6 +52,10 @@
   top: 30%;
 }
 
+.simpleEvent:last-child:after {
+  bottom: 65%;
+}
+
 .commonEvent:before {
   top: 0.5rem;
 }
@@ -61,10 +65,6 @@
   content: attr(data-date);
   top: unset;
   left: -8rem;
-}
-
-.withIcon:first-child:after {
-  bottom: 52%;
 }
 
 .commonEvent {
@@ -199,5 +199,9 @@
 @media (max-width: 768px) {
   .toggler label:hover svg {
     transform: none;
+  }
+
+  .simpleEvent:first-child:after {
+    bottom: 45%;
   }
 }
