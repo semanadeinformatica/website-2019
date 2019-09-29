@@ -26,6 +26,10 @@
   width: 0.9em;
 }
 
+.link svg path {
+  fill: var(--color4);
+}
+
 @media (max-width: 767.99px) {
   .image {
     width: 300px;
