@@ -1,2 +1,16 @@
 .competitionText {
+  font-size: 1.15em;
+}
+
+.conditions {
+  width: 100%;
+  background-color: var(--color3);
+}
+
+@media (max-width: 500px) {
+  .competitionText {
+    font-size: 1em;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+  }
 }
