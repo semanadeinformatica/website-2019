@@ -15,7 +15,7 @@
 .main {
   width: 30%;
   margin: auto;
-  height: 100vh;
+  height: calc(100vh - 102px);
   overflow: hidden;
   display: flex;
   flex-grow: 1;
@@ -51,5 +51,11 @@
 @media (max-width: 768px) {
   .main {
     width: 60%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main {
+    height: calc(100vh - 83.39px);
   }
 }
