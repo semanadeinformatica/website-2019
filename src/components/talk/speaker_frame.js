@@ -1,32 +1,39 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import { FaLinkedin, FaGithubSquare } from "react-icons/fa"
+import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from "react-icons/fa"
 import Globe from "../../images/svg/web_icon.inline.svg"
 
-import Styles from "../../styles/talk/speaker_frame.module.css"
+import FrameStyles from "../../styles/talk/speaker_frame.module.css"
 
-const SpeakerFrame = ({ img, website, linkedin, github }) => {
+const SpeakerFrame = ({ img, website, linkedin, github, twitter }) => {
   return (
     <div>
-      <Img className={Styles.image} fluid={img.childImageSharp.fluid} />
-      <div className={Styles.link_container}>
+      <Img className={FrameStyles.image} fluid={img.childImageSharp.fluid} />
+      <div className={FrameStyles.link_container}>
+        {twitter ? (
+          <a href={twitter} className={FrameStyles.link}>
+            <FaTwitterSquare />
+          </a>
+        ) : (
+          ""
+        )}{" "}
         {linkedin ? (
-          <a href={linkedin} className={Styles.link}>
+          <a href={linkedin} className={FrameStyles.link}>
             <FaLinkedin />
           </a>
         ) : (
           ""
         )}
         {github ? (
-          <a href={github} className={Styles.link}>
+          <a href={github} className={FrameStyles.link}>
             <FaGithubSquare />
           </a>
         ) : (
           ""
         )}
         {website ? (
-          <a href={website} className={Styles.link}>
+          <a href={website} className={FrameStyles.link}>
             <Globe />
           </a>
         ) : (

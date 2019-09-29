@@ -8,7 +8,7 @@ import Speaker from "../components/talk/speaker"
 import Description from "../components/talk/description"
 import Participate from "../components/talk/participate"
 
-import Styles from "../styles/talk/talk.module.css"
+import TalkStyles from "../styles/talk/talk.module.css"
 
 export default function Template({ data }) {
   const { markdownRemark: talk } = data
@@ -17,7 +17,7 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={info.title} />
-      <Container fluid className={Styles.container}>
+      <Container fluid className={TalkStyles.container}>
         <Speaker data={info.speakers[0]} />
         <Description data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>

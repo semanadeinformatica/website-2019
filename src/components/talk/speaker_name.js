@@ -1,23 +1,19 @@
 import React from "react"
 
-import Styles from "../../styles/talk/speaker_name.module.css"
+import SpeakerNameStyles from "../../styles/talk/speaker_name.module.css"
 
-const SpeakerName = ({ name, twitter }) => {
+const SpeakerName = ({ name, occupations }) => {
+  console.log(occupations)
+
   return (
-    <div className={Styles.container}>
-      <div className={Styles.name_container}>
-        <span className={Styles.name}>{name}</span>
+    <div className={SpeakerNameStyles.container}>
+      <div className={SpeakerNameStyles.name_container}>
+        <div className={SpeakerNameStyles.name}>{name}</div>
         <hr />
       </div>
-      {twitter ? (
-        <div>
-          <a className={Styles.link} href={twitter}>
-            @ twitter
-          </a>
-        </div>
-      ) : (
-        ""
-      )}
+      <div className={SpeakerNameStyles.occupation}>
+        {"@" + occupations[0].where}
+      </div>
     </div>
   )
 }

@@ -6,7 +6,7 @@
 }
 
 .name_container {
-  margin-right: 1.5em;
+  margin-right: 1em;
 }
 
 .name_container hr {
@@ -22,16 +22,13 @@
   color: white;
   font-weight: 600;
   font-size: 2em;
+  text-align: center;
 }
 
-.link {
+.occupation {
   font-size: 1.5em;
+  padding-bottom: 1em;
   color: white;
-}
-
-.link:hover {
-  color: white;
-  text-decoration: none;
 }
 
 @media (max-width: 767.99px) {

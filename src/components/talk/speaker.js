@@ -4,29 +4,29 @@ import { Container, Col, Row } from "reactstrap"
 import SpeakerFrame from "./speaker_frame"
 import SpeakerName from "./speaker_name"
 
-import Styles from "../../styles/talk/speaker.module.css"
+import SpeakerStyles from "../../styles/talk/speaker.module.css"
 
 const Speaker = ({ data }) => {
   return (
-    <Container className={Styles.container} fluid>
-      <div className={Styles.id_container}>
-        <Row className={Styles.id_wrapper}>
-          <Col className={Styles.frame}>
+    <Container className={SpeakerStyles.container} fluid>
+      <div className={SpeakerStyles.id_container}>
+        <Row className={SpeakerStyles.id_wrapper}>
+          <Col className={SpeakerStyles.frame}>
             <SpeakerFrame {...data} />
           </Col>
-          <Col className={Styles.name}>
+          <Col className={SpeakerStyles.name}>
             <SpeakerName {...data} />
-            <p className={Styles.bio}>{data.bio}</p>
+            <p className={SpeakerStyles.bio}>{data.bio}</p>
           </Col>
         </Row>
       </div>
 
-      <div className={Styles.mb_id_container}>
-        <div className={Styles.mb_blue}>
+      <div className={SpeakerStyles.mb_id_container}>
+        <div className={SpeakerStyles.mb_blue}>
           <SpeakerName {...data} />
           <SpeakerFrame {...data} />
         </div>
-        <p className={Styles.bio}>{data.bio}</p>
+        <p className={SpeakerStyles.bio}>{data.bio}</p>
       </div>
     </Container>
   )

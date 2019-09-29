@@ -2,16 +2,18 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 import TimePlace from "./time_place"
 
-import Styles from "../../styles/talk/description.module.css"
+import DescriptionStyles from "../../styles/talk/description.module.css"
 
 const Description = ({ data, children }) => {
   return (
-    <Row className={Styles.row}>
+    <Row className={DescriptionStyles.row}>
       <Col>
-        <Container className={Styles.container}>
-          <h2 className={Styles.title}>{data.type + ": " + data.title}</h2>
-          <Row className={Styles.info_container}>
-            <Col className={Styles.date}>
+        <Container className={DescriptionStyles.container}>
+          <h2 className={DescriptionStyles.title}>
+            {data.type + ": " + data.title}
+          </h2>
+          <Row className={DescriptionStyles.info_container}>
+            <Col className={DescriptionStyles.date}>
               <div>Dia {data.n_day}</div>
               <div>{data.day}</div>
             </Col>
