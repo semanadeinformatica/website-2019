@@ -6,6 +6,7 @@
   padding-bottom: 1rem;
   margin-top: 1rem;
   position: relative;
+  margin-right: 30%;
 }
 
 .main:first-child {
@@ -39,16 +40,31 @@
 .main:before {
   position: absolute;
   content: attr(data-date);
-  top: 0.5rem;
+  bottom: 50%;
   left: -8rem;
+}
+
+.simpleEvent:first-child:before {
+  bottom: 40%;
+}
+
+.commonEvent:first-child:before {
+  top: 30%;
+}
+
+.commonEvent:before {
+  top: 0.5rem;
 }
 
 .simpleEvent:before {
   position: absolute;
   content: attr(data-date);
-  bottom: 2rem;
   top: unset;
   left: -8rem;
+}
+
+.withIcon:first-child:after {
+  bottom: 52%;
 }
 
 .commonEvent {
@@ -76,6 +92,7 @@
 
 .speakers {
   margin-bottom: 0;
+  line-height: 1;
 }
 
 .speakers a {
@@ -125,8 +142,11 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
   left: -3.7rem;
+}
+
+.commonEvent:first-child .toggler label {
+  top: 25%;
 }
 
 .toggler svg {
@@ -144,4 +164,40 @@
 .description {
   padding-top: 1rem;
   font-size: 0.95rem;
+}
+
+@media (max-width: 500px) {
+  .main:before {
+    display: none;
+  }
+
+  .main {
+    margin-right: 20%;
+  }
+
+  .title a {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    margin-bottom: 0.2rem;
+  }
+
+  .info h4 {
+    font-size: 1.3rem;
+  }
+
+  .speakers a {
+    font-size: 1.2rem;
+  }
+
+  .occupations {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggler label:hover svg {
+    transform: none;
+  }
 }

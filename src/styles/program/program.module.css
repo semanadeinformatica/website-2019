@@ -1,11 +1,13 @@
 .container {
   margin-top: 3rem;
+  overflow-x: hidden;
 }
 
 .schedule {
   border-left: 1px #ccc solid;
   padding-left: 2.5rem;
-  width: 70vw;
+  width: 100%;
+  margin-left: 20%;
 }
 
 .headingLine {
@@ -145,5 +147,9 @@
 
   .navItemWrapper:last-child {
     border-radius: 0px 0px 0px 0px;
+  }
+
+  .schedule {
+    margin-left: 10%;
   }
 }
