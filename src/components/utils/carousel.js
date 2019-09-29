@@ -46,7 +46,7 @@ class Carousel extends Component {
     }
 
     if (this.props.auto) {
-      setInterval(() => this.moveCarouselRight(this.props.children), 2000);
+      setInterval(() => this.moveCarouselRight(this.props.children), 2000)
     }
   }
 
@@ -74,7 +74,8 @@ class Carousel extends Component {
   }
 
   moveCarouselRight = items => {
-    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length) return false
+    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length)
+      return false
 
     this.setState(state => ({
       animating: true,
@@ -92,11 +93,12 @@ class Carousel extends Component {
         visibleItemsClass: carouselStyles.visibleItems,
         nextItemsClass: carouselStyles.nextItems,
       }))
-    }, 1000)
+    }, 2000)
   }
 
   moveCarouselLeft = items => {
-    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length) return false
+    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length)
+      return false
 
     this.setState(state => ({
       animating: true,
@@ -167,7 +169,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {(!auto) && (
+            {!auto && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselLeft(items)}
@@ -183,7 +185,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {(!auto) && (
+            {!auto && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselRight(items)}
