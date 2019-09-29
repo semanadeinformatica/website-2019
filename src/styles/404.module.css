@@ -56,6 +56,6 @@
 
 @media screen and (max-width: 576px) {
   .main {
-    height: calc(100vh - 83.39px);
+    height: calc(100vh - 83px);
   }
 }
