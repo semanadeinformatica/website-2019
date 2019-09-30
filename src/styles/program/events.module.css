@@ -33,7 +33,7 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 5px;
-  bottom: 60%;
+  bottom: 55%;
   left: -3.25rem;
 }
 
@@ -87,7 +87,7 @@
 
 .title a {
   text-decoration: underline;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .speakers {
@@ -96,14 +96,14 @@
 }
 
 .speakers a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: black;
   text-decoration: underline;
 }
 
 .occupations {
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .info h4 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0;
 }
 
@@ -175,16 +175,8 @@
     margin-right: 20%;
   }
 
-  .title a {
-    font-size: 1.4rem;
-  }
-
   .title {
     margin-bottom: 0.2rem;
-  }
-
-  .info h4 {
-    font-size: 1.3rem;
   }
 
   .speakers a {
@@ -202,6 +194,6 @@
   }
 
   .simpleEvent:first-child:after {
-    bottom: 45%;
+    bottom: 40%;
   }
 }
