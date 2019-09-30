@@ -1,7 +1,11 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { Collapse } from "reactstrap"
-import { TimePlace, Speakers, DescriptionToggler } from "../utils/programUtils"
+
+import TimePlace from "./TimePlace"
+import Speakers from "./Speakers"
+import DescriptionToggler from "./DescriptionToggler"
+
 import eventsStyles from "../../styles/program/events.module.css"
 
 const CommonEvent = ({ color, event }) => {

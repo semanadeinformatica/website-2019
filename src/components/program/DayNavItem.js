@@ -1,7 +1,7 @@
 import React from "react"
 import { IconContext } from "react-icons"
 
-import { icons } from "../utils/programUtils"
+import icons from "../utils/icons"
 import programStyles from "../../styles/program/program.module.css"
 
 const DayNavItem = ({ icon, date, day, active }) => (

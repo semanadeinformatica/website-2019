@@ -49,7 +49,7 @@
 }
 
 .commonEvent:first-child:before {
-  top: 30%;
+  top: 2.5rem;
 }
 
 .simpleEvent:last-child:after {
@@ -143,10 +143,6 @@
   justify-content: center;
   position: absolute;
   left: -3.7rem;
-}
-
-.commonEvent:first-child .toggler label {
-  top: 25%;
 }
 
 .toggler svg {

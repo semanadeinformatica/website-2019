@@ -1,5 +1,8 @@
 import React from "react"
-import { TimePlace, icons } from "../utils/programUtils"
+
+import TimePlace from "./TimePlace"
+import icons from "../utils/icons"
+
 import eventsStyles from "../../styles/program/events.module.css"
 
 const SimpleEvent = ({
