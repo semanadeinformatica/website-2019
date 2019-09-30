@@ -27,7 +27,7 @@ const Competition = () => (
         <Row>
           <Col className={competitionStyles.conditionsText}>
             Condições
-            <hr className={competitionStyles.horizontalRuler} />
+            <hr align="left" className={competitionStyles.horizontalRuler} />
           </Col>
         </Row>
         <Row>

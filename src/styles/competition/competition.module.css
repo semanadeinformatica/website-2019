@@ -9,15 +9,19 @@
 .conditionsText {
   font-size: 1.55em;
   font-weight: 600;
+  margin-left: 15px;
   color: white;
 }
 
 .horizontalRuler {
-  width: 75px;
+  width: 65px;
+  margin-left: 25px;
+  margin-top: 0;
   border: 2px solid white;
 }
 
 .conditionList {
+  margin-left: 15px;
   color: white;
 }
 
