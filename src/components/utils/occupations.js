@@ -1,11 +1,12 @@
 import React from "react"
 
+import OccupationsStyles from "../../styles/utils/occupations.module.css"
+
 const Occupations = ({ occupations }) => {
   return (
     <div>
       {occupations.map((occupation, index) => (
-        <span key={occupation.what}>
-          {occupation.what}
+        <span key={occupation.what} className={OccupationsStyles.occupations}>
           {" @ "}
           {occupation.where}
           {index === occupations.length - 1 ? "" : ", "}

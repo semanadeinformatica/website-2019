@@ -6,8 +6,9 @@ import Occupations from "../utils/occupations"
 import Overlay from "../utils/overlay"
 
 import ParticipantsStyle from "../../styles/utils/participants-display.module.css"
+import SpeakerStyle from "../../styles/speakers/single-speaker.module.css"
 
-const Speaker = ({ speaker, color }) => (
+const SingleSpeaker = ({ speaker, color }) => (
   <Col
     className={ParticipantsStyle.member_container + " mb-3"}
     key={speaker.name}
@@ -20,11 +21,13 @@ const Speaker = ({ speaker, color }) => (
       github={speaker.github}
       website={speaker.website}
     />
-    <div>
-      <Link to={speaker.path}>{speaker.name}</Link>
+    <div className="mt-2">
+      <Link to={speaker.path} className={SpeakerStyle.name}>
+        {speaker.name}
+      </Link>
     </div>
     <Occupations occupations={speaker.occupations} />
   </Col>
 )
 
-export default Speaker
+export default SingleSpeaker
