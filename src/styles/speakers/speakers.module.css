@@ -1,0 +1,9 @@
+.dayDescription {
+  text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+  .dayDescription {
+    text-align: left;
+  }
+}

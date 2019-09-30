@@ -12,6 +12,7 @@ speakers:
     linkedin: https://www.linkedin.com/in/ricardonevesaraujo/
     website: https://davidsopas.com
     twitter: https://twitter.com/dsopas
+    github: https://github.com/dsopas
 
   - name: Hélder Gonçalves
     occupations:

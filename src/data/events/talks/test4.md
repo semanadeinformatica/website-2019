@@ -12,6 +12,7 @@ speakers:
     linkedin: https://www.linkedin.com/in/miguelpoliveira/
     website: https://davidsopas.com
     twitter: https://twitter.com/dsopas
+    github: https://github.com/dsopas
 
 day: 2019-10-29
 start_time: 18h10

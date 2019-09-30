@@ -3,6 +3,9 @@ import { Row, Col } from "reactstrap"
 
 import Speaker from "./speaker"
 
+import TeamStyles from "../../styles/team/team.module.css" //refactor
+import SpeakersStyles from "../../styles/speakers/speakers.module.css"
+
 const getSpeakers = talks => {
   const speakers = []
 
@@ -21,13 +24,13 @@ const DailySpeakers = ({ talks, day }) => {
   const date = new Date(talks[0].node.frontmatter.day)
 
   return (
-    <Row>
-      <Col md="2" xs="12" className="text-right mt-5">
+    <Row className="mt-5">
+      <Col md="2" xs="12" className={SpeakersStyles.dayDescription + " mt-5"}>
         <div>Day {day}</div>
         <div>{date.getDay() + " Outubro"}</div>
       </Col>
       <Col md="10" xs="12">
-        <Row>
+        <Row className={TeamStyles.member_row}>
           {speakers.map((speaker, index) =>
             index % 8 < 4 ? (
               <Speaker speaker={speaker} color={index % 4} />
