@@ -52,7 +52,8 @@
   top: 2.5rem;
 }
 
-.simpleEvent:last-child:after {
+.simpleEvent:last-child:after,
+.simpleEvent:last-child:before {
   bottom: 65%;
 }
 
