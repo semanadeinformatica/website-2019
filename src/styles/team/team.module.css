@@ -19,16 +19,6 @@ div.name_container h2 {
   text-align: right;
 }
 
-div.member_container {
-  padding: 0;
-  flex-grow: initial;
-}
-
-div.member_row {
-  width: 100%;
-  justify-content: flex-start;
-}
-
 @media (max-width: 575.98px) {
   div.member_row {
     justify-content: center;

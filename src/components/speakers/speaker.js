@@ -5,10 +5,13 @@ import { Link } from "gatsby"
 import Occupations from "../utils/occupations"
 import Overlay from "../utils/overlay"
 
-import TeamStyles from "../../styles/team/team.module.css" //refactor
+import ParticipantsStyle from "../../styles/utils/participants-display.module.css"
 
 const Speaker = ({ speaker, color }) => (
-  <Col className={TeamStyles.member_container + " mb-3"} key={speaker.name}>
+  <Col
+    className={ParticipantsStyle.member_container + " mb-3"}
+    key={speaker.name}
+  >
     <Overlay
       image={speaker.img.childImageSharp.fluid}
       color={color}
