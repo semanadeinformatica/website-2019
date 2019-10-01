@@ -4,6 +4,13 @@
   position: relative;
   width: 200px;
   height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.container .image {
+  width: 100%;
 }
 
 .overlay {

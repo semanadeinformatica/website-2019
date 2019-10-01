@@ -46,7 +46,6 @@ export const pageQuery = graphql`
                 linkedin
                 website
                 twitter
-                github
               }
               day
               path
