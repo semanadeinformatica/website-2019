@@ -17,7 +17,6 @@ const SingleSpeaker = ({ speaker, color }) => (
       image={speaker.img.childImageSharp.fluid}
       color={color}
       linkedin={speaker.linkedin}
-      twitter={speaker.twitter}
       github={speaker.github}
       website={speaker.website}
     />

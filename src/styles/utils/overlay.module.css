@@ -114,3 +114,8 @@
 .container:hover .bg2 {
   background-color: rgba(155, 216, 220, 0.6);
 }
+
+.webIcon {
+  width: 19.19px;
+  padding: 1px;
+}

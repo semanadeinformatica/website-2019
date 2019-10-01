@@ -1,6 +1,8 @@
 import React from "react"
 import Img from "gatsby-image"
-import { FaLinkedin, FaTwitter, FaGithubSquare, FaGlobe } from "react-icons/fa"
+import { FaLinkedin, FaTwitter, FaGithubSquare } from "react-icons/fa"
+
+import WebIcon from "../../images/svg/web_icon.inline.svg"
 
 import OverlayStyles from "../../styles/utils/overlay.module.css"
 
@@ -55,7 +57,7 @@ const Overlay = ({
         )}
         {website ? (
           <a href={website} className={OverlayStyles.link}>
-            <FaGlobe />
+            <WebIcon className={OverlayStyles.webIcon} />
           </a>
         ) : (
           ""
