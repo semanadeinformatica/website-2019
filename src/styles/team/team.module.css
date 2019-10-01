@@ -23,6 +23,9 @@ div.name_container h2 {
   div.member_row {
     justify-content: center;
     margin: 0;
+  }
+
+  div.member_row:last-child {
     margin-bottom: 2em;
   }
 

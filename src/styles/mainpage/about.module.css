@@ -28,6 +28,11 @@
   font-size: 18px;
 }
 
+.aboutContainer p a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 575px) {
   .aboutContainer .countdownContainer .number {
     font-size: 30px;

@@ -1,31 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { Container } from "reactstrap"
 import ticketsStyles from "../../styles/mainpage/tickets.module.css"
 
-const countEvents = (data, event) => {
-  let count = data.allMarkdownRemark.edges.filter(({ node }) =>
-    node.fileAbsolutePath.includes(event)
-  ).length
-
-  return String(count).padStart(2, "0")
-}
-
 const Tickets = () => {
-  const data = useStaticQuery(graphql`
-    query ShowcaseEvents {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/events/[^d]/" } }
-      ) {
-        edges {
-          node {
-            fileAbsolutePath
-          }
-        }
-      }
-    }
-  `)
-
   const stats = [
     {
       type: "dias",
@@ -33,15 +10,15 @@ const Tickets = () => {
     },
     {
       type: "palestras",
-      count: countEvents(data, "talks"),
+      count: "13",
     },
     {
       type: "workshops",
-      count: countEvents(data, "workshops"),
+      count: "03",
     },
     {
       type: "visitas",
-      count: countEvents(data, "numVisits"),
+      count: "02",
     },
   ]
 
@@ -56,9 +33,14 @@ const Tickets = () => {
             </li>
           ))}
         </ul>
-        <p className={ticketsStyles.lead}>
-          Os bilhetes estarão disponíveis brevemente
-        </p>
+        <a
+          className={ticketsStyles.lead}
+          href="https://www.eventbrite.com/e/semana-de-informatica-2019-tickets-74550752307"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Inscreve-te!
+        </a>
       </Container>
     </section>
   )
