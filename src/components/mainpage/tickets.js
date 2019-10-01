@@ -33,9 +33,14 @@ const Tickets = () => {
             </li>
           ))}
         </ul>
-        <p className={ticketsStyles.lead}>
-          Os bilhetes estarão disponíveis brevemente
-        </p>
+        <a
+          className={ticketsStyles.lead}
+          href="https://www.eventbrite.com/e/semana-de-informatica-2019-tickets-74550752307"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Inscreve-te!
+        </a>
       </Container>
     </section>
   )
