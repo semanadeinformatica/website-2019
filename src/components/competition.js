@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
-import competitionStyles from "../styles/competition/competition.module.css"
+import CompetitionStyles from "../styles/competition/competition.module.css"
 
 const Competition = () => (
   <div>
@@ -9,7 +9,7 @@ const Competition = () => (
       <Row>
         <Col
           xs="12"
-          className={competitionStyles.competitionText + " my-4 py-5"}
+          className={CompetitionStyles.competitionText + " my-4 py-5"}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           vitae pulvinar orci, et placerat diam. Proin eu nulla lacus. Cras eu
@@ -22,16 +22,16 @@ const Competition = () => (
       </Row>
     </Container>
 
-    <div className={competitionStyles.conditions + " container-fluid"}>
+    <div className={CompetitionStyles.conditions + " container-fluid"}>
       <Container>
         <Row>
-          <Col className={competitionStyles.conditionsText}>
+          <Col className={CompetitionStyles.conditionsText}>
             Condições
-            <hr align="left" className={competitionStyles.horizontalRuler} />
+            <hr align="left" className={CompetitionStyles.horizontalRuler} />
           </Col>
         </Row>
         <Row>
-          <Col xs="12" className={competitionStyles.conditionList}>
+          <Col xs="12" className={CompetitionStyles.conditionList}>
             <ul>
               <li>Regra 1</li>
               <li>Regra 2</li>

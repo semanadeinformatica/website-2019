@@ -7,15 +7,16 @@
 }
 
 .conditionsText {
-  font-size: 1.55em;
+  font-size: 2em;
   font-weight: 600;
+  margin-top: 15px;
   margin-left: 15px;
   color: white;
 }
 
 .horizontalRuler {
-  width: 65px;
-  margin-left: 25px;
+  width: 75px;
+  margin-left: 35px;
   margin-top: 0;
   border: 2px solid white;
 }
