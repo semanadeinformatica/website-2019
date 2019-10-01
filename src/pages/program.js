@@ -58,16 +58,21 @@ export const eventsQuery = graphql`
 `
 
 const ProgramPage = ({ data }) => {
-  const today = new Date()
-  const dd = String(today.getDate())
-  const mm = today.getMonth() + 1
-  const yy = today.getFullYear()
-  const defaultDate =
-    (mm === 10 &&
-      yy === 2019 &&
-      data.allThemesJson.edges.find(day => day.node.date.split(" ")[0] === dd)
-        .node) ||
-    data.allThemesJson.edges[0].node
+  const getDefaultDate = () => {
+    const today = new Date()
+    const dd = String(today.getDate())
+    const mm = today.getMonth() + 1
+    const yy = today.getFullYear()
+    const programDate = data.allThemesJson.edges.find(
+      day => day.node.date.split(" ")[0] === dd
+    )
+    return (
+      (mm === 10 && yy === 2019 && programDate && programDate.node) ||
+      data.allThemesJson.edges[0].node
+    )
+  }
+
+  const defaultDate = getDefaultDate()
 
   const [activeTab, setActiveTab] = useState(defaultDate)
   const days = splitDays(data)
