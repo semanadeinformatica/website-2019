@@ -40,7 +40,6 @@ export const talkQuery = graphql`
       frontmatter {
         path
         title
-        n_day
         type
         day(formatString: "D MMMM", locale: "pt-PT")
         place
@@ -63,7 +62,6 @@ export const talkQuery = graphql`
           linkedin
           twitter
           website
-          github
         }
       }
     }
