@@ -7,15 +7,12 @@ div.container {
 .id_container {
   display: none;
   align-items: flex-end;
-
-  background-color: var(--color1);
-  height: 300px;
-  margin-bottom: 20em;
-  padding: 0;
+  background: linear-gradient(to bottom, var(--color1) 19em, white 12.5em);
+  padding-top: 5em;
+  margin-bottom: 5em;
 }
 
 div.id_wrapper {
-  position: relative;
   margin-right: auto;
   margin-left: auto;
 }
@@ -29,7 +26,7 @@ div.frame {
 }
 
 .bio {
-  margin: 2em 1em 3em 10px;
+  margin: 4em 1em 3em 10px;
 }
 
 .mb_blue {
@@ -46,23 +43,20 @@ div.frame {
   }
 
   div.id_container {
-    margin-bottom: 30em;
     display: flex;
   }
 
   div.id_wrapper {
     max-width: 720px;
-    top: 130%;
   }
 }
 
 @media (min-width: 992px) {
   div.id_container {
-    margin-bottom: 20em;
+    background: linear-gradient(to bottom, var(--color1) 16.5em, white 12.5em);
   }
 
   div.id_wrapper {
-    top: 80%;
     max-width: 960px;
   }
 }
