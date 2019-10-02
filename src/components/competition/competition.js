@@ -1,7 +1,7 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
-import CompetitionStyles from "../styles/competition/competition.module.css"
+import CompetitionStyles from "../../styles/competition/competition.module.css"
 
 const Competition = () => (
   <div>
