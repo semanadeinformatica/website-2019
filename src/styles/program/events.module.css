@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import "../common/palette.css";
+
+.main {
+  border-bottom: 1px #ccc solid;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  margin-right: 30%;
+}
+
+.main:first-child {
+  padding-top: 2rem;
+}
+
+.main:last-child {
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: none;
+}
+.simpleEvent {
+  position: relative;
+}
+
+.simpleEvent:first-child:after {
+  bottom: 40%;
+}
+
+.simpleEvent:after {
+  position: absolute;
+  content: "";
+  background-color: var(--color4);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  bottom: 55%;
+  left: -3.25rem;
+}
+
+.main:before {
+  position: absolute;
+  content: attr(data-date);
+  bottom: 50%;
+  left: -8rem;
+}
+
+.simpleEvent:first-child:before {
+  bottom: 40%;
+}
+
+.commonEvent:first-child:before {
+  top: 2.5rem;
+}
+
+.simpleEvent:last-child:after,
+.simpleEvent:last-child:before {
+  bottom: 65%;
+}
+
+.commonEvent:before {
+  top: 0.5rem;
+}
+
+.simpleEvent:before {
+  position: absolute;
+  content: attr(data-date);
+  top: unset;
+  left: -8rem;
+}
+
+.commonEvent {
+  padding-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.eventTitle:before {
+  content: open-quote;
+}
+
+.eventTitle:after {
+  content: close-quote;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.title a {
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+
+.speakers {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.speakers a {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: underline;
+}
+
+.occupations {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.withIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.withIcon .info {
+  margin-left: 1rem;
+}
+
+.timePlace {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.toggler input {
+  display: none;
+}
+
+.toggler label {
+  border-radius: 5px;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -3.7rem;
+}
+
+.toggler svg {
+  transition: 0.5s ease-in-out;
+}
+
+.toggler label:hover svg {
+  transform: rotateZ(-180deg);
+}
+
+.toggler input:checked + label svg {
+  transform: rotateZ(-180deg);
+}
+
+.description {
+  padding-top: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 500px) {
+  .main:before {
+    display: none;
+  }
+
+  .main {
+    margin-right: 20%;
+  }
+
+  .title {
+    margin-bottom: 0.2rem;
+  }
+
+  .speakers a {
+    font-size: 1.2rem;
+  }
+
+  .occupations {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggler label:hover svg {
+    transform: none;
+  }
+
+  .simpleEvent:first-child:after {
+    bottom: 40%;
+  }
+}
