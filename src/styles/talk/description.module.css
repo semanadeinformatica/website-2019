@@ -1,0 +1,45 @@
+@import "../common/palette.css";
+
+.row {
+  max-width: 100%;
+}
+
+.container {
+  padding-bottom: 4em;
+}
+
+.title {
+  text-decoration: underline;
+  margin-bottom: 0.5em;
+}
+
+.info_container {
+  margin-bottom: 2em;
+}
+
+.date {
+  text-align: right;
+  color: var(--color1);
+}
+
+.date > div {
+  font-size: 1.3em;
+}
+
+.date > :nth-child(2) {
+  font-weight: bold;
+}
+
+.info_container > :nth-child(1) {
+  flex-grow: 0.2;
+}
+
+@media (max-width: 575.98px) {
+  .info_container {
+    flex-direction: column;
+  }
+
+  .date {
+    text-align: left;
+  }
+}

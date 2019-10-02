@@ -1,8 +1,9 @@
 import React from "react"
+import SpeakerNameStyles from "../../styles/talk/speaker_name.module.css"
 
 const Occupations = ({ occupations }) => {
   return (
-    <div>
+    <div className={SpeakerNameStyles.occupation}>
       {occupations.map((occupation, index) => {
         return (
           <span key={occupation.what}>

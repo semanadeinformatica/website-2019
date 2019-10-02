@@ -13,7 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
     talks: path.resolve("src/templates/talk.js"),
     sessions: path.resolve("src/templates/session.js"),
     visits: path.resolve("src/templates/session.js"),
-    workshops: path.resolve("src/templates/workshop.js"),
+    workshops: path.resolve("src/templates/talk.js"),
   }
 
   return graphql(`

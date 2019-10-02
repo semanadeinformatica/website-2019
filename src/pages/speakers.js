@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
-import Occupations from "../components/occupations"
+import Occupations from "../components/talk/occupations"
 
 const styles = {
   image: {

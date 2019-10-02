@@ -5,6 +5,10 @@
   height: 1.4rem;
 }
 
+.logo path {
+  fill: white;
+}
+
 .navbar {
   background-color: var(--color1);
   font-family: "Roboto", sans-serif;
