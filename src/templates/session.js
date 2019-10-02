@@ -23,6 +23,10 @@ export default function Template({ data }) {
         </Row>
         <Row>
           <Col xs={{ size: 8, offset: 4 }}>
+            <div>
+              {session.frontmatter.day} - {session.frontmatter.place} - [
+              {session.frontmatter.start_time} - {session.frontmatter.end_time}]
+            </div>
             <div dangerouslySetInnerHTML={{ __html: session.html }}></div>
           </Col>
         </Row>
@@ -62,6 +66,10 @@ export const sessionQuery = graphql`
             }
           }
         }
+        day(formatString: "D MMMM", locale: "pt-PT")
+        place
+        start_time
+        end_time
         registration
       }
     }
