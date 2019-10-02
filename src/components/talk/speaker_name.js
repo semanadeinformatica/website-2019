@@ -1,6 +1,7 @@
 import React from "react"
 
 import SpeakerNameStyles from "../../styles/talk/speaker_name.module.css"
+import Occupations from "./occupations"
 
 const SpeakerName = ({ name, occupations }) => {
   return (
@@ -9,9 +10,7 @@ const SpeakerName = ({ name, occupations }) => {
         <div className={SpeakerNameStyles.name}>{name}</div>
         <hr />
       </div>
-      <div className={SpeakerNameStyles.occupation}>
-        {"@" + occupations[0].where}
-      </div>
+      <Occupations occupations={occupations} />
     </div>
   )
 }
