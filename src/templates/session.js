@@ -1,5 +1,6 @@
 import React from "react"
-// import Helmet from "react-helmet"
+import Img from "gatsby-image"
+import { Container, Row, Col } from "reactstrap"
 import { graphql } from "gatsby"
 
 import Layout from "../components/common/layout"
@@ -8,39 +9,40 @@ import SEO from "../components/common/seo"
 export default function Template({ data }) {
   const { markdownRemark: session } = data
 
-  const {
-    title,
-    day,
-    start_time,
-    end_time,
-    place,
-    registration,
-  } = session.frontmatter
-
   return (
     <Layout>
-      <SEO title={title} />
-      <div>
-        <h2>session</h2>
-        <div>
-          <h1>{title}</h1>
-          <div>{day}</div>
-          <div>
-            {start_time} {" - "} {end_time}
-          </div>
-          <div>{place}</div>
-          <div dangerouslySetInnerHTML={{ __html: session.html }}></div>
-
+      <SEO title={session.frontmatter.title} />
+      <Container>
+        <Row>
+          <Col xs="4">
+            <Img fluid={session.frontmatter.img.childImageSharp.fluid} />
+          </Col>
+          <Col xs="8">
+            <h1>{session.frontmatter.title}</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={{ size: 8, offset: 4 }}>
+            <div dangerouslySetInnerHTML={{ __html: session.html }}></div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h1>Empresas</h1>
+          </Col>
+        </Row>
+        <Row>
+          <h1>Não percas mais tempo!</h1>
           <a
             type="button"
-            href={registration}
+            href={session.frontmatter.registration}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Inscrições
+            Participar
           </a>
-        </div>
-      </div>
+        </Row>
+      </Container>
     </Layout>
   )
 }
@@ -53,10 +55,13 @@ export const sessionQuery = graphql`
       frontmatter {
         path
         title
-        day(formatString: "D MMMM", locale: "pt-PT")
-        place
-        start_time
-        end_time
+        img {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         registration
       }
     }
