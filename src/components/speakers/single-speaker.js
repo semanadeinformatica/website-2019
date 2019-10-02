@@ -2,7 +2,7 @@ import React from "react"
 import { Col } from "reactstrap"
 import { Link } from "gatsby"
 
-import Occupations from "../utils/occupations"
+import Occupations from "./occupations"
 import Overlay from "../utils/overlay"
 
 import ParticipantsStyle from "../../styles/utils/participants-display.module.css"

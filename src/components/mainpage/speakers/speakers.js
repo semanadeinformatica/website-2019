@@ -60,6 +60,7 @@ const Speakers = () => {
             <SingleSpeaker
               key={`${speaker.name}-${speaker.id}`}
               speaker={speaker}
+              path={speaker.path}
             />
           ))}
         </Carousel>

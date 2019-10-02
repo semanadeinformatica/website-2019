@@ -1,0 +1,12 @@
+@import "../common/palette.css";
+
+.container {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+
+  background: var(--color3) 0% 0% no-repeat padding-box;
+  border-radius: 5px 5px 5px 0px;
+  padding: 0.2em 1em;
+  max-width: 9em;
+}
