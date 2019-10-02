@@ -1,6 +1,6 @@
 ---
 title: Pitch de oportunidades
-image: ../../../images/favicon.png
+img: ../../../images/favicon.png
 day: 2019-10-29
 start_time: 17h10
 end_time: 19h10
