@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap"
 import Member from "./member"
 
 import TeamStyles from "../../styles/team/team.module.css"
+import ParticipantsStyle from "../../styles/utils/participants-display.module.css"
 
 const divide_rows = (members, n_per_row) => {
   const member_rows = []
@@ -34,13 +35,16 @@ const Team = ({ name, members, n_per_row, start_odd }) => {
           odd ^= true
 
           return (
-            <Row className={TeamStyles.member_row} key={"row" + row_index}>
+            <Row
+              className={ParticipantsStyle.member_row}
+              key={"row" + row_index}
+            >
               {row_members.map((value, index) => {
                 const color = !odd ? n_per_row - index - 1 : index
                 return (
                   <Col
                     key={"member" + index}
-                    className={TeamStyles.member_container}
+                    className={ParticipantsStyle.member_container}
                   >
                     <Member data={value} color={color} />
                   </Col>

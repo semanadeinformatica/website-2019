@@ -4,6 +4,13 @@
   position: relative;
   width: 200px;
   height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.container .image {
+  width: 100%;
 }
 
 .overlay {
@@ -113,4 +120,9 @@
 
 .container:hover .bg2 {
   background-color: rgba(155, 216, 220, 0.6);
+}
+
+.webIcon {
+  width: 19.19px;
+  padding: 1px;
 }
