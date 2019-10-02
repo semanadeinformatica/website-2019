@@ -1,5 +1,5 @@
 ---
 name: fraunhofer
-type: silver
-img: "../../images/favicon.png"
+type: bronze
+img: "../../images/sponsors/bronze/fraunhofer.png"
 ---

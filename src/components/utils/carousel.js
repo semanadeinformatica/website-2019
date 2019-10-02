@@ -9,6 +9,7 @@ class Carousel extends Component {
     index: 0,
     animating: false,
     isMobile: false,
+    isTablet: false,
     visibleItemsClass: carouselStyles.visibleItems,
     previousItemsClass: carouselStyles.previousItems,
     nextItemsClass: carouselStyles.nextItems,
@@ -16,24 +17,36 @@ class Carousel extends Component {
 
   static propTypes = {
     numMobileItems: PropTypes.number.isRequired,
+    numTabletItems: PropTypes.number.isRequired,
     numDesktopItems: PropTypes.number.isRequired,
-    removeArrows: PropTypes.bool,
+    auto: PropTypes.bool,
   }
 
   handleWindowSizeChange = () => {
-    const isMobile = window.matchMedia("(max-width: 500px)").matches
+    const isMobile = window.matchMedia("(max-width: 575px)").matches
+    const isTablet = window.matchMedia("(max-width: 767px)").matches
     this.setState({
       isMobile,
+      isTablet,
     })
-    this.NUM_VISIBLE_ITEMS = isMobile
-      ? parseInt(this.props.numMobileItems)
-      : parseInt(this.props.numDesktopItems)
+
+    if (isMobile && this.props.numMobileItems !== null) {
+      this.NUM_VISIBLE_ITEMS = parseInt(this.props.numMobileItems)
+    } else if (isTablet && this.props.numTabletItems !== null) {
+      this.NUM_VISIBLE_ITEMS = parseInt(this.props.numTabletItems)
+    } else if (this.props.numDesktopItems !== null) {
+      this.NUM_VISIBLE_ITEMS = parseInt(this.props.numDesktopItems)
+    }
   }
 
   componentDidMount = () => {
     if (typeof window !== "undefined") {
       this.handleWindowSizeChange()
       window.addEventListener("resize", this.handleWindowSizeChange)
+    }
+
+    if (this.props.auto) {
+      setInterval(() => this.moveCarouselRight(this.props.children), 2000)
     }
   }
 
@@ -61,7 +74,8 @@ class Carousel extends Component {
   }
 
   moveCarouselRight = items => {
-    if (this.state.animating) return false
+    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length)
+      return false
 
     this.setState(state => ({
       animating: true,
@@ -79,11 +93,12 @@ class Carousel extends Component {
         visibleItemsClass: carouselStyles.visibleItems,
         nextItemsClass: carouselStyles.nextItems,
       }))
-    }, 1000)
+    }, 2000)
   }
 
   moveCarouselLeft = items => {
-    if (this.state.animating) return false
+    if (this.state.animating || this.NUM_VISIBLE_ITEMS >= items.length)
+      return false
 
     this.setState(state => ({
       animating: true,
@@ -132,7 +147,7 @@ class Carousel extends Component {
       nextItemsClass,
       visibleItemsClass,
     } = this.state
-    const { children } = this.props
+    const { children, auto } = this.props
     const items = this.renderItems(children)
 
     return (
@@ -154,7 +169,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {(!this.props.removeArrows || this.state.isMobile) && (
+            {!auto && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselLeft(items)}
@@ -170,7 +185,7 @@ class Carousel extends Component {
               " "
             )}
           >
-            {(!this.props.removeArrows || this.state.isMobile) && (
+            {!auto && (
               <button
                 className={carouselStyles.circle}
                 onClick={() => this.moveCarouselRight(items)}

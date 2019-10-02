@@ -7,9 +7,9 @@ const Brevemente = () => {
   return (
     <div className={SoonStyles.banner}>
       <Icon className={SoonStyles.banner_icon} />
-      <h1 className={SoonStyles.title}>Brevemente</h1>
+      <h1 className={SoonStyles.title}>Página em construção</h1>
       <Link className={SoonStyles.link} to="/">
-        Mainpage
+        Voltar
       </Link>
     </div>
   )

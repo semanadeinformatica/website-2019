@@ -55,7 +55,7 @@ const Speakers = () => {
           Speakers
           <hr className={speakersStyles.headingLine} />
         </h2>
-        <Carousel numMobileItems={1} numDesktopItems={4}>
+        <Carousel numMobileItems={1} numTabletItems={2} numDesktopItems={4}>
           {speakers.map(speaker => (
             <SingleSpeaker
               key={`${speaker.name}-${speaker.id}`}
