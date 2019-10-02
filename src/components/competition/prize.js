@@ -1,15 +1,14 @@
 import React from "react"
-import { Container, Row, Col } from "reactstrap"
+import { Col } from "reactstrap"
 
-import CompetitionStyles from "../styles/competition/competition.module.css"
+import CompetitionStyles from "../../styles/competition/competition.module.css"
 
 const Prize = ({ type, description }) => {
-  const prizeImage = <Img src={"todo" + type}></Img>
-
   return (
-    <Col xs="3" className={CompetitionStyles.squarePrize}>
-      {prizeImage}
-      {description}
+    <Col xs="3">
+      <div className={CompetitionStyles.squarePrize + " pl-0"}></div>
+      <div className={CompetitionStyles.prizeType}>{type}</div>
+      <div className={CompetitionStyles.prizeDescription}>{description}</div>
     </Col>
   )
 }

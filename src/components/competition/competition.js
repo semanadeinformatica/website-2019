@@ -1,6 +1,8 @@
 import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
+import Prize from "../competition/prize"
+
 import CompetitionStyles from "../../styles/competition/competition.module.css"
 
 const Competition = () => (
@@ -40,15 +42,18 @@ const Competition = () => (
           </Col>
         </Row>
         <Row className={CompetitionStyles.prizeSquares}>
-          <Col xs="3" className={CompetitionStyles.squarePrize}>
-            PRIZE 1
-          </Col>
-          <Col xs="3" className={CompetitionStyles.squarePrize}>
-            PRIZE 2
-          </Col>
-          <Col xs="3" className={CompetitionStyles.squarePrize}>
-            PRIZE 3
-          </Col>
+          <Prize
+            type="1º Prémio"
+            description="Pequena descrição do prémio Pequena descrição do prémio"
+          />
+          <Prize
+            type="2º Prémio"
+            description="Pequena descrição do prémio Pequena descrição do prémio"
+          />
+          <Prize
+            type="3º Prémio"
+            description="Pequena descrição do prémio Pequena descrição do prémio"
+          />
         </Row>
       </Container>
     </div>

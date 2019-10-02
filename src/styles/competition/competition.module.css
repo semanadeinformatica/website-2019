@@ -4,7 +4,7 @@
 
 .conditions {
   background-color: var(--color3);
-  margin-bottom: 10%;
+  margin-bottom: 20%;
 }
 
 .conditionsText {
@@ -30,8 +30,10 @@
 .prizeSquares {
   text-align: center;
   position: relative;
-  top: 140px;
+  top: 285px;
   justify-content: space-between;
+  margin-right: 0 !important;
+  margin-top: -200px !important;
 }
 
 .squarePrize {
@@ -41,6 +43,18 @@
   opacity: 1;
   height: 280px;
   width: 280px;
+}
+
+.prizeType {
+  margin-top: 15px;
+  margin-left: 30px;
+  font-size: 2em;
+}
+
+.prizeDescription {
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 1.15em;
 }
 
 @media (max-width: 500px) {
