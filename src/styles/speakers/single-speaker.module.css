@@ -1,0 +1,10 @@
+.name {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #212020;
+}
+
+.name:hover,
+.name:active {
+  color: #212020;
+}

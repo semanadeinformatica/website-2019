@@ -76,7 +76,7 @@ export default class NavBar extends React.Component {
 
     this.rightLinks = [
       {
-        url: "/coming",
+        url: "/program",
         text: "Programa",
         internal: true,
       },
