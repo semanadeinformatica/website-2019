@@ -58,6 +58,54 @@
   font-size: 1.15em;
 }
 
+@media (max-width: 1366px) {
+  .squarePrize {
+    height: 240px;
+    width: 240px;
+  }
+
+  .prizeSquares {
+    top: 270px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .squarePrize {
+    height: 210px;
+    width: 210px;
+  }
+
+  .prizeSquares {
+    top: 255px;
+  }
+}
+
+@media (max-width: 990px) {
+  .squarePrize {
+    height: 180px;
+    width: 180px;
+  }
+
+  .prizeSquares {
+    margin-top: -350px !important;
+    top: 375px;
+  }
+}
+
+@media (max-width: 860px) {
+  .squarePrize {
+    height: 140px;
+    width: 140px;
+  }
+}
+
+@media (max-width: 580px) {
+  .squarePrize {
+    height: 120px;
+    width: 120px;
+  }
+}
+
 @media (max-width: 500px) {
   .competitionText {
     font-size: 1em;

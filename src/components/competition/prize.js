@@ -10,7 +10,7 @@ const Prize = ({ type, description }) => {
   else prizeName = "3º Prémio"
 
   return (
-    <Col xs="3">
+    <Col xs="4">
       <div className="pl-0">
         <img
           className={CompetitionStyles.squarePrize}
