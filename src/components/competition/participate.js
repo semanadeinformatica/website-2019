@@ -8,14 +8,14 @@ const Participate = link => {
     <div className={ParticipateStyles.participateSection + " container-fluid"}>
       <Container>
         <Row>
-          <Col xs="12" className={ParticipateStyles.colContent + " py-5"}>
-            <div className={ParticipateStyles.participateText + " pb-3"}>
+          <Col xs="12" className={ParticipateStyles.colContent}>
+            <div className={ParticipateStyles.participateText}>
               Não percas mais tempo!
             </div>
             <Button
               outline
               color="primary"
-              className={ParticipateStyles.participateButton + " mb-5"}
+              className={ParticipateStyles.participateButton + " mt-4"}
             >
               Participate
             </Button>
