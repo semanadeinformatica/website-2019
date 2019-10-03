@@ -43,15 +43,15 @@ const Competition = () => (
         </Row>
         <Row className={CompetitionStyles.prizeSquares}>
           <Prize
-            type="1º Prémio"
+            type="first"
             description="Pequena descrição do prémio Pequena descrição do prémio"
           />
           <Prize
-            type="2º Prémio"
+            type="second"
             description="Pequena descrição do prémio Pequena descrição do prémio"
           />
           <Prize
-            type="3º Prémio"
+            type="third"
             description="Pequena descrição do prémio Pequena descrição do prémio"
           />
         </Row>

@@ -23,6 +23,7 @@
 }
 
 .conditionList {
+  font-size: 1.25em;
   margin-left: 15px;
   color: white;
 }
@@ -33,7 +34,7 @@
   top: 285px;
   justify-content: space-between;
   margin-right: 0 !important;
-  margin-top: -200px !important;
+  margin-top: -215px !important;
 }
 
 .squarePrize {
