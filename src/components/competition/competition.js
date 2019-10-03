@@ -2,6 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
 import Prize from "../competition/prize"
+import Participate from "../competition/participate"
 
 import CompetitionStyles from "../../styles/competition/competition.module.css"
 
@@ -57,6 +58,8 @@ const Competition = () => (
         </Row>
       </Container>
     </div>
+
+    <Participate />
   </div>
 )
 

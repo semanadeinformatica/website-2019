@@ -1,0 +1,30 @@
+.participateSection {
+  background-color: var(--color1);
+}
+
+.participateButton {
+  border: 2px solid white !important;
+  border-radius: 5px 5px 5px 5px !important;
+  color: white !important;
+  font-weight: 400 !important;
+  font-size: 1.5em !important;
+}
+
+.participateButton:hover {
+  border: 2px solid white !important;
+  border-radius: 5px 5px 5px 5px !important;
+  color: white !important;
+  background-color: var(--color1) !important;
+  font-weight: 400 !important;
+  font-size: 1.5em !important;
+}
+
+.colContent {
+  text-align: center;
+}
+
+.participateText {
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+}
