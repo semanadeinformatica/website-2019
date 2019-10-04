@@ -16,7 +16,11 @@ const Description = ({
     <Row>
       <Col xs="12" md="4">
         <div className={DescriptionStyles.logoContainer}>
-          <img alt="" src={image} />
+          {image.childImageSharp !== null ? (
+            <Img fluid={image.childImageSharp.fluid} />
+          ) : (
+            <img alt="" src={image.publicURL} />
+          )}
         </div>
       </Col>
       <Col xs="12" md="8" className={DescriptionStyles.descriptionContainer}>

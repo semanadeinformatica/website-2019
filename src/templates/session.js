@@ -10,13 +10,14 @@ import Participate from "../components/utils/participate"
 
 export default function Template({ data }) {
   const { markdownRemark: session } = data
+  console.log(session.frontmatter)
 
   return (
     <Layout>
       <SEO title={session.frontmatter.title} />
       <Banner title={session.frontmatter.title} />
       <Description
-        image={session.frontmatter.img.publicURL}
+        image={session.frontmatter.img}
         day={session.frontmatter.day}
         place={session.frontmatter.place}
         start_time={session.frontmatter.start_time}
@@ -43,6 +44,11 @@ export const sessionQuery = graphql`
         title
         img {
           publicURL
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
         day(formatString: "D MMMM", locale: "pt-PT")
         place
