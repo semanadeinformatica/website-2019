@@ -1,0 +1,12 @@
+@import url("../common/palette.css");
+
+.companiesContainer {
+  text-align: center;
+  padding: 40px 0;
+  align-items: center;
+}
+
+/* @media screen and (max-width: ) */
+.companiesContainer .companyLogo {
+  margin-top: 40px;
+}

@@ -1,0 +1,23 @@
+@import url("../common/palette.css");
+
+.descriptionContainer {
+  margin-top: 40px;
+}
+
+.descriptionContainer .timePlace {
+  background-color: var(--color3);
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: var(--white);
+  margin-left: 5%;
+}
+
+.descriptionContainer .description {
+  margin-top: 20px;
+  margin-left: 5%;
+  line-height: 1.2em;
+}
+
+.descriptionContainer .description p {
+  margin-bottom: 0.5rem;
+}

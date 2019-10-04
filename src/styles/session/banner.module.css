@@ -1,0 +1,26 @@
+@import url("../common/palette.css");
+
+.logoContainer {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 15% 15% 15% 0;
+  border: 2px solid #cecece;
+  position: relative;
+  top: 210px;
+  margin-top: -100px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.titleContainer .title {
+  margin-bottom: 30px;
+  margin-left: 5%;
+}
+
+.titleContainer .title .underline {
+  border: 3px solid var(--white);
+  width: 50%;
+}
