@@ -12,9 +12,9 @@ speakers:
     linkedin: https://www.linkedin.com/in/silva95gustavo/
     website: https://gustavosilva.me
 
-day: 2019-10-30
-start_time: 15h00
-end_time: 15h30
+day: 2019-10-30 
+start_time: 15h40
+end_time: 16h10
 place: B032
 type: Palestra
 
