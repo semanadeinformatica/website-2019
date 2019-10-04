@@ -13,8 +13,8 @@ speakers:
     website: https://gustavosilva.me
 
 day: 2019-10-30
-start_time: 14h30
-end_time: 15h00
+start_time: 15h00
+end_time: 15h30
 place: B032
 type: Palestra
 
