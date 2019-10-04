@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { Row, Col } from "reactstrap"
+import { Container, Row, Col } from "reactstrap"
 
 import CompaniesStyles from "../../styles/session/companies.module.css"
 import { useStaticQuery } from "gatsby"
@@ -41,18 +41,22 @@ const Companies = ({ companies }) => {
   )
 
   return (
-    <Row className={CompaniesStyles.companiesContainer}>
-      {companiesData.map(company => (
-        <Col
-          xs="12"
-          sm="3"
-          key={company.node.frontmatter.name}
-          className={CompaniesStyles.companyLogo}
-        >
-          <Img fluid={company.node.frontmatter.img.childImageSharp.fluid} />
-        </Col>
-      ))}
-    </Row>
+    <div className={CompaniesStyles.companiesContainer}>
+      <Container>
+        <Row className={CompaniesStyles.companiesRow}>
+          {companiesData.map(company => (
+            <Col
+              xs="12"
+              md="3"
+              key={company.node.frontmatter.name}
+              className={CompaniesStyles.companyLogo}
+            >
+              <Img fluid={company.node.frontmatter.img.childImageSharp.fluid} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </div>
   )
 }
 

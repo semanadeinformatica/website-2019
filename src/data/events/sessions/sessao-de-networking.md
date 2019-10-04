@@ -1,6 +1,6 @@
 ---
 title: sessão de networking
-img: ../../../images/favicon.png
+img: ../../../images/svg/networking.svg
 day: 2019-10-30
 start_time: 17h10
 end_time: 19h10

@@ -1,5 +1,4 @@
 import React from "react"
-import { Container } from "reactstrap"
 import { graphql } from "gatsby"
 
 import Layout from "../components/common/layout"
@@ -7,9 +6,7 @@ import SEO from "../components/common/seo"
 import Banner from "../components/session/banner"
 import Description from "../components/session/description"
 import Companies from "../components/session/companies"
-import Participate from "../components/session/participate"
-
-import SessionStyles from "../styles/session/session.module.css"
+import Participate from "../components/utils/participate"
 
 export default function Template({ data }) {
   const { markdownRemark: session } = data
@@ -17,37 +14,21 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={session.frontmatter.title} />
-      <div className={SessionStyles.bannerContainer}>
-        <Container>
-          <Banner
-            image={session.frontmatter.img.childImageSharp.fluid}
-            title={session.frontmatter.title}
-          />
-        </Container>
-      </div>
-      <Container>
-        <Description
-          day={session.frontmatter.day}
-          place={session.frontmatter.place}
-          start_time={session.frontmatter.start_time}
-          end_time={session.frontmatter.end_time}
-          description={session.html}
-        />
-      </Container>
-      <div className={SessionStyles.companiesContainer}>
-        <Container>
-          {session.frontmatter.companies ? (
-            <Companies companies={session.frontmatter.companies} />
-          ) : (
-            ""
-          )}
-        </Container>
-      </div>
-      <div>
-        <Container>
-          <Participate registration={session.frontmatter.registration} />
-        </Container>
-      </div>
+      <Banner title={session.frontmatter.title} />
+      <Description
+        image={session.frontmatter.img.publicURL}
+        day={session.frontmatter.day}
+        place={session.frontmatter.place}
+        start_time={session.frontmatter.start_time}
+        end_time={session.frontmatter.end_time}
+        description={session.html}
+      />
+      {session.frontmatter.companies ? (
+        <Companies companies={session.frontmatter.companies} />
+      ) : (
+        ""
+      )}
+      <Participate link={session.frontmatter.registration} />
     </Layout>
   )
 }
@@ -61,11 +42,7 @@ export const sessionQuery = graphql`
         path
         title
         img {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
+          publicURL
         }
         day(formatString: "D MMMM", locale: "pt-PT")
         place
