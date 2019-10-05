@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "reactstrap"
 
 import Prize from "../competition/prize"
-import Participate from "../competition/participate"
+import Participate from "../utils/participate"
 
 import CompetitionStyles from "../../styles/competition/competition.module.css"
 
@@ -25,7 +25,7 @@ const Competition = () => (
       </Row>
     </Container>
 
-    <div className={CompetitionStyles.conditions + " container-fluid pt-4"}>
+    <div className={CompetitionStyles.conditions + " pt-4"}>
       <Container>
         <Row>
           <Col className={CompetitionStyles.conditionsText}>
@@ -42,22 +42,24 @@ const Competition = () => (
             </ul>
           </Col>
         </Row>
-        <Row className={CompetitionStyles.prizeSquares}>
-          <Prize
-            type="first"
-            description="Pequena descrição do prémio Pequena descrição do prémio"
-          />
-          <Prize
-            type="second"
-            description="Pequena descrição do prémio Pequena descrição do prémio"
-          />
-          <Prize
-            type="third"
-            description="Pequena descrição do prémio Pequena descrição do prémio"
-          />
-        </Row>
       </Container>
     </div>
+    <Container className={CompetitionStyles.whiteSection}>
+      <Row className={CompetitionStyles.prizeSquares}>
+        <Prize
+          type="first"
+          description="Pequena descrição do prémio Pequena descrição do prémio"
+        />
+        <Prize
+          type="second"
+          description="Pequena descrição do prémio Pequena descrição do prémio"
+        />
+        <Prize
+          type="third"
+          description="Pequena descrição do prémio Pequena descrição do prémio"
+        />
+      </Row>
+    </Container>
 
     <Participate />
   </div>

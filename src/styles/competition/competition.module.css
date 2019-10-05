@@ -4,7 +4,7 @@
 
 .conditions {
   background-color: var(--color3);
-  margin-bottom: 20%;
+  padding-bottom: 10%;
 }
 
 .conditionsText {
@@ -24,17 +24,16 @@
 
 .conditionList {
   font-size: 1.25em;
-  margin-left: 15px;
+  padding-left: 35px !important;
   color: white;
 }
 
 .prizeSquares {
   text-align: center;
   position: relative;
-  top: 285px;
+  bottom: 150px;
   justify-content: space-between;
   margin-right: 0 !important;
-  margin-top: -215px !important;
 }
 
 .squarePrize {
@@ -48,14 +47,21 @@
 
 .prizeType {
   margin-top: 15px;
-  margin-left: 30px;
+  margin-left: 15px;
   font-size: 2em;
+  text-align: left;
 }
 
 .prizeDescription {
   margin-top: 10px;
-  margin-left: 30px;
-  font-size: 1.15em;
+  margin-left: 15px;
+  font-size: 1.25em;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.whiteSection {
+  padding-right: 40px !important;
 }
 
 @media (max-width: 1366px) {
@@ -65,7 +71,7 @@
   }
 
   .prizeSquares {
-    top: 270px;
+    bottom: 120px;
   }
 }
 
@@ -76,7 +82,7 @@
   }
 
   .prizeSquares {
-    top: 255px;
+    bottom: 105px;
   }
 }
 
@@ -87,8 +93,15 @@
   }
 
   .prizeSquares {
-    margin-top: -350px !important;
-    top: 375px;
+    bottom: 95px;
+  }
+
+  .prizeType {
+    font-size: 1.5em;
+  }
+
+  .prizeDescription {
+    font-size: 1em;
   }
 }
 
@@ -99,17 +112,64 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 767px) {
+  .conditions {
+    padding-bottom: 20%;
+  }
+
   .squarePrize {
-    height: 120px;
-    width: 120px;
+    height: 240px;
+    width: 240px;
+  }
+
+  .prizeSquares {
+    bottom: 120px;
+  }
+
+  .prizeType {
+    font-size: 2em;
+    margin-left: 0;
+  }
+
+  .prizeDescription {
+    font-size: 1.15em;
+    margin-bottom: 50px;
+    margin-left: 0;
   }
 }
 
 @media (max-width: 500px) {
+  .conditions {
+    padding-bottom: 25%;
+  }
+
+  .prizeType {
+    text-align: center;
+  }
+
+  .prizeDescription {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+    font-size: 1.05em;
+  }
+
   .competitionText {
     font-size: 1em;
     padding-left: 10% !important;
     padding-right: 10% !important;
+  }
+
+  .squarePrize {
+    height: 180px;
+    width: 180px;
+  }
+
+  .prizeSquares {
+    bottom: 95px;
+  }
+
+  .whiteSection {
+    padding-right: 0 !important;
   }
 }
