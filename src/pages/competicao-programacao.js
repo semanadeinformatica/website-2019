@@ -16,7 +16,6 @@ const CompetitionPage = () => (
       <Icon />
     </PageBanner>
     <Competition />
-    <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
