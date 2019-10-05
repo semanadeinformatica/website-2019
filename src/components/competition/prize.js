@@ -5,9 +5,9 @@ import CompetitionStyles from "../../styles/competition/competition.module.css"
 
 const Prize = ({ type, description }) => {
   let prizeName
-  if (type === "first") prizeName = "1º Prémio"
-  else if (type === "second") prizeName = "2º Prémio"
-  else prizeName = "3º Prémio"
+  if (type === "first") prizeName = "1º prémio"
+  else if (type === "second") prizeName = "2º prémio"
+  else prizeName = "3º prémio"
 
   return (
     <Col md="3" xs="12">
