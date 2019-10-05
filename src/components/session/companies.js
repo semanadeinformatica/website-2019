@@ -6,15 +6,6 @@ import { Container, Row, Col } from "reactstrap"
 import CompaniesStyles from "../../styles/session/companies.module.css"
 import { useStaticQuery } from "gatsby"
 
-// const getCompaniesArrayString = companies => {
-//   let array = `[`
-//   companies.forEach(company => {
-//     array += `"` + company + `",`
-//   });
-//   array += `]`
-//   return array
-// }
-
 const Companies = ({ companies }) => {
   const data = useStaticQuery(graphql`
     query CompaniesQuery {

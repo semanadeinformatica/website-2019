@@ -10,7 +10,6 @@ import Participate from "../components/utils/participate"
 
 export default function Template({ data }) {
   const { markdownRemark: session } = data
-  console.log(session.frontmatter)
 
   return (
     <Layout>
