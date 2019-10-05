@@ -16,7 +16,7 @@ const Participate = ({ link }) => (
             outline
             className={ParticipateStyles.participateButton + " mt-4"}
           >
-            Participate
+            Participar
           </Button>
         </Col>
       </Row>
