@@ -86,7 +86,7 @@ export default class NavBar extends React.Component {
         internal: true,
       },
       {
-        url: "/coming",
+        url: "/competicao-programacao",
         text: "Competição",
         internal: true,
       },
