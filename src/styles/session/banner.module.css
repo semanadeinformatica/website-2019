@@ -1,0 +1,41 @@
+@import url("../common/palette.css");
+
+.bannerContainer {
+  background-color: var(--color1);
+  color: var(--white);
+  padding-top: 150px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.titleContainer .title {
+  margin-bottom: 30px;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.titleContainer .title .underline {
+  border: 3px solid var(--white);
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .bannerContainer {
+    background-color: var(--color1);
+    color: var(--white);
+    padding-top: 0;
+    padding-bottom: 150px;
+  }
+
+  .titleContainer {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .titleContainer .title {
+    margin: 30px auto;
+  }
+}
