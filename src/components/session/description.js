@@ -32,7 +32,8 @@ const Description = ({
       </Col>
       <Col xs="12" md="8" className={DescriptionStyles.descriptionContainer}>
         <span className={DescriptionStyles.timePlace}>
-          {day}, {start_time}-{end_time} {" • "} {place}
+          {day}, {start_time}-{end_time}
+          {place ? " • " + place : ""}
         </span>
         <div
           dangerouslySetInnerHTML={{ __html: description }}
