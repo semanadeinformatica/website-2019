@@ -1,18 +1,27 @@
 ---
 title: Pitch de oportunidades
 img: ../../../images/svg/cocktail.svg
-day: 2019-10-29
-start_time: 17h10
-end_time: 19h10
-place: i-105
+day: 2019-10-28
+start_time: 18h15
+end_time: 20h15
+place: TBD
 path: /sessions/pitch-de-oportunidades
 type: 1-session
-registration: https://www.eventbrite.com/e/pitch-de-oportunidades-tickets-51634552336
+registration: "#"
 companies:
-  - byside
+  - accenture
+  - facebook
+  - kpmg
+  - talkdesk
+  - aptiv
+  - bySide
+  - deloitte
   - eproseed
+  - jumia
+  - pixelmatters
+  - sonaebit
 ---
 
-No Pitch de Oportunidades terás oportunidade de aprender mais sobre várias empresas que tornaram a semana de informática 2018 possível! Cada empresa fará um breve “pitch” falando sobre si - por exemplo o que fazem, como o fazem e em que áreas estão a recrutar.
+Durante a Sessão de Cocktails, várias empresas farão um pequeno pitch promocional. Conjuntos de pitches serão intercalados por intervalos onde serão servidos cocktails, sendo encorajado o networking com as empresas presentes.
 
-No final, será possível haver networking entre os participantes e as empresas, sendo este Pitch de Oportunidades algo a não perder!
+Interessado numa empresa e gostavas de saber mais? Gostavas de conhecer melhor o panorama empresarial da área? A Sessão de Cocktails é o momento ideal para isso!
