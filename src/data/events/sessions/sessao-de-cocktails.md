@@ -1,11 +1,11 @@
 ---
-title: Pitch de oportunidades
+title: Sessão de cocktails
 img: ../../../images/svg/cocktail.svg
 day: 2019-10-28
 start_time: 18h15
 end_time: 20h15
 place: TBD
-path: /sessions/pitch-de-oportunidades
+path: /sessions/sessao-de-cocktails
 type: 1-session
 registration: "#"
 companies:
