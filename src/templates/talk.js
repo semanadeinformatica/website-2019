@@ -7,25 +7,32 @@ import SEO from "../components/common/seo"
 import Speaker from "../components/talk/speaker"
 import Description from "../components/talk/description"
 import Participate from "../components/talk/participate"
+import Partnership from "../components/talk/partnership"
 
 import TalkStyles from "../styles/talk/talk.module.css"
 
 export default function Template({ data }) {
   const { markdownRemark: talk } = data
   const info = { ...talk.frontmatter }
+  console.log(info.partnership)
 
   return (
     <Layout>
       <SEO title={info.title} />
       <Container fluid className={TalkStyles.container}>
         <Speaker data={info.speakers[0]} />
+        {info.partnership ? (
+          <Partnership partnership={info.partnership[0]} />
+        ) : (
+          ""
+        )}
         <Description data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
         </Description>
         {info.href ? (
           <Participate href={info.href ? info.href : "/coming"} />
         ) : (
-          " "
+          ""
         )}
       </Container>
     </Layout>
@@ -61,6 +68,20 @@ export const talkQuery = graphql`
           }
           linkedin
           twitter
+          website
+        }
+        partnership {
+          name
+          description
+          img {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          facebook
+          instagram
           website
         }
       }

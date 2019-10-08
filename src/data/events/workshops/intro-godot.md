@@ -5,13 +5,19 @@ speakers:
     occupations:
       - what: Bolseiro de Doutoramento em Neurociências
         where: Fundação Champalimaud
-
     bio: I was born and raised close enough to Lisboa to appreciate the background noise of cars, yet far enough to know how to milk a cow. After learning how to do all sorts of useful things like making bread, managing a small music newspaper, raiding a 40 man in Vanilla WoW and being involved in student politics, I graduated in psychology. It was the blossoming of my interest in the mind, art and technology that led me to pursue graduate training at the Systems Neuroscience lab where, today, I study human behaviour and condition through novel paradigms in the form of videogames.
-
     img: ../../../images/speakers/tiago_quendera.jpg
     linkedin: https://www.linkedin.com/in/tiago-quendera-7659aa50/
     twitter: https://twitter.com/quendera
     website: https://github.com/quendera
+
+partnership:
+  - name: Núcleo Estudantil de Computação Gráfica e Multimédia (NECGM)
+    description: O Núcleo Estudantil de Computação Gráfica e Multimédia é um grupo com um foco em Game Development, tendo nos últimos anos procurado abranger algumas das múltiplas vertentes de Multimédia. Atualmente, somos os organizadores do Game Dev Meet @ Porto e há já 3 anos que participamos como Jam Site na Global Game Jam, uma hackathon de desenvolvimento de jogos . Para além de eventos relativos a game development, organizamos também workshops de ferramentas transversais às esferas de atuação do núcleo, como Blender e Unity. Procuramos, assim, oferecer à comunidade em geral atividades que fomentem o crescimento das áreas de multimédia e game development a nível nacional.
+    img: "../../../images/partnerships/necgm.png"
+    facebook: https://www.facebook.com/NeCGM.FEUP/
+    instagram: https://www.instagram.com/necgm/
+    website: necgm.fe.up.pt
 
 day: 2019-10-28
 start_time: 15h20
