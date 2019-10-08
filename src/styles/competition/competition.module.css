@@ -28,6 +28,15 @@
   color: white;
 }
 
+.conditionList a {
+  color: white;
+  text-decoration: underline;
+}
+
+.conditionList a:hover {
+  color: white;
+}
+
 .prizeSquares {
   text-align: center;
   position: relative;
