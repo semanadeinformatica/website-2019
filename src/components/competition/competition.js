@@ -19,7 +19,7 @@ const Competition = () => (
           Outubro). Durante os seguintes 3 dias, irão ser lançados 2 exercícios
           por dia, de crescente dificuldade. A participação é voluntária e
           individual e aberta a todos os participantes da SINF, estando esta
-          aberta a partir das XX:XX de 27 de Outubro até às XX:XX de dia 30 de
+          aberta a partir das TBD de 27 de Outubro até às TBD de dia 30 de
           Outubro. No mesmo dia, durante a Sessão de Encerramento, serão
           anunciados os vencedores, passando, assim, à respetiva entrega de
           prémios. A competição irá decorrer online, por via da plataforma
