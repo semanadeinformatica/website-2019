@@ -43,6 +43,7 @@ export const eventsQuery = graphql`
             title
             path
             icon
+            type
             speakers {
               name
               occupations {
