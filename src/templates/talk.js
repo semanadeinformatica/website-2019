@@ -6,7 +6,7 @@ import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
 import Speaker from "../components/talk/speaker"
 import Description from "../components/talk/description"
-import Participate from "../components/talk/participate"
+import Participate from "../components/utils/participate"
 import Partnership from "../components/talk/partnership"
 
 import TalkStyles from "../styles/talk/talk.module.css"
@@ -29,11 +29,7 @@ export default function Template({ data }) {
         <Description data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
         </Description>
-        {info.href ? (
-          <Participate href={info.href ? info.href : "/coming"} />
-        ) : (
-          ""
-        )}
+        {info.href ? <Participate href={info.href} /> : ""}
       </Container>
     </Layout>
   )
