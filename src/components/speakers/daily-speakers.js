@@ -9,11 +9,13 @@ import SpeakersStyles from "../../styles/speakers/speakers.module.css"
 const getSpeakers = talks => {
   const speakers = []
 
-  talks.forEach(({ node }) => {
-    node.frontmatter.speakers.forEach(speaker => {
-      speaker.path = node.frontmatter.path
-      speakers.push(speaker)
-    })
+  talks
+    .filter( ({ node }) => node.frontmatter.type !== "Placeholder" )
+    .forEach(({ node }) => {
+      node.frontmatter.speakers.forEach(speaker => {
+        speaker.path = node.frontmatter.path
+        speakers.push(speaker)
+      })
   })
 
   return speakers
@@ -40,9 +42,9 @@ const DailySpeakers = ({ talks, day }) => {
         <Row className={ParticipantsStyle.member_row}>
           {speakers.map((speaker, index) =>
             index % 8 < 4 ? (
-              <SingleSpeaker speaker={speaker} color={index % 4} />
+              <SingleSpeaker key={index} speaker={speaker} color={index % 4} />
             ) : (
-              <SingleSpeaker speaker={speaker} color={3 - (index % 4)} />
+              <SingleSpeaker key={index} speaker={speaker} color={3 - (index % 4)} />
             )
           )}
         </Row>
