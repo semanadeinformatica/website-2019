@@ -6,7 +6,7 @@ const Occupations = ({ occupations }) => {
   return (
     <div>
       {occupations.map((occupation, index) => (
-        <span key={occupation.what} className={OccupationsStyles.occupations}>
+        <span key={index} className={OccupationsStyles.occupations}>
           {" @ "}
           {occupation.where}
           {index === occupations.length - 1 ? "" : ", "}

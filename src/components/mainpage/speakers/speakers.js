@@ -8,13 +8,14 @@ const getAllSpeakers = data => {
   let speakers = []
 
   data.allMarkdownRemark.edges.forEach(({ node }) => {
-    speakers.push(
-      ...node.frontmatter.speakers.map(speaker => ({
-        ...speaker,
-        path: node.frontmatter.path,
-        id: node.id,
-      }))
-    )
+    node.frontmatter.type !== "Placeholder" &&
+      speakers.push(
+        ...node.frontmatter.speakers.map(speaker => ({
+          ...speaker,
+          path: node.frontmatter.path,
+          id: node.id,
+        }))
+      )
   })
 
   return speakers
@@ -39,6 +40,7 @@ const Speakers = () => {
                 }
               }
               path
+              type
             }
           }
         }

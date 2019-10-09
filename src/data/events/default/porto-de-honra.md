@@ -1,8 +1,8 @@
 ---
-title: Porto de honra
+title: Porto d'honra
 
-day: 2019-11-01
-start_time: 18h20
-end_time: 18h50
-place: local a anunciar
+day: 2019-10-30
+start_time: 18h30
+end_time: 19h00
+place: Coffee Lounge
 ---
