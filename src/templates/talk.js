@@ -14,7 +14,6 @@ import TalkStyles from "../styles/talk/talk.module.css"
 export default function Template({ data }) {
   const { markdownRemark: talk } = data
   const info = { ...talk.frontmatter }
-  console.log(info.partnership)
 
   return (
     <Layout>
@@ -29,8 +28,8 @@ export default function Template({ data }) {
         <Description data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
         </Description>
-        {info.href ? <Participate href={info.href} /> : ""}
       </Container>
+      {info.registration ? <Participate link={info.registration} /> : ""}
     </Layout>
   )
 }
@@ -48,6 +47,7 @@ export const talkQuery = graphql`
         place
         start_time
         end_time
+        registration
         speakers {
           name
           bio

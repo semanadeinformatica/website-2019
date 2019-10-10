@@ -26,7 +26,7 @@ div.frame {
 }
 
 .bio {
-  margin: 4em 1em 3em 10px;
+  margin: 4em 1em 3em 20px;
 }
 
 .mb_blue {
@@ -37,7 +37,7 @@ div.frame {
   background-color: var(--color1);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   div.mb_id_container {
     display: none;
   }
@@ -49,9 +49,7 @@ div.frame {
   div.id_wrapper {
     max-width: 720px;
   }
-}
 
-@media (min-width: 992px) {
   div.id_container {
     background: linear-gradient(to bottom, var(--color1) 16.5em, white 12.5em);
   }

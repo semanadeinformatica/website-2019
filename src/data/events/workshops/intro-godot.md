@@ -13,7 +13,7 @@ speakers:
 
 partnership:
   - name: Núcleo Estudantil de Computação Gráfica e Multimédia (NECGM)
-    description: O Núcleo Estudantil de Computação Gráfica e Multimédia é um grupo com um foco em Game Development, tendo nos últimos anos procurado abranger algumas das múltiplas vertentes de Multimédia. Atualmente, somos os organizadores do Game Dev Meet @ Porto e há já 3 anos que participamos como Jam Site na Global Game Jam, uma hackathon de desenvolvimento de jogos . Para além de eventos relativos a game development, organizamos também workshops de ferramentas transversais às esferas de atuação do núcleo, como Blender e Unity. Procuramos, assim, oferecer à comunidade em geral atividades que fomentem o crescimento das áreas de multimédia e game development a nível nacional.
+    description: The Computer Graphics and Multimedia Student Group has historically focused on the field of game development, having over the last few years expanded its sphere of interests to include some of the many facets of Multimedia. As of today, we organise the monthly Game Dev Meet @ Porto and have participated in the Global Game Jam (a game oriented hackathon) as a Jam Site for 3 consecutive years. In addition to events related to game development, we also hold workshops spanning a range of topics relevant to the group’s identity, approaching tools such as Blender and Unity. Ultimately, we seek to offer the general public activities that stimulate the growth of multimedia and game development domains on a national level.
     img: "../../../images/partnerships/necgm.png"
     facebook: https://www.facebook.com/NeCGM.FEUP/
     instagram: https://www.instagram.com/necgm/
@@ -22,9 +22,8 @@ partnership:
 day: 2019-10-28
 start_time: 15h20
 end_time: 18h00
-place: B336
+place: TBD
 type: Workshop
-registration: https://www.eventbrite.com/e/hitchhikers-guide-to-hardware-maintenance-tickets-51765175032
 
 path: /workshops/intro-godot/
 ---
