@@ -27,6 +27,6 @@ The workshop will consist of multiple short teasers to specific vulnerabilities 
 
 Please bring the following prerequisites to this workshop:
 
-    • Laptop with your favourite Internet browser
-    • Some API testing app like PostMan (optional)
-    • Any pentesting toys and tools you like (optional)
+- Laptop with your favourite Internet browser
+- Some API testing app like PostMan (optional)
+- Any pentesting toys and tools you like (optional)
