@@ -17,7 +17,7 @@ partnership:
     img: "../../../images/partnerships/necgm.png"
     facebook: https://www.facebook.com/NeCGM.FEUP/
     instagram: https://www.instagram.com/necgm/
-    website: necgm.fe.up.pt
+    website: https://necgm.fe.up.pt/#/
 
 day: 2019-10-28
 start_time: 15h20
