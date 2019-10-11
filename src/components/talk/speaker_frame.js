@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from "react-icons/fa"
 import Globe from "../../images/svg/web_icon.inline.svg"
 
-import FrameStyles from "../../styles/talk/speaker_frame.module.css"
+import FrameStyles from "../../styles/talk/frame.module.css"
 
 const SpeakerFrame = ({ img, website, linkedin, github, twitter }) => {
   return (

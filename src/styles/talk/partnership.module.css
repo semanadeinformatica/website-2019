@@ -1,0 +1,56 @@
+.container {
+  margin-bottom: 80px;
+}
+
+.titleContainer {
+  display: flex;
+}
+
+.titleContainer .underline {
+  border: 2px solid #212020;
+  width: 60%;
+}
+
+.partnerImage {
+  border: 1px solid #cecece;
+  padding: 20px;
+}
+
+.partnerImage img {
+  object-fit: contain !important;
+}
+
+.infoContainer {
+  margin-left: 10px;
+}
+
+.infoContainer .name {
+  color: #212020;
+}
+
+.infoContainer .description {
+  margin: 4em 1em 3em 0;
+}
+
+@media screen and (max-width: 991px) {
+  .titleContainer {
+    justify-content: center;
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .infoContainer {
+    margin-top: 20px;
+  }
+
+  .infoContainer .socials {
+    text-align: center;
+  }
+
+  .infoContainer .name {
+    text-align: center;
+  }
+}
