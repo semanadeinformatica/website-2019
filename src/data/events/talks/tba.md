@@ -1,5 +1,5 @@
 ---
-title: TBA
+title: A anunciar
 
 speakers:
   - name: 
