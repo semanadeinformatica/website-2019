@@ -6,7 +6,7 @@ start_time: 09h30
 end_time: 11h30
 path: /visits/talkdesk/
 type: Visita
-registration: "#"
+registration: "https://www.eventbrite.com/e/visita-a-talkdesk-tickets-75830586325"
 ---
 
 ##### Plano de atividades
