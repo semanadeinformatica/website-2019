@@ -122,6 +122,10 @@
     font-size: 1.5em;
   }
 
+  .prizeTitle {
+    font-size: 1em;
+  }
+
   .prizeDescription {
     font-size: 1em;
   }
@@ -149,11 +153,19 @@
   }
 
   .prizeType {
+    text-align: center;
     font-size: 1.3em;
     margin-left: 0;
   }
 
+  .prizeTitle {
+    text-align: center;
+    font-size: 16px;
+    margin-left: 0;
+  }
+
   .prizeDescription {
+    text-align: center;
     font-size: 16px;
     margin-bottom: 50px;
     margin-left: 0;
@@ -165,14 +177,15 @@
     padding-bottom: 30%;
   }
 
-  .prizeType {
-    text-align: center;
+  .prizeTitle {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.05em;
   }
 
   .prizeDescription {
     padding-left: 15px;
     padding-right: 15px;
-    text-align: justify;
     font-size: 1.05em;
   }
 
