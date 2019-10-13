@@ -65,6 +65,15 @@
   color: #361784;
 }
 
+.prizeTitle {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
 .prizeDescription {
   margin-top: 10px;
   margin-left: 15px;

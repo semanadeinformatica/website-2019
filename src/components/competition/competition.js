@@ -14,16 +14,19 @@ const Competition = () => (
           xs="12"
           className={CompetitionStyles.competitionText + " my-4 py-5"}
         >
-          Durante a SINF irás poder participar numa Competição de Programação!
-          Esta iniciar-se-á no dia anterior à abertura do evento (27 de
-          Outubro). Durante os seguintes 3 dias, irão ser lançados 2 exercícios
-          por dia, de crescente dificuldade. A participação é voluntária e
-          individual e aberta a todos os participantes da SINF, estando esta
-          aberta a partir das TBD de 27 de Outubro até às TBD de dia 30 de
-          Outubro. No mesmo dia, durante a Sessão de Encerramento, serão
-          anunciados os vencedores, passando, assim, à respetiva entrega de
-          prémios. A competição irá decorrer online, por via da plataforma
-          HackerRank.
+          Participa na nossa Competição de Programação e habilita-te a ganhar 3 
+          fantásticos prémios! Fica atento aos 6 desafios, de crescente dificuldade, 
+          que vamos lançar para seres o mais rápido. No entanto, a rapidez não é tudo 
+          pelo que tens de ser também o melhor a resolver os desafios. 
+
+          <br /><br />
+
+          Não percas a Sessão de Encerramento, onde serão anunciados os vencedores e 
+          será feita a entrega de prémios.
+
+          <br /><br />
+
+          A participação é voluntária e individual e aberta a todos os participantes da Semana de Informática.
         </Col>
       </Row>
     </Container>
@@ -40,19 +43,29 @@ const Competition = () => (
           <Col xs="12" className={CompetitionStyles.conditionList}>
             <ul>
               <li>
-                Para participar na Competição, tens de te{" "}
-                <a href="https://www.eventbrite.com/e/semana-de-informatica-2019-tickets-74550752307?fbclid=IwAR0bifoaq7PDdUMQieYaNue8lIaeCTR6lrtqzRg_JSKUD0gFGgsHSl096-M">
-                  inscrever na SINF
-                </a>
+                A Competição terá início dia 27 de Outubro às 15h00, decorrendo durante os 3 próximos 
+                dias até dia 30 de Outubro às 17:00.
               </li>
               <li>
-                A cópia de código é estritamente proibida, sendo esta
-                monitorizada pela própria plataforma do HackerRank
+                A competição decorrerrá online, através da plataforma HackerRank.
               </li>
               <li>
-                A pontuação em cada exercício será influenciada pela qualidade
-                da solução, sendo o factor de desempate o tempo demorado a
-                submeter a resolução
+                Serão lançados diariamente 2 novos desafios: dia 27, às 15h00 e dias 28 e 29, às 21h00.
+              </li>
+              <li>
+                Apenas estarás habilitado aos prémios caso tenhas tenhas realizado <strong>inscrição</strong> 
+                e <strong>check-in</strong> na SINF.
+              </li>
+              <li>
+                A entrega de prémios será realizada durante a Sessão de Encerramento.
+              </li>
+              <li>
+                A cópia de código é estritamente proibida, sendo esta monitorizada pela própria plataforma 
+                HackerRank.
+              </li>
+              <li>
+                A pontuação em cada exercício será influenciada pela qualidade da solução, sendo o factor 
+                de desempate o tempo demorado a submeter a resolução.
               </li>
             </ul>
           </Col>
@@ -63,15 +76,18 @@ const Competition = () => (
       <Row className={CompetitionStyles.prizeSquares}>
         <Prize
           type="first"
-          description="Pequena descrição do prémio Pequena descrição do prémio"
+          title="Trotinete elétrica"
+          description="STOREX RIDE 80XL PRETA"
         />
         <Prize
           type="second"
-          description="Pequena descrição do prémio Pequena descrição do prémio"
+          title="Headphones Bluetooth"
+          description="JBL E65BTNC"
         />
         <Prize
           type="third"
-          description="Pequena descrição do prémio Pequena descrição do prémio"
+          title="Cartão oferta Fnac 100€"
+          description=""
         />
       </Row>
     </Container>
