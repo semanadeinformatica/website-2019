@@ -13,8 +13,8 @@ speakers:
     twitter: https://twitter.com/arturferreira
 
 day: 2019-10-30
-start_time: 15h00
-end_time: 15h30
+start_time: 15h05
+end_time: 15h35
 place: B032
 type: Palestra
 

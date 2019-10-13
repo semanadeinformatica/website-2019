@@ -14,8 +14,8 @@ speakers:
     twitter: https://twitter.com/shoegazerpt
 
 day: 2019-10-28
-start_time: 17h00
-end_time: 17h40
+start_time: 17h05
+end_time: 17h45
 place: B032
 type: Palestra
 

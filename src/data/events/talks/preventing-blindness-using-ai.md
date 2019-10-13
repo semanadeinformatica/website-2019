@@ -12,8 +12,8 @@ speakers:
     linkedin: https://www.linkedin.com/in/pmvcosta/
 
 day: 2019-10-29
-start_time: 17h20
-end_time: 17h50
+start_time: 17h30
+end_time: 18h00
 place: B032
 type: Palestra
 

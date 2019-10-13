@@ -13,8 +13,8 @@ speakers:
     twitter: https://twitter.com/tcx__
 
 day: 2019-10-30
-start_time: 16h50
-end_time: 17h20
+start_time: 16h45
+end_time: 17h15
 place: B032
 type: Palestra
 
