@@ -22,8 +22,9 @@ partnership:
 day: 2019-10-28
 start_time: 15h20
 end_time: 18h00
-place: TBD
+place: B336
 type: Workshop
+registration: "https://www.eventbrite.com/e/a-hands-on-introduction-to-godot-tickets-75769262905"
 
 path: /workshops/intro-godot/
 ---

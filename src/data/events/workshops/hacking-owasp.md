@@ -15,10 +15,10 @@ speakers:
 day: 2019-10-30
 start_time: 14h30
 end_time: 18h00
-place: TBD
+place: B336
 path: /workshops/hacking-owasp/
 type: Workshop
-registration:
+registration: " https://www.eventbrite.com/e/hacking-owasp-juice-shop-tickets-75765967047"
 ---
 
 In this workshop you can test your skills in hacking modern web applications against the OWASP Juice Shop! There are 85+ hacking challenges that are waiting to be solved, ranging from simple functional problems and the usual XSS/SQLi issues over severe authentication flaws up to multi-step and multi-path attacks!
