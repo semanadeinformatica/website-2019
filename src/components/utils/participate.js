@@ -3,7 +3,11 @@ import { Container, Row, Col, Button } from "reactstrap"
 
 import ParticipateStyles from "../../styles/utils/participate.module.css"
 
-const Participate = ({ link }) => (
+const Participate = ({ link }) => {
+  
+  if (!link) return null;
+
+  return (
   <div className={ParticipateStyles.participateSection + " container-fluid"}>
     <Container>
       <Row>
@@ -22,6 +26,6 @@ const Participate = ({ link }) => (
       </Row>
     </Container>
   </div>
-)
+)}
 
 export default Participate

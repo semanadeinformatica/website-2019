@@ -28,6 +28,15 @@
   color: white;
 }
 
+.conditionList a {
+  color: white;
+  text-decoration: underline;
+}
+
+.conditionList a:hover {
+  color: white;
+}
+
 .prizeSquares {
   text-align: center;
   position: relative;
@@ -54,6 +63,15 @@
   text-align: left;
   letter-spacing: 0.7px;
   color: #361784;
+}
+
+.prizeTitle {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  font-weight: bold;
 }
 
 .prizeDescription {
@@ -104,6 +122,10 @@
     font-size: 1.5em;
   }
 
+  .prizeTitle {
+    font-size: 1em;
+  }
+
   .prizeDescription {
     font-size: 1em;
   }
@@ -131,11 +153,19 @@
   }
 
   .prizeType {
+    text-align: center;
     font-size: 1.3em;
     margin-left: 0;
   }
 
+  .prizeTitle {
+    text-align: center;
+    font-size: 16px;
+    margin-left: 0;
+  }
+
   .prizeDescription {
+    text-align: center;
     font-size: 16px;
     margin-bottom: 50px;
     margin-left: 0;
@@ -147,14 +177,15 @@
     padding-bottom: 30%;
   }
 
-  .prizeType {
-    text-align: center;
+  .prizeTitle {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.05em;
   }
 
   .prizeDescription {
     padding-left: 15px;
     padding-right: 15px;
-    text-align: justify;
     font-size: 1.05em;
   }
 

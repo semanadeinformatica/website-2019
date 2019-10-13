@@ -3,7 +3,7 @@ import { Col } from "reactstrap"
 
 import CompetitionStyles from "../../styles/competition/competition.module.css"
 
-const Prize = ({ type, description }) => {
+const Prize = ({ type, description, title }) => {
   let prizeName
   if (type === "first") prizeName = "1º prémio"
   else if (type === "second") prizeName = "2º prémio"
@@ -14,13 +14,14 @@ const Prize = ({ type, description }) => {
       <div className="pl-0">
         <img
           className={CompetitionStyles.squarePrize}
-          src={require("../../images/competition/" + type + ".jpg")}
-          width="280px"
+          src={require("../../images/competition/" + type + ".png")}
           height="280px"
+          width="280px"
           alt="Prize"
         />
       </div>
       <div className={CompetitionStyles.prizeType}>{prizeName}</div>
+      <div className={CompetitionStyles.prizeTitle}>{title}</div>
       <div className={CompetitionStyles.prizeDescription}>{description}</div>
     </Col>
   )
