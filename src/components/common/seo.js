@@ -57,11 +57,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `http://sinf.pt/og_thumbnail.png`
+          content: `http://sinf.pt/og_thumbnail.png`,
         },
         {
           property: `og:image:secure_url`,
-          content: `https://sinf.pt/og_thumbnail.png`
+          content: `https://sinf.pt/og_thumbnail.png`,
         },
       ]}
     />

@@ -1,46 +1,34 @@
 import React from "react"
-// import Helmet from "react-helmet"
 import { graphql } from "gatsby"
 
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
+import Banner from "../components/session/banner"
+import Description from "../components/session/description"
+import Companies from "../components/session/companies"
+import Participate from "../components/utils/participate"
 
 export default function Template({ data }) {
   const { markdownRemark: session } = data
 
-  const {
-    title,
-    day,
-    start_time,
-    end_time,
-    place,
-    registration,
-  } = session.frontmatter
-
   return (
     <Layout>
-      <SEO title={title} />
-      <div>
-        <h2>session</h2>
-        <div>
-          <h1>{title}</h1>
-          <div>{day}</div>
-          <div>
-            {start_time} {" - "} {end_time}
-          </div>
-          <div>{place}</div>
-          <div dangerouslySetInnerHTML={{ __html: session.html }}></div>
-
-          <a
-            type="button"
-            href={registration}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Inscrições
-          </a>
-        </div>
-      </div>
+      <SEO title={session.frontmatter.title} />
+      <Banner title={session.frontmatter.title} />
+      <Description
+        image={session.frontmatter.img}
+        day={session.frontmatter.day}
+        place={session.frontmatter.place}
+        start_time={session.frontmatter.start_time}
+        end_time={session.frontmatter.end_time}
+        description={session.html}
+      />
+      {session.frontmatter.companies ? (
+        <Companies companies={session.frontmatter.companies} />
+      ) : (
+        ""
+      )}
+      <Participate link={session.frontmatter.registration} />
     </Layout>
   )
 }
@@ -53,11 +41,20 @@ export const sessionQuery = graphql`
       frontmatter {
         path
         title
+        img {
+          publicURL
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         day(formatString: "D MMMM", locale: "pt-PT")
         place
         start_time
         end_time
         registration
+        companies
       }
     }
   }

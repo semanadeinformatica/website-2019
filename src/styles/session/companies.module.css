@@ -1,0 +1,25 @@
+@import url("../common/palette.css");
+
+.companiesContainer {
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  margin-bottom: 40px;
+}
+
+.companiesRow {
+  text-align: center;
+  padding: 40px 0;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .companiesRow {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 0;
+    align-items: center;
+  }
+  .companiesContainer .companyLogo {
+    margin-bottom: 100px;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../common/palette.css";
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.name_container {
+  margin-right: 1em;
+}
+
+.name_container hr {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 0;
+  background-color: white;
+  height: 5px;
+  width: 60%;
+}
+
+.name {
+  color: white;
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+}
+
+.occupation {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+
+  .name_container {
+    margin: 0;
+  }
+
+  .occupation {
+    text-align: center;
+    margin: 0 20px;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../common/palette.css";
+
+div.container {
+  padding: 0;
+}
+
+.id_container {
+  display: none;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, var(--color1) 19em, white 12.5em);
+  padding-top: 5em;
+  margin-bottom: 5em;
+}
+
+div.id_wrapper {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.frame {
+  flex-grow: unset;
+}
+
+.name {
+  margin-top: 5em;
+}
+
+.bio {
+  margin: 4em 1em 3em 20px;
+}
+
+.mb_blue {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color1);
+}
+
+@media (min-width: 991px) {
+  div.mb_id_container {
+    display: none;
+  }
+
+  div.id_container {
+    display: flex;
+  }
+
+  div.id_wrapper {
+    max-width: 720px;
+  }
+
+  div.id_container {
+    background: linear-gradient(to bottom, var(--color1) 16.5em, white 12.5em);
+  }
+
+  div.id_wrapper {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.id_wrapper {
+    max-width: 1140px;
+  }
+}

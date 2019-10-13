@@ -1,0 +1,70 @@
+@import url("../common/palette.css");
+
+.logoContainer {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 15% 15% 15% 0;
+  border: 2px solid #cecece;
+  position: relative;
+  bottom: 150px;
+  text-align: center;
+  margin: auto;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer .logoImg {
+  width: 100%;
+}
+
+.descriptionContainer {
+  margin: 40px 0;
+}
+
+.descriptionContainer .timePlace {
+  background-color: var(--color3);
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: var(--white);
+  margin-left: 5%;
+}
+
+.descriptionContainer .description {
+  margin-top: 20px;
+  margin-left: 5%;
+  line-height: 1.2em;
+}
+
+.descriptionContainer .description p {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .logoContainer {
+    width: 290px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .logoContainer {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logoContainer {
+    width: 70vw;
+    height: 70vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .descriptionContainer {
+    margin-top: -100px;
+    margin-bottom: 40px;
+  }
+}

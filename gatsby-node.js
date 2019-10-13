@@ -12,7 +12,8 @@ exports.createPages = ({ actions, graphql }) => {
   const templates = {
     talks: path.resolve("src/templates/talk.js"),
     sessions: path.resolve("src/templates/session.js"),
-    workshops: path.resolve("src/templates/workshop.js"),
+    visits: path.resolve("src/templates/session.js"),
+    workshops: path.resolve("src/templates/talk.js"),
   }
 
   return graphql(`

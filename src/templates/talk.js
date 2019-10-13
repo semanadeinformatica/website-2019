@@ -1,38 +1,35 @@
 import React from "react"
-// import Helmet from "react-helmet"
 import { graphql } from "gatsby"
+import { Container } from "reactstrap"
 
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
-import Speaker from "../components/speaker"
+import Speaker from "../components/talk/speaker"
+import Description from "../components/talk/description"
+import Participate from "../components/utils/participate"
+import Partnership from "../components/talk/partnership"
+
+import TalkStyles from "../styles/talk/talk.module.css"
 
 export default function Template({ data }) {
   const { markdownRemark: talk } = data
+  const info = { ...talk.frontmatter }
 
   return (
     <Layout>
-      <SEO title={talk.frontmatter.title} />
-      <div>
-        <h2>talk</h2>
-        <div>
-          <h1>{talk.frontmatter.title}</h1>
-          <div>{talk.frontmatter.day}</div>
-          <div>
-            {talk.frontmatter.start_time} {" - "} {talk.frontmatter.end_time}
-          </div>
-          <div>{talk.frontmatter.place}</div>
+      <SEO title={info.title} />
+      <Container fluid className={TalkStyles.container}>
+        <Speaker data={info.speakers[0]} />
+        {info.partnership ? (
+          <Partnership partnership={info.partnership[0]} />
+        ) : (
+          ""
+        )}
+        <Description data={info}>
           <div dangerouslySetInnerHTML={{ __html: talk.html }}></div>
-
-          <div>
-            <h2>Speakers</h2>
-            <div>
-              {talk.frontmatter.speakers.map(speaker => {
-                return <Speaker key={speaker.name} data={speaker} />
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
+        </Description>
+      </Container>
+      {info.registration ? <Participate link={info.registration} /> : ""}
     </Layout>
   )
 }
@@ -45,10 +42,12 @@ export const talkQuery = graphql`
       frontmatter {
         path
         title
+        type
         day(formatString: "D MMMM", locale: "pt-PT")
         place
         start_time
         end_time
+        registration
         speakers {
           name
           bio
@@ -65,6 +64,20 @@ export const talkQuery = graphql`
           }
           linkedin
           twitter
+          website
+        }
+        partnership {
+          name
+          description
+          img {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          facebook
+          instagram
           website
         }
       }

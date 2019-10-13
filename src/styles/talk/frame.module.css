@@ -1,0 +1,43 @@
+@import "../common/palette.css";
+
+.image {
+  width: 350px;
+  height: 350px;
+  border-radius: 12px 12px 12px 0;
+}
+
+.link_container {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  font-size: 2.5em;
+  color: var(--color4);
+  margin-right: 5px;
+}
+
+.link:hover {
+  color: var(--color4);
+  text-decoration: none;
+}
+
+.link svg {
+  width: 0.9em;
+}
+
+.link svg path {
+  fill: var(--color4);
+}
+
+@media (max-width: 991px) {
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .link_container {
+    justify-content: center;
+    padding-bottom: 2em;
+  }
+}

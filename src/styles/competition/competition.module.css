@@ -1,0 +1,210 @@
+.competitionText {
+  font-size: 16px;
+}
+
+.conditions {
+  background-color: var(--color3);
+  padding-bottom: 12%;
+}
+
+.conditionsText {
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-left: 15px;
+  color: white;
+}
+
+.horizontalRuler {
+  width: 75px;
+  margin-left: 35px;
+  margin-top: 0;
+  border: 2px solid white;
+}
+
+.conditionList {
+  font-size: 1.25em;
+  padding-left: 35px !important;
+  color: white;
+}
+
+.conditionList a {
+  color: white;
+  text-decoration: underline;
+}
+
+.conditionList a:hover {
+  color: white;
+}
+
+.prizeSquares {
+  text-align: center;
+  position: relative;
+  bottom: 150px;
+  justify-content: space-between;
+  margin-right: 0 !important;
+}
+
+.squarePrize {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 20px 20px 20px 0px;
+  opacity: 1;
+  height: 280px;
+  width: 280px;
+  padding: 15px !important;
+}
+
+.prizeType {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.7px;
+  color: #361784;
+}
+
+.prizeTitle {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.prizeDescription {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.whiteSection {
+  padding-right: 40px !important;
+}
+
+@media (max-width: 1366px) {
+  .squarePrize {
+    height: 240px;
+    width: 240px;
+  }
+
+  .prizeSquares {
+    bottom: 120px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .squarePrize {
+    height: 210px;
+    width: 210px;
+  }
+
+  .prizeSquares {
+    bottom: 105px;
+  }
+}
+
+@media (max-width: 990px) {
+  .squarePrize {
+    height: 180px;
+    width: 180px;
+  }
+
+  .prizeSquares {
+    bottom: 95px;
+  }
+
+  .prizeType {
+    font-size: 1.5em;
+  }
+
+  .prizeTitle {
+    font-size: 1em;
+  }
+
+  .prizeDescription {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 860px) {
+  .squarePrize {
+    height: 140px;
+    width: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  .conditions {
+    padding-bottom: 20%;
+  }
+
+  .squarePrize {
+    height: 240px;
+    width: 240px;
+  }
+
+  .prizeSquares {
+    bottom: 120px;
+  }
+
+  .prizeType {
+    text-align: center;
+    font-size: 1.3em;
+    margin-left: 0;
+  }
+
+  .prizeTitle {
+    text-align: center;
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .prizeDescription {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .conditions {
+    padding-bottom: 30%;
+  }
+
+  .prizeTitle {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.05em;
+  }
+
+  .prizeDescription {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.05em;
+  }
+
+  .competitionText {
+    font-size: 1em;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+  }
+
+  .squarePrize {
+    height: 180px;
+    width: 180px;
+  }
+
+  .prizeSquares {
+    bottom: 95px;
+  }
+
+  .whiteSection {
+    padding-right: 0 !important;
+  }
+}

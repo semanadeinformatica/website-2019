@@ -1,64 +1,56 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import { Container } from "reactstrap"
 
 import Layout from "../components/common/layout"
 import SEO from "../components/common/seo"
-import Occupations from "../components/occupations"
+import PageBanner from "../components/utils/page_banner"
+import DailySpeakers from "../components/speakers/daily-speakers"
 
-const styles = {
-  image: {
-    width: "100px",
-    height: "100px",
-  },
-}
+import Icon from "../images/svg/speakers.inline.svg"
 
 const SpeakersPage = ({ data }) => (
   <Layout>
     <SEO title="Speakers" />
-    <h1>Speakers</h1>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        {node.frontmatter.speakers.map(speaker => (
-          <div key={speaker.name}>
-            <Img
-              fluid={speaker.img.childImageSharp.fluid}
-              style={styles.image}
-            />
-            <div>
-              <Link to={node.frontmatter.path}>{speaker.name}</Link>
-            </div>
-            <Occupations occupations={speaker.occupations} />
-          </div>
-        ))}
-      </div>
-    ))}
-    <Link to="/">Go back to the homepage</Link>
+    <PageBanner>
+      <Icon />
+    </PageBanner>
+    <Container>
+      {data.allMarkdownRemark.group.map(({ edges }, index) => (
+        <DailySpeakers talks={edges} key={index} day={index + 1} />
+      ))}
+    </Container>
   </Layout>
 )
 
 export const pageQuery = graphql`
   query SpeakersQuery {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/talks/" } }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            speakers {
-              name
-              occupations {
-                what
-                where
-              }
-              img {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
+      group(field: frontmatter___day) {
+        edges {
+          node {
+            id
+            frontmatter {
+              speakers {
+                name
+                occupations {
+                  where
+                }
+                img {
+                  childImageSharp {
+                    fluid {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
+                linkedin
+                website
+                twitter
               }
+              day
+              path
+              type
             }
-            path
           }
         }
       }
