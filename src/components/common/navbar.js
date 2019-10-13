@@ -12,7 +12,7 @@ import {
 import Logo from "../../images/svg/logo_sinf_simp.inline.svg"
 import NavbarStyles from "../../styles/common/navbar.module.css"
 
-const NavWrapper = ({ links, className }) => (
+const NavWrapper = ({ links, className, closeDrawer }) => (
   <Nav navbar className={className}>
     {links.map(({ internal, url, text }) => (
       <NavItem className="px-2" key={text}>
@@ -21,6 +21,7 @@ const NavWrapper = ({ links, className }) => (
             className={`nav-link ${NavbarStyles.navLink}`}
             activeClassName={NavbarStyles.navLinkActive}
             to={url}
+            onClick={closeDrawer}
           >
             {text}
           </Link>
@@ -98,6 +99,12 @@ export default class NavBar extends React.Component {
     ]
   }
 
+  closeDrawer = () => {
+    this.setState({
+      isOpen: false,
+    })
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
@@ -126,6 +133,7 @@ export default class NavBar extends React.Component {
             <NavWrapper
               className="ml-0 align-items-center"
               links={this.leftLinks}
+              closeDrawer={this.closeDrawer}
             />
           </Collapse>
           {this.logo || this.state.isOpen ? (
@@ -143,6 +151,7 @@ export default class NavBar extends React.Component {
             <NavWrapper
               className="ml-auto align-items-center"
               links={this.rightLinks}
+              closeDrawer={this.closeDrawer}
             />
           </Collapse>
           <NavbarToggler

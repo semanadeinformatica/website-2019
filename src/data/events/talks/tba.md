@@ -1,5 +1,5 @@
 ---
-title: TBA
+title: A anunciar
 
 speakers:
   - name: 
@@ -11,8 +11,8 @@ speakers:
     img: 
 
 day: 2019-10-29
-start_time: 16h55
-end_time: 17h25
+start_time: 16h50
+end_time: 17h30
 place: B032
 type: Placeholder
 

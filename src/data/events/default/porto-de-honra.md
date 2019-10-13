@@ -1,5 +1,5 @@
 ---
-title: Porto d'honra
+title: Porto d'Honra
 
 day: 2019-10-30
 start_time: 18h30
