@@ -53,7 +53,7 @@ const Competition = () => (
                 Serão lançados diariamente 2 novos desafios: dia 27, às 15h00 e dias 28 e 29, às 21h00.
               </li>
               <li>
-                Apenas estarás habilitado aos prémios caso tenhas tenhas realizado <strong>inscrição</strong> 
+                Apenas estarás habilitado aos prémios caso tenhas tenhas realizado <strong>inscrição </strong> 
                 e <strong>check-in</strong> na SINF.
               </li>
               <li>
