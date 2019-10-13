@@ -35,8 +35,8 @@ const DailySpeakers = ({ talks, day }) => {
         xs="12"
         className={SpeakersStyles.dayDescription + " mb-3"}
       >
-        <div className={SpeakersStyles.dayNumber}>Day {day}</div>
-        <div className={SpeakersStyles.date}>{date.getDay() + " Outubro"}</div>
+        <div className={SpeakersStyles.dayNumber}>Dia {day}</div>
+        <div className={SpeakersStyles.date}>{date.getDate() + " Outubro"}</div>
       </Col>
       <Col xl="10" lg="6" md="8" sm="8" xs="12">
         <Row className={ParticipantsStyle.member_row}>
