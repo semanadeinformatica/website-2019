@@ -13,8 +13,8 @@ speakers:
     twitter: https://twitter.com/beatrizoliveira
 
 day: 2019-10-28
-start_time: 15h25
-end_time: 15h55
+start_time: 15h30
+end_time: 16h00
 place: B032
 type: Palestra
 
