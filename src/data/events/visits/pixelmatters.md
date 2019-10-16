@@ -13,8 +13,8 @@ Nesta visita irás conhecer a Pixelmatters, a nossa cultura, equipa, e o nosso e
 
 ##### Plano de atividades
 
-**10h30**: Pequena introdução sobre a Pixel e contexto sobre o Codematters
+**10h30**: Pequena introdução sobre a Pixelmatters e contexto sobre o Codematters
 
-**10h40**: Codematters: Construindo uma aplicação de raiz com React Hooks
+**10h40**: Codematters: Construindo uma aplicação de raíz com React Hooks
 
 **11h45**: Tour pelo escritório
