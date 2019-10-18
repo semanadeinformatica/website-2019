@@ -13,7 +13,7 @@ speakers:
 day: 2019-10-29
 start_time: 16h50
 end_time: 17h20
-place: TBD
+place: B032
 type: Placeholder
 
 path: #
