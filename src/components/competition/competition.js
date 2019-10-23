@@ -67,6 +67,10 @@ const Competition = () => (
                 A pontuação em cada exercício será influenciada pela qualidade da solução, sendo o factor 
                 de desempate o tempo demorado a submeter a resolução.
               </li>
+              <li>
+                Caso sejas um dos vencedores, certifica-te que estás presente na Sessão de Encerramento ou 
+                indica-nos o contacto de alguém que possa receber o prémio por ti.
+              </li>
             </ul>
           </Col>
         </Row>
@@ -82,7 +86,7 @@ const Competition = () => (
         <Prize
           type="second"
           title="Headphones Bluetooth"
-          description="JBL E65BTNC"
+          description="JBL Live 650BTNC"
         />
         <Prize
           type="third"
@@ -92,7 +96,7 @@ const Competition = () => (
       </Row>
     </Container>
 
-    <Participate />
+    <Participate link="https://www.hackerrank.com/sinf-2019" />
   </div>
 )
 
