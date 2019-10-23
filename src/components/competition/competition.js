@@ -86,7 +86,7 @@ const Competition = () => (
         <Prize
           type="second"
           title="Headphones Bluetooth"
-          description="JBL E65BTNC"
+          description="JBL Live 650BTNC"
         />
         <Prize
           type="third"
